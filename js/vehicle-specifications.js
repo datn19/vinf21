@@ -1,10 +1,18 @@
 import {
   vehicleSpecifications,
   getSpecificationFields,
-  specificationGroupOrder,
 } from '../data/vehicle-specifications.js';
 import { localURL } from './routes.js';
 import { money } from '../data/products.js';
+
+// Chỉ gộp nhóm trình bày; giữ nguyên ID, giá trị và nguồn của từng trường.
+const displayGroups = [
+  ['Động cơ & vận hành', ['Động cơ và vận hành']],
+  ['Pin, sạc & quãng đường', ['Pin', 'Sạc', 'Quãng đường']],
+  ['Khung gầm & an toàn', ['Khung gầm', 'An toàn']],
+  ['Công nghệ & tiện nghi', ['Công nghệ', 'Tiện nghi']],
+  ['Nhiên liệu & khí thải', ['Nhiên liệu và khí thải']],
+];
 
 const element = (tag, text, className) => {
   const node = document.createElement(tag);
@@ -170,13 +178,16 @@ export function mountVehicleSpecifications(main, viewer) {
     const dimensions = fields.filter((field) => field.group === 'Kích thước');
     visualData.replaceChildren(element('h3', 'Kích thước'), table(dimensions));
     visualData.hidden = !dimensions.length;
-    for (const title of specificationGroupOrder.filter(
-      (title) => title !== 'Kích thước',
-    )) {
-      const rows = fields.filter((field) => field.group === title);
+    for (const [title, groups] of displayGroups) {
+      const rows = groups.flatMap((group) =>
+        fields.filter((field) => field.group === group),
+      );
       if (!rows.length) continue;
       const groupBlock = element('div', null, 'vehicle-spec-group');
-      groupBlock.append(element('h3', title), table(rows));
+      const fieldTable = table(rows);
+      fieldTable.className = 'vehicle-spec-fields';
+      fieldTable.setAttribute('aria-label', title);
+      groupBlock.append(element('h3', title), fieldTable);
       information.append(groupBlock);
     }
     layout.append(visual, information);
