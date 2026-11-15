@@ -1,18 +1,35 @@
 import {
   vehicleSpecifications,
   getSpecificationFields,
+  specificationGroupOrder,
 } from '../data/vehicle-specifications.js';
 import { localURL } from './routes.js';
 import { money } from '../data/products.js';
 
-// Chỉ gộp nhóm trình bày; giữ nguyên ID, giá trị và nguồn của từng trường.
-const displayGroups = [
-  ['Động cơ & vận hành', ['Động cơ và vận hành']],
-  ['Pin, sạc & quãng đường', ['Pin', 'Sạc', 'Quãng đường']],
-  ['Khung gầm & an toàn', ['Khung gầm', 'An toàn']],
-  ['Công nghệ & tiện nghi', ['Công nghệ', 'Tiện nghi']],
-  ['Nhiên liệu & khí thải', ['Nhiên liệu và khí thải']],
+// Nét SVG dùng chung, chỉ mang tính trang trí; tên nhóm là nhãn truy cập.
+const groupIcons = [
+  'M4 8h16v10H4z M7 8V5h10v3 M8 12h8 M8 15h4',
+  'M5 7h14v13H5z M9 7V4h6v3 M9 13h6 M12 10v6',
+  'M13 2 5 14h6l-1 8 9-13h-6z',
+  'M5 19V5h7l3 4h5v10 M5 5h7 M5 19h15',
+  'M4 7h16v10H4z M7 4v3 M17 4v3 M7 17v3 M17 17v3',
+  'M12 3 4 6v6c0 5 8 9 8 9s8-4 8-9V6z M8 12l3 3 5-6',
+  'M3 4h18v13H3z M8 21h8 M12 17v4',
+  'M6 3v11h12v7 M6 9h9v5 M3 14h3v7',
+  'M3 7h18v10H3z M7 7v4 M11 7v3 M15 7v4 M19 7v3',
+  'M5 3h9v18H5z M5 9h9 M14 7h3l3 4v7h-3v-6',
 ];
+function categoryHeading(title, index) {
+  const heading = element('h3', null, 'vehicle-spec-category');
+  const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+  svg.setAttribute('viewBox', '0 0 24 24');
+  svg.setAttribute('aria-hidden', 'true');
+  const path = document.createElementNS(svg.namespaceURI, 'path');
+  path.setAttribute('d', groupIcons[index]);
+  svg.append(path);
+  heading.append(svg, element('span', title));
+  return heading;
+}
 
 const element = (tag, text, className) => {
   const node = document.createElement(tag);
@@ -70,7 +87,10 @@ export function mountVehicleSpecifications(main, viewer) {
       model.historical ? 'HỒ SƠ XE LỊCH SỬ' : 'KHÁM PHÁ PHIÊN BẢN',
       'vehicle-kicker',
     ),
-    element('h2', model.variants.length > 1 ? 'Chọn phiên bản' : model.name),
+    element(
+      'h2',
+      model.variants.length > 1 ? 'Chọn phiên bản' : 'Phiên bản & giá',
+    ),
   );
   const choices = element('div', null, 'vehicle-variant-choices');
   choices.setAttribute('role', 'group');
@@ -93,16 +113,6 @@ export function mountVehicleSpecifications(main, viewer) {
     configurator = configurator.parentElement;
   if (configurator && configurator !== summary) summary.after(configurator);
   (configurator || summary).after(specifications);
-  const visual = element('figure');
-  const illustration = new Image();
-  illustration.src = localURL(viewer.image);
-  illustration.alt = model.name + ' — hình tham chiếu kích thước';
-  visual.append(
-    illustration,
-    element('figcaption', 'Ảnh tham chiếu, không phải bản vẽ theo tỉ lệ'),
-  );
-  const visualData = element('div');
-  visual.append(visualData);
   const buttons = model.variants.map((variant, index) => {
     const button = element('button', variant.name);
     button.type = 'button';
@@ -172,26 +182,40 @@ export function mountVehicleSpecifications(main, viewer) {
     );
     summary.dataset.selectedVariant = String(index);
     specifications.replaceChildren(element('h2', 'Thông số kỹ thuật'));
-    const layout = element('div', null, 'vehicle-technical-grid');
     const information = element('div', null, 'vehicle-spec-information');
     const fields = getSpecificationFields(model, index);
-    const dimensions = fields.filter((field) => field.group === 'Kích thước');
-    visualData.replaceChildren(element('h3', 'Kích thước'), table(dimensions));
-    visualData.hidden = !dimensions.length;
-    for (const [title, groups] of displayGroups) {
-      const rows = groups.flatMap((group) =>
-        fields.filter((field) => field.group === group),
-      );
+    const groups = [
+      ...specificationGroupOrder.filter((title) => title !== 'Kích thước'),
+      'Kích thước',
+    ];
+    for (const title of groups) {
+      const rows = fields.filter((field) => field.group === title);
       if (!rows.length) continue;
       const groupBlock = element('div', null, 'vehicle-spec-group');
       const fieldTable = table(rows);
       fieldTable.className = 'vehicle-spec-fields';
       fieldTable.setAttribute('aria-label', title);
-      groupBlock.append(element('h3', title), fieldTable);
+      groupBlock.append(
+        categoryHeading(
+          title === 'Động cơ và vận hành' ? 'Động cơ & vận hành' : title,
+          [
+            'Động cơ và vận hành',
+            'Pin',
+            'Sạc',
+            'Quãng đường',
+            'Khung gầm',
+            'An toàn',
+            'Công nghệ',
+            'Tiện nghi',
+            'Kích thước',
+            'Nhiên liệu và khí thải',
+          ].indexOf(title),
+        ),
+        fieldTable,
+      );
       information.append(groupBlock);
     }
-    layout.append(visual, information);
-    specifications.append(layout);
+    specifications.append(information);
     const source = element('a', 'Thông tin từ VinFast');
     source.href = model.source;
     source.target = '_blank';

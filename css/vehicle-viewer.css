@@ -1,6 +1,38 @@
 .vehicle-configurator {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
+  padding-block: 32px 16px;
 }
+.vehicle-configurator h1 {
+  font-size: clamp(30px, 4vw, 48px);
+  margin: 0 0 16px;
+}
+.vehicle-configurator > [data-color-name] {
+  margin: 12px 0 0;
+  border: 0;
+  font-size: 16px;
+  font-weight: 500;
+}
+.vehicle-configurator .vehicle-preview-label {
+  margin: 8px 0 0;
+  min-height: 1.5em;
+  font-size: 13px;
+  color: #536575;
+}
+.vehicle-reference-notes {
+  padding-block: 24px;
+  font-size: 14px;
+  color: #536575;
+}
+.vehicle-reference-notes p:empty {
+  display: none;
+}
+.vehicle-reference-notes .viewer-note {
+  margin-block: 10px;
+}
+
 .vehicle-configurator .swatches {
   justify-content: center;
 }
@@ -18,11 +50,6 @@
   .color-gallery:has(.swatches > button:only-child)
   .gallery-arrow {
   display: none;
-}
-.configuration[data-vehicle-viewer] > .viewer-controls,
-.configuration[data-vehicle-viewer] > .viewer-note {
-  grid-column: 1 / -1;
-  margin: 0;
 }
 [data-vehicle-viewer] {
   min-width: 0;
@@ -131,10 +158,7 @@
 [data-vehicle-viewer] .exterior-swatches button span {
   background: var(--swatch);
 }
-[data-vehicle-viewer] .exterior-status {
-  min-height: 5.6em;
-}
-[data-vehicle-viewer] .exterior-source a {
+.vehicle-reference-notes .exterior-source a {
   color: #1464f4;
 }
 @media (prefers-reduced-motion: reduce) {

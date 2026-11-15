@@ -88,6 +88,44 @@ const { start } = require('./static-server.cjs');
         }
         await checkFields(0);
         assert.equal(await technical.locator('details').count(), 0);
+        const configurator = page.locator('[data-vehicle-viewer]');
+        assert.equal(await page.locator('main h1').count(), 1);
+        assert.ok(
+          await configurator.evaluate((root) => {
+            const title = root.querySelector('h1');
+            const stage = root.querySelector('.viewer-stage');
+            const swatches = root.querySelector('.swatches');
+            const name = root.querySelector('[data-color-name]');
+            const box = stage.getBoundingClientRect();
+            const parent = root.getBoundingClientRect();
+            return (
+              root.parentElement ===
+                document.querySelector('main').firstElementChild &&
+              title.nextElementSibling === stage &&
+              swatches.nextElementSibling === name &&
+              Math.abs(box.x + box.width / 2 - parent.x - parent.width / 2) <
+                1 &&
+              !root.querySelector(
+                '.exterior-source, .exterior-scope, .exterior-status',
+              )
+            );
+          }),
+        );
+        assert.ok(
+          await technical.locator('.vehicle-spec-group').evaluateAll((groups) =>
+            groups.every((group) => {
+              const heading = group.querySelector('h3');
+              const icon = heading.querySelector('svg path');
+              const table = group.querySelector('table');
+              const style = getComputedStyle(group);
+              return (
+                Boolean(icon?.getAttribute('d')) &&
+                Number.parseFloat(style.borderRadius) > 0 &&
+                table.getBoundingClientRect().width > 0
+              );
+            }),
+          ),
+        );
         const rows = technical.locator('tr');
         for (const row of await rows.all()) assert.ok(await row.isVisible());
         assert.ok(
