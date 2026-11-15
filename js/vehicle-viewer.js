@@ -294,7 +294,7 @@ export function mountVehicleViewer(root, config, { stage, swatches, name }) {
       );
       if (index < 0 || index === selected) return;
       selected = index;
-      updateZoom(1);
+      // Đổi màu chỉ crossfade; giữ mức zoom để xe không đột ngột đổi kích thước.
       if (mode === '360') showFrame(frame);
       if (mode === '3d') applyMaterial();
     }).observe(swatches, {

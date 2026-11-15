@@ -7,6 +7,7 @@ import { mountVehicleViewer } from './vehicle-viewer.js';
 import { exteriorColors } from '../data/exterior-colors.js';
 import { mountExteriorColors } from './exterior-colors.js';
 import { mountVehicleSpecifications } from './vehicle-specifications.js';
+import { mountVehicleFeatures } from './vehicle-features.js';
 
 const id =
   document.body.dataset.page === 'product'
@@ -70,4 +71,5 @@ if (config) {
     elements,
   );
   mountVehicleSpecifications(main, config);
+  mountVehicleFeatures(main, config);
 }

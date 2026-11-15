@@ -83,8 +83,7 @@
   align-items: start;
 }
 .vehicle-technical figure {
-  position: sticky;
-  top: 96px;
+  position: static;
   margin: 0;
   background: #f5f7fa;
   padding: 20px;
@@ -117,18 +116,101 @@
   font-weight: 500;
   color: #536575;
 }
-.vehicle-technical details {
+.vehicle-technical .vehicle-spec-group {
   border-bottom: 1px solid #dbe2e9;
 }
-.vehicle-technical summary {
+.vehicle-technical .vehicle-spec-group h3 {
   padding: 20px 0;
   font-weight: 600;
-  cursor: pointer;
 }
 .vehicle-source-note {
   color: #667482;
   font-size: 14px;
   line-height: 1.7;
+  min-height: 1.7em;
+}
+.vehicle-features {
+  padding-block: 48px;
+  overflow-anchor: none;
+}
+.vehicle-features > h2 {
+  text-align: center;
+  font-size: clamp(28px, 4vw, 42px);
+}
+.vehicle-feature-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  overflow-x: auto;
+  padding: 20px 4px 28px;
+}
+.vehicle-feature-tabs button {
+  flex: 0 0 auto;
+  border: 0;
+  border-bottom: 2px solid transparent;
+  background: transparent;
+  color: #536575;
+  padding: 12px;
+  cursor: pointer;
+}
+.vehicle-feature-tabs button[aria-selected='true'] {
+  color: #1464f4;
+  border-color: #1464f4;
+}
+.vehicle-feature-tabs button:focus-visible {
+  outline: 2px solid #1464f4;
+  outline-offset: 2px;
+}
+.vehicle-feature-stage {
+  display: grid;
+  isolation: isolate;
+  overflow: hidden;
+}
+.vehicle-feature-grid {
+  grid-area: 1 / 1;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+  background: white;
+  align-self: start;
+}
+.vehicle-feature-grid[hidden] {
+  display: none;
+}
+.vehicle-feature-grid[aria-hidden='false'] {
+  z-index: 1;
+}
+.vehicle-feature-card {
+  background: #f5f7fa;
+  min-width: 0;
+}
+.vehicle-feature-card > img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3 / 2;
+  object-fit: contain;
+}
+.vehicle-feature-card > div {
+  padding: 24px;
+}
+.vehicle-feature-card h3 {
+  margin: 0 0 12px;
+}
+.vehicle-feature-card small,
+.vehicle-feature-card a {
+  display: block;
+  font-size: 12px;
+  color: #536575;
+  margin-top: 12px;
+}
+@media (max-width: 1023px) {
+  .vehicle-feature-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .vehicle-feature-tabs {
+    justify-content: flex-start;
+  }
 }
 @media (max-width: 767px) {
   .vehicle-summary-scene,
@@ -149,5 +231,8 @@
   }
   .vehicle-quick-stats dd {
     font-size: 18px;
+  }
+  .vehicle-feature-grid {
+    grid-template-columns: minmax(0, 1fr);
   }
 }

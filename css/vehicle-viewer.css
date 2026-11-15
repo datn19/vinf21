@@ -106,12 +106,22 @@
 [data-vehicle-viewer] .exterior-stage {
   display: grid;
   isolation: isolate;
+  width: 100%;
+  min-width: 0;
+  height: clamp(220px, 40vw, 500px);
+  grid-template-columns: minmax(0, 1fr);
+  grid-template-rows: minmax(0, 1fr);
+  overflow-anchor: none;
 }
 [data-vehicle-viewer] .exterior-stage img {
   grid-area: 1 / 1;
   display: block;
   width: 100%;
-  height: clamp(220px, 40vw, 500px);
+  height: 100%;
+  min-height: 0;
+  max-height: none;
+  margin: 0;
+  object-position: center;
   object-fit: contain;
 }
 [data-vehicle-viewer] .exterior-swatches {
@@ -122,7 +132,7 @@
   background: var(--swatch);
 }
 [data-vehicle-viewer] .exterior-status {
-  min-height: 2.8em;
+  min-height: 5.6em;
 }
 [data-vehicle-viewer] .exterior-source a {
   color: #1464f4;

@@ -65,10 +65,64 @@ const { start } = require('./static-server.cjs');
                 .selectedVariant === '0',
           );
         }
-        assert.ok(await technical.locator('details').count());
-        const details = technical.locator('details').last();
-        await details.locator('summary').click();
-        assert.equal(await details.evaluate((node) => node.open), true);
+        assert.equal(await technical.locator('details').count(), 0);
+        const rows = technical.locator('tr');
+        for (const row of await rows.all()) assert.ok(await row.isVisible());
+        assert.ok(
+          await technical.evaluate((node) =>
+            node.previousElementSibling.matches(
+              '[data-vehicle-viewer], :has([data-vehicle-viewer])',
+            ),
+          ),
+        );
+        const features = page.locator('[data-vehicle-features]');
+        await features.locator('[role=tab][aria-selected=true]').waitFor();
+        assert.ok(
+          await features.evaluate((node) =>
+            node.previousElementSibling.matches('[data-vehicle-technical]'),
+          ),
+        );
+        const tabs = features.getByRole('tab');
+        for (let i = 0; i < (await tabs.count()); i++) {
+          await tabs.nth(i).click();
+          await page.waitForFunction(
+            (i) =>
+              document.querySelector('[data-vehicle-features]').dataset
+                .selectedCategory === String(i),
+            i,
+          );
+          const activePanel = features.locator(
+            '[role=tabpanel][aria-hidden=false]',
+          );
+          assert.equal(await activePanel.count(), 1);
+          assert.ok(
+            await activePanel
+              .locator('img')
+              .evaluateAll(
+                (images) =>
+                  images.length > 0 &&
+                  images.every(
+                    (image) => image.complete && image.naturalWidth > 0,
+                  ),
+              ),
+          );
+        }
+        await tabs.last().focus();
+        await page.keyboard.press('Home');
+        await page.waitForFunction(
+          () =>
+            document.querySelector('[data-vehicle-features]').dataset
+              .selectedCategory === '0',
+        );
+        await tabs.evaluateAll((buttons) => {
+          for (let i = 0; i < 9; i++) buttons[i % buttons.length].click();
+          buttons[0].click();
+        });
+        await page.waitForFunction(
+          () =>
+            document.querySelector('[data-vehicle-features]').dataset
+              .selectedCategory === '0',
+        );
         assert.equal(await page.locator('[data-vehicle-viewer]').count(), 1);
         assert.equal(
           await page.evaluate(
@@ -81,7 +135,7 @@ const { start } = require('./static-server.cjs');
         assert.ok(await image.evaluate((image) => image.naturalWidth > 0));
         results.push({ id: vehicle.id, width, status: 'PASS' });
         if (['vf6', 'kinet', 'vf8', 'fadil'].includes(vehicle.id)) {
-          await technical.scrollIntoViewIfNeeded();
+          await features.scrollIntoViewIfNeeded();
           await page.screenshot({
             path: path.join(
               os.tmpdir(),

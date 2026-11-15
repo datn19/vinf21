@@ -70,6 +70,27 @@ export function mountVehicleSpecifications(main, viewer) {
   if (oldSpecs && oldSpecs !== oldVersions && oldSpecs.isConnected)
     oldSpecs.replaceWith(specifications);
   else summary.after(specifications);
+  // Đưa toàn bộ cấu hình lên trước bảng; giữ nguyên node và các listener đang có.
+  const viewerRoot = main.querySelector('[data-vehicle-viewer]');
+  let configurator = viewerRoot;
+  while (configurator?.parentElement && configurator.parentElement !== main)
+    configurator = configurator.parentElement;
+  if (configurator && configurator !== summary) summary.after(configurator);
+  (configurator || summary).after(specifications);
+  const visual = element('figure');
+  const illustration = new Image();
+  illustration.src = localURL(viewer.image);
+  illustration.alt = model.name + ' — hình tham chiếu kích thước';
+  visual.append(
+    illustration,
+    element('figcaption', 'Ảnh tham chiếu, không phải bản vẽ theo tỉ lệ'),
+  );
+  const dimensions = model.groups
+    .flatMap((group) => group.rows)
+    .filter(([label]) =>
+      /Dài|Kích thước|Chiều dài cơ sở|Chiều cao yên|Khoảng sáng/.test(label),
+    );
+  if (dimensions.length) visual.append(table(dimensions));
   const buttons = model.variants.map((variant, index) => {
     const button = element('button', variant.name);
     button.type = 'button';
@@ -140,22 +161,16 @@ export function mountVehicleSpecifications(main, viewer) {
     summary.dataset.selectedVariant = String(index);
     specifications.replaceChildren(element('h2', 'Thông số kỹ thuật'));
     const layout = element('div', null, 'vehicle-technical-grid');
-    const visual = element('figure');
-    const illustration = image.cloneNode();
-    visual.append(
-      illustration,
-      element('figcaption', 'Ảnh tham khảo · trang bị tùy phiên bản'),
-    );
     const information = element('div');
     information.append(
       element('h3', variant.name),
       table([...variant.quick, ...variant.rows]),
     );
     for (const group of model.groups) {
-      const details = element('details');
-      details.open = model.groups.indexOf(group) === 0;
-      details.append(element('summary', group.title), table(group.rows));
-      information.append(details);
+      if (!group.rows.length) continue;
+      const groupBlock = element('div', null, 'vehicle-spec-group');
+      groupBlock.append(element('h3', group.title), table(group.rows));
+      information.append(groupBlock);
     }
     layout.append(visual, information);
     specifications.append(layout);
@@ -185,6 +200,9 @@ export function mountVehicleSpecifications(main, viewer) {
     loading.textContent = variant.image
       ? ''
       : 'Ảnh tham chiếu chung; chưa có ảnh riêng cho cấu hình này.';
+    main.dispatchEvent(
+      new CustomEvent('vehiclevariantchange', { detail: { index } }),
+    );
   }
   select(0);
 }
