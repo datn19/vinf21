@@ -13,6 +13,32 @@ const element = (tag, text, className) => {
   if (className) node.className = className;
   return node;
 };
+// Icon trang trí dùng chung; tên nhóm vẫn là nhãn đọc cho công cụ hỗ trợ.
+const specificationIcons = {
+  'Động cơ và vận hành': 'M9 3h6l1 3 3 1 2 5-2 5-3 1-1 3H9l-1-3-3-1-2-5 2-5 3-1z M15 12a3 3 0 1 0-6 0 3 3 0 0 0 6 0',
+  Pin: 'M5 7h14v14H5z M9 7V3h6v4 M9 14h6 M12 11v6',
+  Sạc: 'm13 2-8 12h6l-1 8L19 9h-6z',
+  'Quãng đường': 'M7 3 3 21 M17 3l4 18 M12 4v3 M12 11v3 M12 18v3',
+  'Khung gầm': 'M4 7h16v10H4z M7 3v4 M17 3v4 M7 17v4 M17 17v4',
+  'An toàn': 'm12 3-8 3v6c0 5 8 9 8 9s8-4 8-9V6z M8 12l3 3 5-6',
+  'Công nghệ': 'M3 4h18v13H3z M8 21h8 M12 17v4',
+  'Tiện nghi': 'M6 3v11h12v7 M6 9h9v5 M3 14h3v7',
+  'Nhiên liệu và khí thải': 'M5 3h9v18H5z M5 9h9 M14 7h3l3 4v7h-3v-6',
+};
+function specificationHeading(title) {
+  const heading = element('h3');
+  const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+  svg.setAttribute('viewBox', '0 0 24 24');
+  svg.setAttribute('aria-hidden', 'true');
+  const path = document.createElementNS(svg.namespaceURI, 'path');
+  path.setAttribute('d', specificationIcons[title]);
+  svg.append(path);
+  heading.append(
+    svg,
+    element('span', title === 'Động cơ và vận hành' ? 'Động cơ & vận hành' : title),
+  );
+  return heading;
+}
 function table(rows) {
   const result = element('table');
   const body = element('tbody');
@@ -191,7 +217,9 @@ syncFavoriteButton();
       const rows = fields.filter((field) => field.group === title);
       if (!rows.length) continue;
       const groupBlock = element('div', null, 'vehicle-spec-group');
-      groupBlock.append(element('h3', title), table(rows));
+      const content = element('div', null, 'vehicle-spec-content');
+      content.append(table(rows));
+      groupBlock.append(specificationHeading(title), content);
       information.append(groupBlock);
     }
     layout.append(visual, information);
