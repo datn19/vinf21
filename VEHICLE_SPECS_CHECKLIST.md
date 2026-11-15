@@ -4,7 +4,7 @@ Ngày đối chiếu: 15/11/2026. Phạm vi: 42 mẫu xe, 50 cấu hình trong w
 
 COMPLETE nghĩa là không còn trường thiếu hoặc mâu thuẫn đã ghi nhận trong phạm vi nguồn đối chiếu; không có nghĩa hãng công bố mọi phép đo có thể có. PARTIAL nghĩa là còn dữ liệu, phiên bản hoặc điều kiện đo chưa xác minh. Không suy diễn từ công suất/pin.
 
-Kết quả dữ liệu: {"PARTIAL":39,"COMPLETE":3}. Số trường dưới đây là số ID chuẩn duy nhất của mỗi cấu hình, tính cả nhóm Kích thước; không đếm lại chỉ số hero. Công suất danh định/cực đại, pin tổng/khả dụng, chuẩn quãng đường và cấu hình pin khác nhau được giữ riêng.
+Kết quả dữ liệu: {"PARTIAL":39,"COMPLETE":3}. Số trường dưới đây là số ID chuẩn duy nhất của mỗi cấu hình, tính cả bảng kích thước bên trái; không đếm lại chỉ số hero. Công suất danh định/cực đại, pin tổng/khả dụng, chuẩn quãng đường và cấu hình pin khác nhau được giữ riêng.
 
 | Mẫu / route | Phiên bản: số trường duy nhất | Trạng thái | Thiếu / giới hạn | Mâu thuẫn nguồn và cách xử lý | Nguồn | Kiểm thử |
 |---|---|---|---|---|---|---|
@@ -64,11 +64,3 @@ Kết quả dữ liệu: {"PARTIAL":39,"COMPLETE":3}. Số trường dưới đ�
 - tests/vehicle-specifications.cjs: 126 trường hợp trình duyệt; mọi ID xuất hiện đúng một lần, luôn hiện, cập nhật theo phiên bản; tab đặc điểm và responsive.
 - tests/vehicle-viewers.cjs: 126 trường hợp; màu, zoom và swipe khi có gallery, không tràn ngang.
 - Đã xem ảnh chụp trình duyệt thực tế bố cục thông số desktop/tablet/mobile; không xem thủ công từng ảnh của 126 trường hợp.
-
-## Giao diện thống nhất — 15/11/2026
-
-Áp dụng cùng component cho đủ 42 route ở trên: tiêu đề, ảnh căn giữa, swatches và tên màu; ghi chú nguồn được chuyển xuống phần tham khảo. Giữ thông báo ngắn khi màu chỉ là mô phỏng hoặc chưa có ảnh. Banner giới thiệu cũ được giữ ở phần nội dung phía dưới.
-
-Thông số dùng các thẻ nền sáng bo góc, biểu tượng SVG và tên nhóm bên trái, bảng nhãn/giá trị bên phải; tablet/mobile xếp một cột. Kích thước chuyển thành nhóm trong cùng hệ thống, không lặp lại dưới ảnh. Bỏ đường kẻ dưới tiêu đề nhóm và dòng cuối bảng; chỉ giữ phân cách giữa các hàng.
-
-Trạng thái giao diện: COMPLETE cho 42 route sau kiểm thử trình duyệt ở 1440/768/390 px. Trạng thái dữ liệu không đổi: 3 COMPLETE (Kinet, Vero X, Kyo), 39 PARTIAL; các trường còn thiếu và nguồn của từng mẫu nằm trong bảng phía trên. Không có dữ liệu kỹ thuật mới được suy diễn trong lần chỉnh layout này.
