@@ -6,6 +6,7 @@ import { localURL } from './routes.js';
 import { mountVehicleViewer } from './vehicle-viewer.js';
 import { exteriorColors } from '../data/exterior-colors.js';
 import { mountExteriorColors } from './exterior-colors.js';
+import { mountVehicleSpecifications } from './vehicle-specifications.js';
 
 const id =
   document.body.dataset.page === 'product'
@@ -14,6 +15,10 @@ const id =
 const config = vehicleViewers.find((item) => item.id === id);
 const main = document.querySelector('main');
 if (config) {
+  const specificationStyles = document.createElement('link');
+  specificationStyles.rel = 'stylesheet';
+  specificationStyles.href = localURL('css/vehicle-specifications.css');
+  document.head.append(specificationStyles);
   let root = main.querySelector('[data-color-gallery]');
   let stage = root?.querySelector('.color-gallery-stage');
   let swatches = root?.querySelector('.swatches');
@@ -64,4 +69,5 @@ if (config) {
       : config,
     elements,
   );
+  mountVehicleSpecifications(main, config);
 }
