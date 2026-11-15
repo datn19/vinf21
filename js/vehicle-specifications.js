@@ -1,18 +1,11 @@
 import {
   vehicleSpecifications,
   getSpecificationFields,
+  specificationGroupOrder,
 } from '../data/vehicle-specifications.js';
 import { localURL } from './routes.js';
 import { money } from '../data/products.js';
-
-// Chỉ gộp nhóm trình bày; giữ nguyên ID, giá trị và nguồn của từng trường.
-const displayGroups = [
-  ['Động cơ & vận hành', ['Động cơ và vận hành']],
-  ['Pin, sạc & quãng đường', ['Pin', 'Sạc', 'Quãng đường']],
-  ['Khung gầm & an toàn', ['Khung gầm', 'An toàn']],
-  ['Công nghệ & tiện nghi', ['Công nghệ', 'Tiện nghi']],
-  ['Nhiên liệu & khí thải', ['Nhiên liệu và khí thải']],
-];
+import { favoriteIds } from './favorite-store.js';
 
 const element = (tag, text, className) => {
   const node = document.createElement(tag);
@@ -140,15 +133,29 @@ export function mountVehicleSpecifications(main, viewer) {
           : model.name,
       ),
     );
-    description.append(
-      element(
-        'p',
-        variant.price != null
-          ? money(variant.price)
-          : 'Giá: chưa xác minh theo phiên bản/thời điểm',
-        'vehicle-summary-price',
-      ),
+    const price = element(
+      'p',
+      variant.price != null
+        ? money(variant.price)
+        : '\u0047i\u00e1: ch\u01b0a x\u00e1c minh theo phi\u00ean b\u1ea3n/th\u1eddi \u0111i\u1ec3m',
+      'vehicle-summary-price',
     );
+    const favoriteButton = element('button');
+    favoriteButton.type = 'button';
+    favoriteButton.className = 'favorite-button vehicle-favorite-button';
+    favoriteButton.dataset.favorite = model.id;
+    favoriteButton.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8l1.1 1.1L12 21l7.8-7.5 1.1-1.1a5.5 5.5 0 0 0-.1-7.8Z"/></svg>';
+    function syncFavoriteButton() {
+      const active = favoriteIds().has(model.id);
+      favoriteButton.classList.toggle('is-favorite', active);
+      favoriteButton.setAttribute('aria-pressed', String(active));
+      favoriteButton.setAttribute('aria-label', active ? 'Bỏ khỏi danh sách yêu thích' : 'Thêm vào danh sách yêu thích');
+      favoriteButton.title = active ? 'Bỏ khỏi yêu thích' : 'Thêm vào yêu thích';
+    }
+syncFavoriteButton();
+    const priceRow = element('div', null, 'vehicle-summary-price-row');
+    priceRow.append(price, favoriteButton);
+    description.append(priceRow);
     const quick = element('dl', null, 'vehicle-quick-stats');
     for (const [label, value] of [
       ...variant.quick,
@@ -178,16 +185,13 @@ export function mountVehicleSpecifications(main, viewer) {
     const dimensions = fields.filter((field) => field.group === 'Kích thước');
     visualData.replaceChildren(element('h3', 'Kích thước'), table(dimensions));
     visualData.hidden = !dimensions.length;
-    for (const [title, groups] of displayGroups) {
-      const rows = groups.flatMap((group) =>
-        fields.filter((field) => field.group === group),
-      );
+    for (const title of specificationGroupOrder.filter(
+      (title) => title !== 'Kích thước',
+    )) {
+      const rows = fields.filter((field) => field.group === title);
       if (!rows.length) continue;
       const groupBlock = element('div', null, 'vehicle-spec-group');
-      const fieldTable = table(rows);
-      fieldTable.className = 'vehicle-spec-fields';
-      fieldTable.setAttribute('aria-label', title);
-      groupBlock.append(element('h3', title), fieldTable);
+      groupBlock.append(element('h3', title), table(rows));
       information.append(groupBlock);
     }
     layout.append(visual, information);
