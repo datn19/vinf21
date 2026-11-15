@@ -1,4 +1,8 @@
-import { vehicleSpecifications } from '../data/vehicle-specifications.js';
+import {
+  vehicleSpecifications,
+  getSpecificationFields,
+  specificationGroupOrder,
+} from '../data/vehicle-specifications.js';
 import { localURL } from './routes.js';
 import { money } from '../data/products.js';
 
@@ -11,8 +15,12 @@ const element = (tag, text, className) => {
 function table(rows) {
   const result = element('table');
   const body = element('tbody');
-  for (const [label, value] of rows) {
+  for (const item of rows) {
+    const [label, value] = Array.isArray(item)
+      ? item
+      : [item.label, item.value];
     const row = element('tr');
+    if (item.id) row.dataset.specField = item.id;
     const heading = element('th', label);
     heading.scope = 'row';
     row.append(heading, element('td', value));
@@ -85,12 +93,8 @@ export function mountVehicleSpecifications(main, viewer) {
     illustration,
     element('figcaption', 'Ảnh tham chiếu, không phải bản vẽ theo tỉ lệ'),
   );
-  const dimensions = model.groups
-    .flatMap((group) => group.rows)
-    .filter(([label]) =>
-      /Dài|Kích thước|Chiều dài cơ sở|Chiều cao yên|Khoảng sáng/.test(label),
-    );
-  if (dimensions.length) visual.append(table(dimensions));
+  const visualData = element('div');
+  visual.append(visualData);
   const buttons = model.variants.map((variant, index) => {
     const button = element('button', variant.name);
     button.type = 'button';
@@ -161,15 +165,18 @@ export function mountVehicleSpecifications(main, viewer) {
     summary.dataset.selectedVariant = String(index);
     specifications.replaceChildren(element('h2', 'Thông số kỹ thuật'));
     const layout = element('div', null, 'vehicle-technical-grid');
-    const information = element('div');
-    information.append(
-      element('h3', variant.name),
-      table([...variant.quick, ...variant.rows]),
-    );
-    for (const group of model.groups) {
-      if (!group.rows.length) continue;
+    const information = element('div', null, 'vehicle-spec-information');
+    const fields = getSpecificationFields(model, index);
+    const dimensions = fields.filter((field) => field.group === 'Kích thước');
+    visualData.replaceChildren(element('h3', 'Kích thước'), table(dimensions));
+    visualData.hidden = !dimensions.length;
+    for (const title of specificationGroupOrder.filter(
+      (title) => title !== 'Kích thước',
+    )) {
+      const rows = fields.filter((field) => field.group === title);
+      if (!rows.length) continue;
       const groupBlock = element('div', null, 'vehicle-spec-group');
-      groupBlock.append(element('h3', group.title), table(group.rows));
+      groupBlock.append(element('h3', title), table(rows));
       information.append(groupBlock);
     }
     layout.append(visual, information);

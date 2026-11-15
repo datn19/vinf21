@@ -9,7 +9,7 @@ const { start } = require('./static-server.cjs');
 
 (async () => {
   const { vehicleViewers } = await import('../data/vehicle-viewers.js');
-  const { vehicleSpecifications } =
+  const { vehicleSpecifications, getSpecificationFields } =
     await import('../data/vehicle-specifications.js');
   const server = await start('/vinf21');
   const browser = await chromium.launch();
@@ -35,6 +35,26 @@ const { start } = require('./static-server.cjs');
         );
         const summary = page.locator('[data-vehicle-summary]');
         const technical = page.locator('[data-vehicle-technical]');
+        const checkFields = async (index) => {
+          const expected = getSpecificationFields(model, index)
+            .map((field) => field.id)
+            .sort();
+          const rendered = await technical
+            .locator('[data-spec-field]')
+            .evaluateAll((rows) =>
+              rows.map((row) => row.dataset.specField).sort(),
+            );
+          assert.deepEqual(
+            rendered,
+            expected,
+            'Every canonical field displayed once',
+          );
+          assert.equal(
+            new Set(rendered).size,
+            rendered.length,
+            'No duplicated fields across image and tables',
+          );
+        };
         assert.equal(await summary.count(), 1);
         assert.equal(await technical.count(), 1);
         if (model.variants.length > 1) {
@@ -54,6 +74,7 @@ const { start } = require('./static-server.cjs');
             );
             for (const [, value] of model.variants[index].rows)
               assert.ok((await technical.textContent()).includes(value));
+            await checkFields(index);
           }
           await buttons.evaluateAll((buttons) => {
             for (let i = 0; i < 12; i++) buttons[i % buttons.length].click();
@@ -65,6 +86,7 @@ const { start } = require('./static-server.cjs');
                 .selectedVariant === '0',
           );
         }
+        await checkFields(0);
         assert.equal(await technical.locator('details').count(), 0);
         const rows = technical.locator('tr');
         for (const row of await rows.all()) assert.ok(await row.isVisible());

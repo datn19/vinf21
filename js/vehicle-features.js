@@ -66,6 +66,7 @@ export function mountVehicleFeatures(main, viewer) {
     }
     if (current !== ticket) return;
     const incoming = panels[index];
+    incoming.dataset.cardCount = String(group.cards.length);
     incoming.replaceChildren();
     for (const card of group.cards) {
       const article = node('article', null, 'vehicle-feature-card');
@@ -127,6 +128,9 @@ export function mountVehicleFeatures(main, viewer) {
     });
     stage.style.height = '';
     status.textContent = '';
+    // Chỉ nạp trước tab kế tiếp, không tải toàn bộ gallery khi mở trang.
+    for (const card of groups[(index + 1) % groups.length].cards)
+      preload(card.image).catch(() => {});
   }
   function render(index = 0) {
     ticket++;
