@@ -103,6 +103,25 @@
 [data-vehicle-viewer] .swatches {
   flex-wrap: wrap;
 }
+[data-vehicle-viewer] .exterior-stage img {
+  display: block;
+  width: 100%;
+  height: clamp(220px, 40vw, 500px);
+  object-fit: contain;
+}
+[data-vehicle-viewer] .exterior-swatches {
+  gap: 14px;
+  padding: 5px;
+}
+[data-vehicle-viewer] .exterior-swatches button span {
+  background: var(--swatch);
+}
+[data-vehicle-viewer] .exterior-status {
+  min-height: 2.8em;
+}
+[data-vehicle-viewer] .exterior-source a {
+  color: #1464f4;
+}
 @media (prefers-reduced-motion: reduce) {
   [data-vehicle-viewer] .viewer-stage img {
     transition: none;

@@ -10,9 +10,13 @@ const { start } = require('./static-server.cjs');
 
 (async () => {
   const { vehicleViewers } = await import('../data/vehicle-viewers.js');
-  const server = await start('/vinf21');
+  const { exteriorColors } = await import('../data/exterior-colors.js');
+  const server = await start('/vinf');
   const browser = await chromium.launch({ headless: true });
-  const output = path.join(os.tmpdir(), 'vinf-viewer-verification');
+  const output = path.join(
+    os.tmpdir(),
+    process.env.VIEWER_IDS ? 'vinf-viewer-focused' : 'vinf-viewer-verification',
+  );
   fs.mkdirSync(output, { recursive: true });
   const results = [];
   try {
@@ -28,10 +32,15 @@ const { start } = require('./static-server.cjs');
       let errors = [];
       page.on('pageerror', (error) => errors.push(error.message));
       for (const vehicle of vehicleViewers) {
+        if (
+          process.env.VIEWER_IDS &&
+          !process.env.VIEWER_IDS.split(',').includes(vehicle.id)
+        )
+          continue;
         errors = [];
         const row = { id: vehicle.id, width, colors: [], status: 'PASS' };
         try {
-          await page.goto(`${server.base}/vinf21/${vehicle.route}`);
+          await page.goto(`${server.base}/vinf/${vehicle.route}`);
           const viewer = page.locator('[data-vehicle-viewer]');
           await viewer.waitFor();
           await viewer.scrollIntoViewIfNeeded();
@@ -64,6 +73,10 @@ const { start } = require('./static-server.cjs');
           row.colors = await swatches.evaluateAll((buttons) =>
             buttons.map((button) => button.getAttribute('aria-label')),
           );
+          assert.equal(
+            row.colors.length,
+            exteriorColors[vehicle.id].colors.length,
+          );
           for (let index = 0; index < row.colors.length; index++) {
             if (width === 390) await swatches.nth(index).tap();
             else await swatches.nth(index).click();
@@ -80,18 +93,49 @@ const { start } = require('./static-server.cjs');
               },
               { id: vehicle.id, index },
             );
-            await page.waitForTimeout(50);
+            await page.waitForFunction(
+              () =>
+                document.querySelector('[data-vehicle-viewer]').dataset
+                  .previewState !== 'loading',
+            );
             const selection = await viewer.evaluate((root) => ({
               name: root.querySelector(
                 '[data-color-name], [data-viper-color-name], #selection',
               )?.textContent,
-              index: root.querySelector(
-                '.viewer-stage [data-swipe-index], .viewer-stage[data-swipe-index]',
-              )?.dataset.swipeIndex,
+              index: root.dataset.selectedColor,
             }));
             assert.equal(selection.name, row.colors[index], 'Color name');
             assert.equal(Number(selection.index), index, 'Image follows color');
+            const color = exteriorColors[vehicle.id].colors[index];
+            assert.equal(
+              await viewer.getAttribute('data-preview-state'),
+              color.mask
+                ? 'approximate'
+                : color.image
+                  ? 'original'
+                  : 'unavailable',
+            );
+            assert.ok(
+              await viewer
+                .locator('.exterior-stage img')
+                .evaluate((image) => image.naturalWidth > 0),
+            );
+            if (width === 1440)
+              await viewer.locator('.exterior-stage').screenshot({
+                path: path.join(output, `${vehicle.id}-color-${index}.png`),
+              });
           }
+          await page.waitForFunction(
+            () =>
+              document.querySelector('[data-vehicle-viewer]').dataset
+                .previewState !== 'loading',
+          );
+          if (row.colors.length > 1)
+            assert.equal(
+              Number(await viewer.getAttribute('data-selected-color')),
+              row.colors.length - 1,
+              'Rapid selection keeps latest image',
+            );
           if (row.colors.length > 1) {
             await swatches.last().focus();
             await page.keyboard.press('Home');

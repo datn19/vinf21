@@ -1,0 +1,972 @@
+{
+  "accessed": "2026-11-15",
+  "note": "Official product color images; educational reference, no license transfer. Names come from the product page, not inferred filenames.",
+  "assets": [
+    {
+      "id": "vero-x",
+      "index": 0,
+      "url": "https://static-cms-prod.vinfastauto.com/statics/e-scooter/vero-x/hinh-anh-vinfast-vero-x-mau-xanh-ngoc-mobile.webp",
+      "file": "assets/colors/vero-x/0.webp"
+    },
+    {
+      "id": "vero-x",
+      "index": 1,
+      "url": "https://static-cms-prod.vinfastauto.com/statics/e-scooter/vero-x/hinh-anh-vinfast-vero-x-mau-trang-mobile.webp",
+      "file": "assets/colors/vero-x/1.webp"
+    },
+    {
+      "id": "vero-x",
+      "index": 2,
+      "url": "https://static-cms-prod.vinfastauto.com/statics/e-scooter/vero-x/hinh-anh-vinfast-vero-x-mau-xanh-la-cay-mobile.webp",
+      "file": "assets/colors/vero-x/2.webp"
+    },
+    {
+      "id": "vero-x",
+      "index": 3,
+      "url": "https://static-cms-prod.vinfastauto.com/statics/e-scooter/vero-x/hinh-anh-vinfast-vero-x-mau-den-mobile.webp",
+      "file": "assets/colors/vero-x/3.webp"
+    },
+    {
+      "id": "kyo",
+      "index": 0,
+      "url": "https://static-cms-prod.vinfastauto.com/statics/e-scooter/kyo/hinh-anh-vinfast-kyo-mau-do-mobile.webp",
+      "file": "assets/colors/kyo/0.webp"
+    },
+    {
+      "id": "kyo",
+      "index": 1,
+      "url": "https://static-cms-prod.vinfastauto.com/statics/e-scooter/kyo/hinh-anh-vinfast-kyo-mau-xi-mang-mobile.webp",
+      "file": "assets/colors/kyo/1.webp"
+    },
+    {
+      "id": "kyo",
+      "index": 2,
+      "url": "https://static-cms-prod.vinfastauto.com/statics/e-scooter/kyo/hinh-anh-vinfast-kyo-mau-trang-mobile.webp",
+      "file": "assets/colors/kyo/2.webp"
+    },
+    {
+      "id": "kyo",
+      "index": 3,
+      "url": "https://static-cms-prod.vinfastauto.com/statics/e-scooter/kyo/hinh-anh-vinfast-kyo-mau-den-mobile.webp",
+      "file": "assets/colors/kyo/3.webp"
+    },
+    {
+      "id": "kyo",
+      "index": 4,
+      "url": "https://static-cms-prod.vinfastauto.com/statics/e-scooter/kyo/hinh-anh-vinfast-kyo-mau-nau-mobile.webp",
+      "file": "assets/colors/kyo/4.webp"
+    },
+    {
+      "id": "feliz-ii",
+      "index": 0,
+      "url": "https://static-cms-prod.vinfastauto.com/statics/e-scooter/feliz-ii/hinh-anh-vinfast-feliz-ii-mau-do-mobile-20250910.webp",
+      "file": "assets/colors/feliz-ii/0.webp"
+    },
+    {
+      "id": "feliz-ii",
+      "index": 1,
+      "url": "https://static-cms-prod.vinfastauto.com/statics/e-scooter/feliz-ii/hinh-anh-vinfast-feliz-ii-mau-xanh-ngoc-mobile-20250910.webp",
+      "file": "assets/colors/feliz-ii/1.webp"
+    },
+    {
+      "id": "feliz-ii",
+      "index": 2,
+      "url": "https://static-cms-prod.vinfastauto.com/statics/e-scooter/feliz-ii/hinh-anh-vinfast-feliz-ii-mau-trang-mobile-20250910.webp",
+      "file": "assets/colors/feliz-ii/2.webp"
+    },
+    {
+      "id": "feliz-ii",
+      "index": 3,
+      "url": "https://static-cms-prod.vinfastauto.com/statics/e-scooter/feliz-ii/hinh-anh-vinfast-feliz-ii-mau-den-mobile-20250910.webp",
+      "file": "assets/colors/feliz-ii/3.webp"
+    },
+    {
+      "id": "feliz-2025",
+      "index": 0,
+      "url": "https://static-cms-prod.vinfastauto.com/statics/e-scooter/feliz-2025/hinh-anh-vinfast-feliz-2025-mau-xanh-la-cay-mobile.webp",
+      "file": "assets/colors/feliz-2025/0.webp"
+    },
+    {
+      "id": "feliz-2025",
+      "index": 1,
+      "url": "https://static-cms-prod.vinfastauto.com/statics/e-scooter/feliz-2025/hinh-anh-vinfast-feliz-2025-mau-xanh-ngoc-mobile.webp",
+      "file": "assets/colors/feliz-2025/1.webp"
+    },
+    {
+      "id": "feliz-2025",
+      "index": 2,
+      "url": "https://static-cms-prod.vinfastauto.com/statics/e-scooter/feliz-2025/hinh-anh-vinfast-feliz-2025-mau-trang-mobile.webp",
+      "file": "assets/colors/feliz-2025/2.webp"
+    },
+    {
+      "id": "feliz-2025",
+      "index": 3,
+      "url": "https://static-cms-prod.vinfastauto.com/statics/e-scooter/feliz-2025/hinh-anh-vinfast-feliz-2025-mau-den-mobile.webp",
+      "file": "assets/colors/feliz-2025/3.webp"
+    },
+    {
+      "id": "feliz-2027",
+      "index": 0,
+      "url": "https://static-cms-prod.vinfastauto.com/statics/e-scooter/feliz-2027/hinh-anh-vinfast-feliz-2027-mau-trang-mobile.webp",
+      "file": "assets/colors/feliz-2027/0.webp"
+    },
+    {
+      "id": "feliz-2027",
+      "index": 1,
+      "url": "https://static-cms-prod.vinfastauto.com/statics/e-scooter/feliz-2027/hinh-anh-vinfast-feliz-2027-mau-xanh-xi-mang-mobile.webp",
+      "file": "assets/colors/feliz-2027/1.webp"
+    },
+    {
+      "id": "feliz-2027",
+      "index": 2,
+      "url": "https://static-cms-prod.vinfastauto.com/statics/e-scooter/feliz-2027/hinh-anh-vinfast-feliz-2027-mau-xanh-cam-thach-mobile.webp",
+      "file": "assets/colors/feliz-2027/2.webp"
+    },
+    {
+      "id": "feliz-2027",
+      "index": 3,
+      "url": "https://static-cms-prod.vinfastauto.com/statics/e-scooter/feliz-2027/hinh-anh-vinfast-feliz-2027-mau-den-mobile.webp",
+      "file": "assets/colors/feliz-2027/3.webp"
+    },
+    {
+      "id": "evo-grand-limited",
+      "index": 0,
+      "url": "https://static-cms-prod.vinfastauto.com/statics/e-scooter/evo-grand-limited-1501220926/hinh-anh-marble-green-desktop-20260922.webp",
+      "file": "assets/colors/evo-grand-limited/0.webp"
+    },
+    {
+      "id": "evo-grand-limited",
+      "index": 1,
+      "url": "https://static-cms-prod.vinfastauto.com/statics/e-scooter/evo-grand-limited-1501220926/hinh-anh-milk-white-desktop-20260922.webp",
+      "file": "assets/colors/evo-grand-limited/1.webp"
+    },
+    {
+      "id": "evo-grand-ii",
+      "index": 0,
+      "url": "https://static-cms-prod.vinfastauto.com/statics/e-scooter/evo-grand-ii/hinh-anh-vinfast-evo-grand-ii-mau-do-mobile.webp",
+      "file": "assets/colors/evo-grand-ii/0.webp"
+    },
+    {
+      "id": "evo-grand-ii",
+      "index": 1,
+      "url": "https://static-cms-prod.vinfastauto.com/statics/e-scooter/evo-grand-ii/hinh-anh-vinfast-evo-grand-ii-mau-xanh-la-mobile.webp",
+      "file": "assets/colors/evo-grand-ii/1.webp"
+    },
+    {
+      "id": "evo-grand-ii",
+      "index": 2,
+      "url": "https://static-cms-prod.vinfastauto.com/statics/e-scooter/evo-grand-ii/hinh-anh-vinfast-evo-grand-ii-mau-trang-mobile.webp",
+      "file": "assets/colors/evo-grand-ii/2.webp"
+    },
+    {
+      "id": "evo",
+      "index": 0,
+      "url": "https://static-cms-prod.vinfastauto.com/statics/e-scooter/evo/hinh-anh-vinfast-evo-mau-do-mobile.webp",
+      "file": "assets/colors/evo/0.webp"
+    },
+    {
+      "id": "evo",
+      "index": 1,
+      "url": "https://static-cms-prod.vinfastauto.com/statics/e-scooter/evo/hinh-anh-vinfast-evo-mau-xanh-mint-mobile.webp",
+      "file": "assets/colors/evo/1.webp"
+    },
+    {
+      "id": "evo",
+      "index": 2,
+      "url": "https://static-cms-prod.vinfastauto.com/statics/e-scooter/evo/hinh-anh-vinfast-evo-mau-trang-mobile.webp",
+      "file": "assets/colors/evo/2.webp"
+    },
+    {
+      "id": "evo",
+      "index": 3,
+      "url": "https://static-cms-prod.vinfastauto.com/statics/e-scooter/evo/hinh-anh-vinfast-evo-mau-den-mobile.webp",
+      "file": "assets/colors/evo/3.webp"
+    },
+    {
+      "id": "amio",
+      "index": 0,
+      "url": "https://static-cms-prod.vinfastauto.com/statics/e-scooter/amio/hinh-anh-vinfast-amio-mau-do-mobile.webp",
+      "file": "assets/colors/amio/0.webp"
+    },
+    {
+      "id": "amio",
+      "index": 1,
+      "url": "https://static-cms-prod.vinfastauto.com/statics/e-scooter/amio/hinh-anh-vinfast-amio-mau-xanh-ngoc-mobile.webp",
+      "file": "assets/colors/amio/1.webp"
+    },
+    {
+      "id": "amio",
+      "index": 2,
+      "url": "https://static-cms-prod.vinfastauto.com/statics/e-scooter/amio/hinh-anh-vinfast-amio-mau-trang-mobile.webp",
+      "file": "assets/colors/amio/2.webp"
+    },
+    {
+      "id": "amio",
+      "index": 3,
+      "url": "https://static-cms-prod.vinfastauto.com/statics/e-scooter/amio/hinh-anh-vinfast-amio-mau-den-mobile.webp",
+      "file": "assets/colors/amio/3.webp"
+    },
+    {
+      "id": "amio",
+      "index": 4,
+      "url": "https://static-cms-prod.vinfastauto.com/statics/e-scooter/amio/hinh-anh-vinfast-amio-mau-xam-xi-mang-mobile.webp",
+      "file": "assets/colors/amio/4.webp"
+    },
+    {
+      "id": "amio-s",
+      "index": 0,
+      "url": "https://static-cms-prod.vinfastauto.com/statics/e-scooter/amio-s/hinh-anh-vinfast-amio-s-mau-do-mobile.webp",
+      "file": "assets/colors/amio-s/0.webp"
+    },
+    {
+      "id": "amio-s",
+      "index": 1,
+      "url": "https://static-cms-prod.vinfastauto.com/statics/e-scooter/amio-s/hinh-anh-vinfast-amio-s-mau-trang-mobile.webp",
+      "file": "assets/colors/amio-s/1.webp"
+    },
+    {
+      "id": "amio-s",
+      "index": 2,
+      "url": "https://static-cms-prod.vinfastauto.com/statics/e-scooter/amio-s/hinh-anh-vinfast-amio-s-mau-xanh-ngoc-mobile.webp",
+      "file": "assets/colors/amio-s/2.webp"
+    },
+    {
+      "id": "amio-s",
+      "index": 3,
+      "url": "https://static-cms-prod.vinfastauto.com/statics/e-scooter/amio-s/hinh-anh-vinfast-amio-s-mau-den-mobile.webp",
+      "file": "assets/colors/amio-s/3.webp"
+    },
+    {
+      "id": "amio-s",
+      "index": 4,
+      "url": "https://static-cms-prod.vinfastauto.com/statics/e-scooter/amio-s/hinh-anh-vinfast-amio-s-mau-xam-xi-mang-mobile.webp",
+      "file": "assets/colors/amio-s/4.webp"
+    },
+    {
+      "id": "amio-s2",
+      "index": 0,
+      "url": "https://static-cms-prod.vinfastauto.com/statics/e-scooter/amio-s2/hinh-anh-amio-s2-mau-do-mobile.webp",
+      "file": "assets/colors/amio-s2/0.webp"
+    },
+    {
+      "id": "amio-s2",
+      "index": 1,
+      "url": "https://static-cms-prod.vinfastauto.com/statics/e-scooter/amio-s2/hinh-anh-amio-s2-mau-xanh-ngoc-mobile.webp",
+      "file": "assets/colors/amio-s2/1.webp"
+    },
+    {
+      "id": "amio-s2",
+      "index": 2,
+      "url": "https://static-cms-prod.vinfastauto.com/statics/e-scooter/amio-s2/hinh-anh-amio-s2-mau-trang-mobile.webp",
+      "file": "assets/colors/amio-s2/2.webp"
+    },
+    {
+      "id": "amio-s2",
+      "index": 3,
+      "url": "https://static-cms-prod.vinfastauto.com/statics/e-scooter/amio-s2/hinh-anh-amio-s2-mau-den-mobile.webp",
+      "file": "assets/colors/amio-s2/3.webp"
+    },
+    {
+      "id": "amio-s2",
+      "index": 4,
+      "url": "https://static-cms-prod.vinfastauto.com/statics/e-scooter/amio-s2/hinh-anh-amio-s2-mau-hong-mobile.webp",
+      "file": "assets/colors/amio-s2/4.webp"
+    },
+    {
+      "id": "flazz",
+      "index": 0,
+      "url": "https://static-cms-prod.vinfastauto.com/statics/e-scooter/flazz/hinh-anh-vinfast-flazz-mau-do-mobile.webp",
+      "file": "assets/colors/flazz/0.webp"
+    },
+    {
+      "id": "flazz",
+      "index": 1,
+      "url": "https://static-cms-prod.vinfastauto.com/statics/e-scooter/flazz/hinh-anh-vinfast-flazz-mau-xanh-la-cay-mobile.webp",
+      "file": "assets/colors/flazz/1.webp"
+    },
+    {
+      "id": "flazz",
+      "index": 2,
+      "url": "https://static-cms-prod.vinfastauto.com/statics/e-scooter/flazz/hinh-anh-vinfast-flazz-mau-trang-mobile.webp",
+      "file": "assets/colors/flazz/2.webp"
+    },
+    {
+      "id": "flazz",
+      "index": 3,
+      "url": "https://static-cms-prod.vinfastauto.com/statics/e-scooter/flazz/hinh-anh-vinfast-flazz-mau-den-mobile.webp",
+      "file": "assets/colors/flazz/3.webp"
+    },
+    {
+      "id": "flazz-max",
+      "index": 0,
+      "url": "https://static-cms-prod.vinfastauto.com/statics/e-scooter/flazz-max/hinh-anh-vinfast-flazz-max-mau-xanh-duong-mobile.webp",
+      "file": "assets/colors/flazz-max/0.webp"
+    },
+    {
+      "id": "flazz-max",
+      "index": 1,
+      "url": "https://static-cms-prod.vinfastauto.com/statics/e-scooter/flazz-max/hinh-anh-vinfast-flazz-max-mau-cam-mobile.webp",
+      "file": "assets/colors/flazz-max/1.webp"
+    },
+    {
+      "id": "flazz-max",
+      "index": 2,
+      "url": "https://static-cms-prod.vinfastauto.com/statics/e-scooter/flazz-max/hinh-anh-vinfast-flazz-max-mau-den-mobile.webp",
+      "file": "assets/colors/flazz-max/2.webp"
+    },
+    {
+      "id": "zgoo",
+      "index": 0,
+      "url": "https://static-cms-prod.vinfastauto.com/statics/e-scooter/zgoo/hinh-anh-vinfast-zgoo-mau-xanh-la-cay-mobile.webp",
+      "file": "assets/colors/zgoo/0.webp"
+    },
+    {
+      "id": "zgoo",
+      "index": 1,
+      "url": "https://static-cms-prod.vinfastauto.com/statics/e-scooter/zgoo/hinh-anh-vinfast-zgoo-mau-trang-mobile.webp",
+      "file": "assets/colors/zgoo/1.webp"
+    },
+    {
+      "id": "zgoo",
+      "index": 2,
+      "url": "https://static-cms-prod.vinfastauto.com/statics/e-scooter/zgoo/hinh-anh-vinfast-zgoo-mau-den-mobile.webp",
+      "file": "assets/colors/zgoo/2.webp"
+    },
+    {
+      "id": "zgoo",
+      "index": 3,
+      "url": "https://static-cms-prod.vinfastauto.com/statics/e-scooter/zgoo/hinh-anh-vinfast-zgoo-mau-do-mobile.webp",
+      "file": "assets/colors/zgoo/3.webp"
+    },
+    {
+      "id": "evo-lite",
+      "index": 0,
+      "url": "https://static-cms-prod.vinfastauto.com/statics/e-scooter/evo-lite/hinh-anh-xe-vinfast-evo-lite-mau-do-mobile.webp",
+      "file": "assets/colors/evo-lite/0.webp"
+    },
+    {
+      "id": "evo-lite",
+      "index": 1,
+      "url": "https://static-cms-prod.vinfastauto.com/statics/e-scooter/evo-lite/hinh-anh-xe-vinfast-evo-lite-mau-xanh-reu-mobile.webp",
+      "file": "assets/colors/evo-lite/1.webp"
+    },
+    {
+      "id": "evo-lite",
+      "index": 2,
+      "url": "https://static-cms-prod.vinfastauto.com/statics/e-scooter/evo-lite/hinh-anh-xe-vinfast-evo-lite-mau-trang-mobile.webp",
+      "file": "assets/colors/evo-lite/2.webp"
+    },
+    {
+      "id": "evo-lite",
+      "index": 3,
+      "url": "https://static-cms-prod.vinfastauto.com/statics/e-scooter/evo-lite/hinh-anh-xe-vinfast-evo-lite-mau-den-mobile.webp",
+      "file": "assets/colors/evo-lite/3.webp"
+    },
+    {
+      "id": "evo-grand-lite",
+      "index": 0,
+      "url": "https://static-cms-prod.vinfastauto.com/statics/e-scooter/evo-grand-lite/hinh-anh-vinfast-evo-grand-lite-mau-tim-mobile.webp",
+      "file": "assets/colors/evo-grand-lite/0.webp"
+    },
+    {
+      "id": "evo-grand-lite",
+      "index": 1,
+      "url": "https://static-cms-prod.vinfastauto.com/statics/e-scooter/evo-grand-lite/hinh-anh-vinfast-evo-grand-lite-mau-trang-mobile.webp",
+      "file": "assets/colors/evo-grand-lite/1.webp"
+    },
+    {
+      "id": "evo-grand-lite",
+      "index": 2,
+      "url": "https://static-cms-prod.vinfastauto.com/statics/e-scooter/evo-grand-lite/hinh-anh-vinfast-evo-grand-lite-mau-den-mobile.webp",
+      "file": "assets/colors/evo-grand-lite/2.webp"
+    },
+    {
+      "id": "evo-lite-neo",
+      "index": 0,
+      "url": "https://static-cms-prod.vinfastauto.com/statics/e-scooter/evo-lite-neo/hinh-anh-vinfast-evo-lite-neo-mau-xanh-reu-goc-ngang-mobile.webp",
+      "file": "assets/colors/evo-lite-neo/0.webp"
+    },
+    {
+      "id": "evo-lite-neo",
+      "index": 1,
+      "url": "https://static-cms-prod.vinfastauto.com/statics/e-scooter/evo-lite-neo/hinh-anh-vinfast-evo-lite-neo-mau-do-goc-ngang-mobile.webp",
+      "file": "assets/colors/evo-lite-neo/1.webp"
+    },
+    {
+      "id": "evo-lite-neo",
+      "index": 2,
+      "url": "https://static-cms-prod.vinfastauto.com/statics/e-scooter/evo-lite-neo/hinh-anh-vinfast-evo-lite-neo-mau-xanh-tim-than-goc-ngang-mobile.webp",
+      "file": "assets/colors/evo-lite-neo/2.webp"
+    },
+    {
+      "id": "evo-lite-neo",
+      "index": 3,
+      "url": "https://static-cms-prod.vinfastauto.com/statics/e-scooter/evo-lite-neo/hinh-anh-vinfast-evo-lite-neo-mau-trang-goc-ngang-mobile.webp",
+      "file": "assets/colors/evo-lite-neo/3.webp"
+    },
+    {
+      "id": "evo-lite-neo",
+      "index": 4,
+      "url": "https://static-cms-prod.vinfastauto.com/statics/e-scooter/evo-lite-neo/hinh-anh-vinfast-evo-lite-neo-mau-den-goc-ngang-mobile.webp",
+      "file": "assets/colors/evo-lite-neo/4.webp"
+    },
+    {
+      "id": "drgnfly",
+      "index": 0,
+      "url": "https://static-cms-prod.vinfastauto.com/statics/e-scooter/dragon-fly/mobile/hinh-anh-VinFast-Dragon-fly-product-summary.webp",
+      "file": "assets/colors/drgnfly/0.webp"
+    },
+    {
+      "id": "vf2",
+      "index": "CE17",
+      "url": "https://shop.vinfastauto.com/on/demandware.static/-/Sites-app_vinfast_vn-Library/default/dweb504538/images/VF2/TH14V/CE17.webp",
+      "file": "assets/colors/vf2/CE17.webp"
+    },
+    {
+      "id": "vf2",
+      "index": "CE2G",
+      "url": "https://shop.vinfastauto.com/on/demandware.static/-/Sites-app_vinfast_vn-Library/default/dwdbdc5599/images/VF2/TH14V/CE2G.webp",
+      "file": "assets/colors/vf2/CE2G.webp"
+    },
+    {
+      "id": "vf2",
+      "index": "CE2Q",
+      "url": "https://shop.vinfastauto.com/on/demandware.static/-/Sites-app_vinfast_vn-Library/default/dwe8c59c81/images/VF2/TH14V/CE2Q.webp",
+      "file": "assets/colors/vf2/CE2Q.webp"
+    },
+    {
+      "id": "vf2",
+      "index": "CE18",
+      "url": "https://shop.vinfastauto.com/on/demandware.static/-/Sites-app_vinfast_vn-Library/default/dw05aa09f9/images/VF2/TH14V/CE18.webp",
+      "file": "assets/colors/vf2/CE18.webp"
+    },
+    {
+      "id": "vf2",
+      "index": "CE2T",
+      "url": "https://shop.vinfastauto.com/on/demandware.static/-/Sites-app_vinfast_vn-Library/default/dw59ac38f2/images/VF2/TH14V/CE2T.webp",
+      "file": "assets/colors/vf2/CE2T.webp"
+    },
+    {
+      "id": "vf2",
+      "index": "CE1W",
+      "url": "https://shop.vinfastauto.com/on/demandware.static/-/Sites-app_vinfast_vn-Library/default/dw022a5c2f/images/VF2/TH14V/CE1W.webp",
+      "file": "assets/colors/vf2/CE1W.webp"
+    },
+    {
+      "id": "vf2",
+      "index": "CE1U",
+      "url": "https://shop.vinfastauto.com/on/demandware.static/-/Sites-app_vinfast_vn-Library/default/dwe756594c/images/VF2/TH14V/CE1U.webp",
+      "file": "assets/colors/vf2/CE1U.webp"
+    },
+    {
+      "id": "vf2",
+      "index": "CE21",
+      "url": "https://shop.vinfastauto.com/on/demandware.static/-/Sites-app_vinfast_vn-Library/default/dw6712c383/images/VF2/TH14V/CE21.webp",
+      "file": "assets/colors/vf2/CE21.webp"
+    },
+    {
+      "id": "vf5",
+      "index": "181Y",
+      "url": "https://shop.vinfastauto.com/on/demandware.static/-/Sites-app_vinfast_vn-Library/default/dw6a8286c7/images/VF5/GA12V/181Y.webp",
+      "file": "assets/colors/vf5/181Y.webp"
+    },
+    {
+      "id": "vf5",
+      "index": "CE2Q",
+      "url": "https://shop.vinfastauto.com/on/demandware.static/-/Sites-app_vinfast_vn-Library/default/dwc781c6b0/images/VF5/GA12V/CE2Q.webp",
+      "file": "assets/colors/vf5/CE2Q.webp"
+    },
+    {
+      "id": "vf5",
+      "index": "111U",
+      "url": "https://shop.vinfastauto.com/on/demandware.static/-/Sites-app_vinfast_vn-Library/default/dwf62f0986/images/VF5/GA12V/111U.webp",
+      "file": "assets/colors/vf5/111U.webp"
+    },
+    {
+      "id": "vf5",
+      "index": "CE1W",
+      "url": "https://shop.vinfastauto.com/on/demandware.static/-/Sites-app_vinfast_vn-Library/default/dwfa8dfe57/images/VF5/GA12V/CE1W.webp",
+      "file": "assets/colors/vf5/CE1W.webp"
+    },
+    {
+      "id": "vf5",
+      "index": "CE1V",
+      "url": "https://shop.vinfastauto.com/on/demandware.static/-/Sites-app_vinfast_vn-Library/default/dw571c8451/images/VF5/GA12V/CE1V.webp",
+      "file": "assets/colors/vf5/CE1V.webp"
+    },
+    {
+      "id": "vf5",
+      "index": "CE18",
+      "url": "https://shop.vinfastauto.com/on/demandware.static/-/Sites-app_vinfast_vn-Library/default/dw15a07f69/images/VF5/GA12V/CE18.webp",
+      "file": "assets/colors/vf5/CE18.webp"
+    },
+    {
+      "id": "vf6",
+      "index": "CE18",
+      "url": "https://shop.vinfastauto.com/on/demandware.static/-/Sites-app_vinfast_vn-Library/default/dw445cc03b/images/VF6/JB10V/CE18.webp",
+      "file": "assets/colors/vf6/CE18.webp"
+    },
+    {
+      "id": "vf6",
+      "index": "CE11",
+      "url": "https://shop.vinfastauto.com/on/demandware.static/-/Sites-app_vinfast_vn-Library/default/dwda2b25f0/images/VF6/JB10V/CE11.webp",
+      "file": "assets/colors/vf6/CE11.webp"
+    },
+    {
+      "id": "vf6",
+      "index": "CE1V",
+      "url": "https://shop.vinfastauto.com/on/demandware.static/-/Sites-app_vinfast_vn-Library/default/dw7e7f4a29/images/VF6/JB10V/CE1V.webp",
+      "file": "assets/colors/vf6/CE1V.webp"
+    },
+    {
+      "id": "vf6",
+      "index": "CE1W",
+      "url": "https://shop.vinfastauto.com/on/demandware.static/-/Sites-app_vinfast_vn-Library/default/dwdcc781de/images/VF6/JB10V/CE1W.webp",
+      "file": "assets/colors/vf6/CE1W.webp"
+    },
+    {
+      "id": "vf6",
+      "index": "CE2Q",
+      "url": "https://shop.vinfastauto.com/on/demandware.static/-/Sites-app_vinfast_vn-Library/default/dw878c933f/images/VF6/JB10V/CE2Q.webp",
+      "file": "assets/colors/vf6/CE2Q.webp"
+    },
+    {
+      "id": "vf7",
+      "index": "CE11",
+      "url": "https://shop.vinfastauto.com/on/demandware.static/-/Sites-app_vinfast_vn-Library/default/dw7fd70968/images/VF7/GC15V/CE11.webp",
+      "file": "assets/colors/vf7/CE11.webp"
+    },
+    {
+      "id": "vf7",
+      "index": "CE2Q",
+      "url": "https://shop.vinfastauto.com/on/demandware.static/-/Sites-app_vinfast_vn-Library/default/dw19c75f50/images/VF7/GC15V/CE2Q.webp",
+      "file": "assets/colors/vf7/CE2Q.webp"
+    },
+    {
+      "id": "vf7",
+      "index": "CE1W",
+      "url": "https://shop.vinfastauto.com/on/demandware.static/-/Sites-app_vinfast_vn-Library/default/dw4b5e4bae/images/VF7/GC15V/CE1W.webp",
+      "file": "assets/colors/vf7/CE1W.webp"
+    },
+    {
+      "id": "vf7",
+      "index": "CE1V",
+      "url": "https://shop.vinfastauto.com/on/demandware.static/-/Sites-app_vinfast_vn-Library/default/dw6071a992/images/VF7/GC15V/CE1V.webp",
+      "file": "assets/colors/vf7/CE1V.webp"
+    },
+    {
+      "id": "vf7",
+      "index": "CE18",
+      "url": "https://shop.vinfastauto.com/on/demandware.static/-/Sites-app_vinfast_vn-Library/default/dw5e18d16a/images/VF7/GC15V/CE18.webp",
+      "file": "assets/colors/vf7/CE18.webp"
+    },
+    {
+      "id": "vf9",
+      "index": "CE18",
+      "url": "https://shop.vinfastauto.com/on/demandware.static/-/Sites-app_vinfast_vn-Library/default/dwec05bc92/images/VF9/NE3LV/CE18.webp",
+      "file": "assets/colors/vf9/CE18.webp"
+    },
+    {
+      "id": "vf9",
+      "index": "CE1M",
+      "url": "https://shop.vinfastauto.com/on/demandware.static/-/Sites-app_vinfast_vn-Library/default/dw231e8658/images/VF9/NE3LV/CE1M.webp",
+      "file": "assets/colors/vf9/CE1M.webp"
+    },
+    {
+      "id": "vf9",
+      "index": "CE1W",
+      "url": "https://shop.vinfastauto.com/on/demandware.static/-/Sites-app_vinfast_vn-Library/default/dw9858ec38/images/VF9/NE3LV/CE1W.webp",
+      "file": "assets/colors/vf9/CE1W.webp"
+    },
+    {
+      "id": "vf9",
+      "index": "CE11",
+      "url": "https://shop.vinfastauto.com/on/demandware.static/-/Sites-app_vinfast_vn-Library/default/dw12ed4303/images/VF9/NE3LV/CE11.webp",
+      "file": "assets/colors/vf9/CE11.webp"
+    },
+    {
+      "id": "vf9",
+      "index": "CE22",
+      "url": "https://shop.vinfastauto.com/on/demandware.static/-/Sites-app_vinfast_vn-Library/default/dw621d859a/images/VF9/NE3LV/CE22.webp",
+      "file": "assets/colors/vf9/CE22.webp"
+    },
+    {
+      "id": "vf9",
+      "index": "CE1V",
+      "url": "https://shop.vinfastauto.com/on/demandware.static/-/Sites-app_vinfast_vn-Library/default/dw8287a700/images/VF9/NE3LV/CE1V.webp",
+      "file": "assets/colors/vf9/CE1V.webp"
+    },
+    {
+      "id": "vf9",
+      "index": "CE17",
+      "url": "https://shop.vinfastauto.com/on/demandware.static/-/Sites-app_vinfast_vn-Library/default/dwd6d61ae2/images/VF9/NE3LV/CE17.webp",
+      "file": "assets/colors/vf9/CE17.webp"
+    },
+    {
+      "id": "limo-green",
+      "index": "CE17",
+      "url": "https://shop.vinfastauto.com/on/demandware.static/-/Sites-app_vinfast_vn-Library/default/dw08f52164/images/LimoGreen/SL1VV/CE17.webp",
+      "file": "assets/colors/limo-green/CE17.webp"
+    },
+    {
+      "id": "limo-green",
+      "index": "CE11",
+      "url": "https://shop.vinfastauto.com/on/demandware.static/-/Sites-app_vinfast_vn-Library/default/dwfe7b0e19/images/LimoGreen/SL1VV/CE11.webp",
+      "file": "assets/colors/limo-green/CE11.webp"
+    },
+    {
+      "id": "limo-green",
+      "index": "CE2Q",
+      "url": "https://shop.vinfastauto.com/on/demandware.static/-/Sites-app_vinfast_vn-Library/default/dwbd78ae73/images/LimoGreen/SL1VV/CE2Q.webp",
+      "file": "assets/colors/limo-green/CE2Q.webp"
+    },
+    {
+      "id": "herio-green",
+      "index": "CE11",
+      "url": "https://shop.vinfastauto.com/on/demandware.static/-/Sites-app_vinfast_vn-Library/default/dw95e048b9/images/HerioGreen/GA1XV/CE11.webp",
+      "file": "assets/colors/herio-green/CE11.webp"
+    },
+    {
+      "id": "herio-green",
+      "index": "CE17",
+      "url": "https://shop.vinfastauto.com/on/demandware.static/-/Sites-app_vinfast_vn-Library/default/dw7b93aca3/images/HerioGreen/GA1XV/CE17.webp",
+      "file": "assets/colors/herio-green/CE17.webp"
+    },
+    {
+      "id": "herio-green",
+      "index": "CE2Q",
+      "url": "https://shop.vinfastauto.com/on/demandware.static/-/Sites-app_vinfast_vn-Library/default/dw5269b2b7/images/HerioGreen/GA1XV/CE2Q.webp",
+      "file": "assets/colors/herio-green/CE2Q.webp"
+    },
+    {
+      "id": "minio-green",
+      "index": "CE2I",
+      "url": "https://shop.vinfastauto.com/on/demandware.static/-/Sites-app_vinfast_vn-Library/default/dwbdba7ad8/images/MinioGreen/TH12V/CE2I.webp",
+      "file": "assets/colors/minio-green/CE2I.webp"
+    },
+    {
+      "id": "minio-green",
+      "index": "1P2K",
+      "url": "https://shop.vinfastauto.com/on/demandware.static/-/Sites-app_vinfast_vn-Library/default/dw9110f961/images/MinioGreen/TH12V/1P2K.webp",
+      "file": "assets/colors/minio-green/1P2K.webp"
+    },
+    {
+      "id": "minio-green",
+      "index": "182I",
+      "url": "https://shop.vinfastauto.com/on/demandware.static/-/Sites-app_vinfast_vn-Library/default/dwfa026c2d/images/MinioGreen/TH12V/182I.webp",
+      "file": "assets/colors/minio-green/182I.webp"
+    },
+    {
+      "id": "minio-green",
+      "index": "CE2K",
+      "url": "https://shop.vinfastauto.com/on/demandware.static/-/Sites-app_vinfast_vn-Library/default/dw05bccef0/images/MinioGreen/TH12V/CE2K.webp",
+      "file": "assets/colors/minio-green/CE2K.webp"
+    },
+    {
+      "id": "minio-green",
+      "index": "1U2I",
+      "url": "https://shop.vinfastauto.com/on/demandware.static/-/Sites-app_vinfast_vn-Library/default/dw1a7337ed/images/MinioGreen/TH12V/1U2I.webp",
+      "file": "assets/colors/minio-green/1U2I.webp"
+    },
+    {
+      "id": "minio-green",
+      "index": "182Q",
+      "url": "https://shop.vinfastauto.com/on/demandware.static/-/Sites-app_vinfast_vn-Library/default/dw4143e4c6/images/MinioGreen/TH12V/182Q.webp",
+      "file": "assets/colors/minio-green/182Q.webp"
+    },
+    {
+      "id": "minio-green",
+      "index": "1U11",
+      "url": "https://shop.vinfastauto.com/on/demandware.static/-/Sites-app_vinfast_vn-Library/default/dwb5738a7b/images/MinioGreen/TH12V/1U11.webp",
+      "file": "assets/colors/minio-green/1U11.webp"
+    },
+    {
+      "id": "minio-green",
+      "index": "CE11",
+      "url": "https://shop.vinfastauto.com/on/demandware.static/-/Sites-app_vinfast_vn-Library/default/dw75de8c5b/images/MinioGreen/TH12V/CE11.webp",
+      "file": "assets/colors/minio-green/CE11.webp"
+    },
+    {
+      "id": "minio-green",
+      "index": "1117",
+      "url": "https://shop.vinfastauto.com/on/demandware.static/-/Sites-app_vinfast_vn-Library/default/dw1cab044d/images/MinioGreen/TH12V/1117.webp",
+      "file": "assets/colors/minio-green/1117.webp"
+    },
+    {
+      "id": "minio-green",
+      "index": "CE2Q",
+      "url": "https://shop.vinfastauto.com/on/demandware.static/-/Sites-app_vinfast_vn-Library/default/dw699157df/images/MinioGreen/TH12V/CE2Q.webp",
+      "file": "assets/colors/minio-green/CE2Q.webp"
+    },
+    {
+      "id": "ec-van",
+      "index": "CE1W",
+      "url": "https://shop.vinfastauto.com/on/demandware.static/-/Sites-app_vinfast_vn-Library/default/dwf19b7705/images/ECVAN/TG10V/CE1W.webp",
+      "file": "assets/colors/ec-van/CE1W.webp"
+    },
+    {
+      "id": "ec-van",
+      "index": "CE2Q",
+      "url": "https://shop.vinfastauto.com/on/demandware.static/-/Sites-app_vinfast_vn-Library/default/dw6de5be7f/images/ECVAN/TG10V/CE2Q.webp",
+      "file": "assets/colors/ec-van/CE2Q.webp"
+    },
+    {
+      "id": "ec-van",
+      "index": "CE1U",
+      "url": "https://shop.vinfastauto.com/on/demandware.static/-/Sites-app_vinfast_vn-Library/default/dw2668a56c/images/ECVAN/TG10V/CE1U.webp",
+      "file": "assets/colors/ec-van/CE1U.webp"
+    },
+    {
+      "id": "ec-van",
+      "index": "CE18",
+      "url": "https://shop.vinfastauto.com/on/demandware.static/-/Sites-app_vinfast_vn-Library/default/dwa0fda69c/images/ECVAN/TG10V/CE18.webp",
+      "file": "assets/colors/ec-van/CE18.webp"
+    },
+    {
+      "id": "vf-mpv7",
+      "index": "CE1V",
+      "url": "https://shop.vinfastauto.com/on/demandware.static/-/Sites-app_vinfast_vn-Library/vi_VN/v1794618018414/images/VFMPV7/SL1WV/CE1V.webp",
+      "file": "assets/colors/vf-mpv7/CE1V.webp"
+    },
+    {
+      "id": "vf-mpv7",
+      "index": "CE2J",
+      "url": "https://shop.vinfastauto.com/on/demandware.static/-/Sites-app_vinfast_vn-Library/vi_VN/v1794618018414/images/VFMPV7/SL1WV/CE2J.webp",
+      "file": "assets/colors/vf-mpv7/CE2J.webp"
+    },
+    {
+      "id": "vf-mpv7",
+      "index": "CE11",
+      "url": "https://shop.vinfastauto.com/on/demandware.static/-/Sites-app_vinfast_vn-Library/vi_VN/v1794618018414/images/VFMPV7/SL1WV/CE11.webp",
+      "file": "assets/colors/vf-mpv7/CE11.webp"
+    },
+    {
+      "id": "vf-mpv7",
+      "index": "CE18",
+      "url": "https://shop.vinfastauto.com/on/demandware.static/-/Sites-app_vinfast_vn-Library/vi_VN/v1794618018414/images/VFMPV7/SL1WV/CE18.webp",
+      "file": "assets/colors/vf-mpv7/CE18.webp"
+    },
+    {
+      "id": "vf-mpv7",
+      "index": "CE2Q",
+      "url": "https://shop.vinfastauto.com/on/demandware.static/-/Sites-app_vinfast_vn-Library/vi_VN/v1794618018414/images/VFMPV7/SL1WV/CE2Q.webp",
+      "file": "assets/colors/vf-mpv7/CE2Q.webp"
+    },
+    {
+      "id": "vf-mpv7",
+      "index": "CE2N",
+      "url": "https://shop.vinfastauto.com/on/demandware.static/-/Sites-app_vinfast_vn-Library/vi_VN/v1794618018414/images/VFMPV7/SL1WV/CE2N.webp",
+      "file": "assets/colors/vf-mpv7/CE2N.webp"
+    },
+    {
+      "id": "vf8-new",
+      "index": "CE33",
+      "url": "https://shop.vinfastauto.com/on/demandware.static/-/Sites-app_vinfast_vn-Library/default/dw9497945d/images/VF8-THE-ALL-NEW/HC11V/CE33.webp",
+      "file": "assets/colors/vf8-new/CE33.webp"
+    },
+    {
+      "id": "vf8-new",
+      "index": "1832",
+      "url": "https://shop.vinfastauto.com/on/demandware.static/-/Sites-app_vinfast_vn-Library/default/dw024461bf/images/VF8-THE-ALL-NEW/HC11V/1832.webp",
+      "file": "assets/colors/vf8-new/1832.webp"
+    },
+    {
+      "id": "vf8-new",
+      "index": "1833",
+      "url": "https://shop.vinfastauto.com/on/demandware.static/-/Sites-app_vinfast_vn-Library/default/dwd84f7689/images/VF8-THE-ALL-NEW/HC11V/1833.webp",
+      "file": "assets/colors/vf8-new/1833.webp"
+    },
+    {
+      "id": "vf8-new",
+      "index": "CE11",
+      "url": "https://shop.vinfastauto.com/on/demandware.static/-/Sites-app_vinfast_vn-Library/default/dwb2337694/images/VF8-THE-ALL-NEW/HC11V/CE11.webp",
+      "file": "assets/colors/vf8-new/CE11.webp"
+    },
+    {
+      "id": "vf8-new",
+      "index": "CE32",
+      "url": "https://shop.vinfastauto.com/on/demandware.static/-/Sites-app_vinfast_vn-Library/default/dw58844690/images/VF8-THE-ALL-NEW/HC11V/CE32.webp",
+      "file": "assets/colors/vf8-new/CE32.webp"
+    },
+    {
+      "id": "vf8-new",
+      "index": "112Q",
+      "url": "https://shop.vinfastauto.com/on/demandware.static/-/Sites-app_vinfast_vn-Library/default/dwed3bf97b/images/VF8-THE-ALL-NEW/HC11V/112Q.webp",
+      "file": "assets/colors/vf8-new/112Q.webp"
+    },
+    {
+      "id": "vf8-new",
+      "index": "3111",
+      "url": "https://shop.vinfastauto.com/on/demandware.static/-/Sites-app_vinfast_vn-Library/default/dw14d5c233/images/VF8-THE-ALL-NEW/HC11V/3111.webp",
+      "file": "assets/colors/vf8-new/3111.webp"
+    },
+    {
+      "id": "vf8-new",
+      "index": "CE2O",
+      "url": "https://shop.vinfastauto.com/on/demandware.static/-/Sites-app_vinfast_vn-Library/default/dw9ed73f08/images/VF8-THE-ALL-NEW/HC11V/CE2O.webp",
+      "file": "assets/colors/vf8-new/CE2O.webp"
+    },
+    {
+      "id": "vf8-new",
+      "index": "1132",
+      "url": "https://shop.vinfastauto.com/on/demandware.static/-/Sites-app_vinfast_vn-Library/default/dwcfdf63c1/images/VF8-THE-ALL-NEW/HC11V/1132.webp",
+      "file": "assets/colors/vf8-new/1132.webp"
+    },
+    {
+      "id": "vf8-new",
+      "index": "CE18",
+      "url": "https://shop.vinfastauto.com/on/demandware.static/-/Sites-app_vinfast_vn-Library/default/dw61dd02a5/images/VF8-THE-ALL-NEW/HC11V/CE18.webp",
+      "file": "assets/colors/vf8-new/CE18.webp"
+    },
+    {
+      "id": "vf8-new",
+      "index": "CE2Q",
+      "url": "https://shop.vinfastauto.com/on/demandware.static/-/Sites-app_vinfast_vn-Library/default/dwd511da03/images/VF8-THE-ALL-NEW/HC11V/CE2Q.webp",
+      "file": "assets/colors/vf8-new/CE2Q.webp"
+    },
+    {
+      "id": "vf8-new",
+      "index": "312O",
+      "url": "https://shop.vinfastauto.com/on/demandware.static/-/Sites-app_vinfast_vn-Library/default/dwd0f6cced/images/VF8-THE-ALL-NEW/HC11V/312O.webp",
+      "file": "assets/colors/vf8-new/312O.webp"
+    },
+    {
+      "id": "vf-wild",
+      "index": "CE2Q",
+      "url": "https://shop.vinfastauto.com/on/demandware.static/-/Sites-app_vinfast_vn-Library/default/dwd81241d9/images/VFWILD/HJ01V/CE2Q.webp",
+      "file": "assets/colors/vf-wild/CE2Q.webp"
+    },
+    {
+      "id": "vf-wild",
+      "index": "CE31",
+      "url": "https://shop.vinfastauto.com/on/demandware.static/-/Sites-app_vinfast_vn-Library/default/dw1fadad37/images/VFWILD/HJ01V/CE31.webp",
+      "file": "assets/colors/vf-wild/CE31.webp"
+    },
+    {
+      "id": "vf-wild",
+      "index": "CE11",
+      "url": "https://shop.vinfastauto.com/on/demandware.static/-/Sites-app_vinfast_vn-Library/default/dwd6f8db6c/images/VFWILD/HJ01V/CE11.webp",
+      "file": "assets/colors/vf-wild/CE11.webp"
+    },
+    {
+      "id": "vf-wild",
+      "index": "CE18",
+      "url": "https://shop.vinfastauto.com/on/demandware.static/-/Sites-app_vinfast_vn-Library/default/dw282f10c9/images/VFWILD/HJ01V/CE18.webp",
+      "file": "assets/colors/vf-wild/CE18.webp"
+    },
+    {
+      "id": "vf8",
+      "file": "assets/colors/vf8/base.webp",
+      "url": "https://static-cms-prod.vinfastauto.com/statics/car/VF-8/hinh-anh-xe-VinFast-vf8-ngoai-that-mau-trang-01.webp",
+      "note": "Canonical white side image; manually traced body/roof masks in data/paint-masks.js. Recolors are approximate."
+    },
+    {
+      "id": "fadil",
+      "index": "blue",
+      "url": "https://shop.vinfastauto.com/on/demandware.static/-/Sites-app_vinfast_vn-Library/default/dw6c73ce6e/images/Fadil/Hinh-anh-Mua-xe-VinFast-Fadil-ban-nang-cao-tra-gop-mau-xanh-duong-dam-Blue.png",
+      "file": "assets/colors/fadil/blue.webp"
+    },
+    {
+      "id": "fadil",
+      "index": "silver",
+      "url": "https://shop.vinfastauto.com/on/demandware.static/-/Sites-app_vinfast_vn-Library/default/dw671d43c3/images/Fadil/Hinh-anh-Mua-xe-VinFast-Fadil-tra-gop-ban-cao-cap-mau-bac-silver.png",
+      "file": "assets/colors/fadil/silver.webp"
+    },
+    {
+      "id": "fadil",
+      "index": "white",
+      "url": "https://shop.vinfastauto.com/on/demandware.static/-/Sites-app_vinfast_vn-Library/default/dw0ac221ee/images/Fadil/Hinh-anh-Mua-xe-VinFast-Fadil-ban-cao-cap-tra-gop-mau-trang-white.png",
+      "file": "assets/colors/fadil/white.webp"
+    },
+    {
+      "id": "lux-a",
+      "index": "blue",
+      "url": "https://shop.vinfastauto.com/on/demandware.static/-/Sites-app_vinfast_vn-Library/default/dw1c8f65e8/images/Lux-A/hinh-anh-tra-gop-Lux-A2.0-ban-cao-cap-mau-xanh-luxury-blue.png",
+      "file": "assets/colors/lux-a/blue.webp"
+    },
+    {
+      "id": "lux-a",
+      "index": "silver",
+      "url": "https://shop.vinfastauto.com/on/demandware.static/-/Sites-app_vinfast_vn-Library/default/dw09dcc382/images/Lux-A/hinh-anh-tra-gop-VinFast-Lux-A2.0-cao-cap-mau-bac-silver.png",
+      "file": "assets/colors/lux-a/silver.webp"
+    },
+    {
+      "id": "lux-a",
+      "index": "black",
+      "url": "https://shop.vinfastauto.com/on/demandware.static/-/Sites-app_vinfast_vn-Library/default/dwa8b44027/images/Lux-A/hinh-anh-tra-gop-VinFast-Lux-A2.0-plus-mau-den-jetblack.png",
+      "file": "assets/colors/lux-a/black.webp"
+    },
+    {
+      "id": "lux-a",
+      "index": "white",
+      "url": "https://shop.vinfastauto.com/on/demandware.static/-/Sites-app_vinfast_vn-Library/default/dwf1dd9980/images/Lux-A/hinh-anh-gia-VinFast-Lux-a2.0-price-mau-trang-brahminy-white.png",
+      "file": "assets/colors/lux-a/white.webp"
+    },
+    {
+      "id": "lux-sa",
+      "index": "blue",
+      "url": "https://shop.vinfastauto.com/on/demandware.static/-/Sites-app_vinfast_vn-Library/default/dw682e84c4/images/Lux-SA/hinh-anh-VinFast-Lux-SA2.0-mau-xanh-blue-tra-gop-ban-turbo.png",
+      "file": "assets/colors/lux-sa/blue.webp"
+    },
+    {
+      "id": "lux-sa",
+      "index": "silver",
+      "url": "https://shop.vinfastauto.com/on/demandware.static/-/Sites-app_vinfast_vn-Library/default/dw66cfe2e1/images/Lux-SA/hinh-anh-gia-VinFast-Lux-SA2.0-ban-cao-cap-premium-tra-gop-mau-bac-silver.png",
+      "file": "assets/colors/lux-sa/silver.webp"
+    },
+    {
+      "id": "lux-sa",
+      "index": "black",
+      "url": "https://shop.vinfastauto.com/on/demandware.static/-/Sites-app_vinfast_vn-Library/default/dwcf093742/images/Lux-SA/hinh-anh-VinFast-Lux-SA2.0-tra-gop-ban-cao-cap-premium-mau-den-black.png",
+      "file": "assets/colors/lux-sa/black.webp"
+    },
+    {
+      "id": "lux-sa",
+      "index": "white",
+      "url": "https://shop.vinfastauto.com/on/demandware.static/-/Sites-app_vinfast_vn-Library/default/dw0dcaf51e/images/Lux-SA/hinh-anh-gia-VinFast-Lux-SA2.0-turbo-tra-gop-mau-trang-white.png",
+      "file": "assets/colors/lux-sa/white.webp"
+    },
+    {
+      "id": "president",
+      "index": "black",
+      "url": "https://shop.vinfastauto.com/on/demandware.static/-/Sites-app_vinfast_vn-Library/default/dwb0bf6261/images/President/hinh-anh-gia-xe-SUV-VinFast-President-dong-co-V8-mau-den-Jet-black.png",
+      "file": "assets/colors/president/black.webp"
+    },
+    {
+      "id": "president",
+      "index": "purple",
+      "url": "https://shop.vinfastauto.com/on/demandware.static/-/Sites-app_vinfast_vn-Library/default/dw919dca08/images/President/hinh-anh-gia-VinFast-President-V8-mau-tim-purple.png",
+      "file": "assets/colors/president/purple.webp"
+    },
+    {
+      "id": "president",
+      "index": "grey",
+      "url": "https://shop.vinfastauto.com/on/demandware.static/-/Sites-app_vinfast_vn-Library/default/dw5800f67b/images/President/hinh-anh-gia-VinFast-President-mau-ghi-gray.png",
+      "file": "assets/colors/president/grey.webp"
+    },
+    {
+      "id": "president",
+      "index": "silver",
+      "url": "https://shop.vinfastauto.com/on/demandware.static/-/Sites-app_vinfast_vn-Library/default/dw1d3ab01d/images/President/hinh-anh-gia-VinFast-President-V8-mau-bac-silver.png",
+      "file": "assets/colors/president/silver.webp"
+    },
+    {
+      "id": "president",
+      "index": "brown",
+      "url": "https://shop.vinfastauto.com/on/demandware.static/-/Sites-app_vinfast_vn-Library/default/dwb5f8051c/images/President/hinh-anh-gia-VinFast-President-V8-mau-nau-brown.png",
+      "file": "assets/colors/president/brown.webp"
+    },
+    {
+      "id": "president",
+      "index": "orange",
+      "url": "https://shop.vinfastauto.com/on/demandware.static/-/Sites-app_vinfast_vn-Library/default/dw758fe168/images/President/hinh-anh-gia-xe-SUV-VinFast-President-V8-mau-cam-orange.png",
+      "file": "assets/colors/president/orange.webp"
+    },
+    {
+      "id": "president",
+      "index": "blue",
+      "url": "https://shop.vinfastauto.com/on/demandware.static/-/Sites-app_vinfast_vn-Library/default/dw01bdf00a/images/President/hinh-anh-gia-xe-SUV-VinFast-President-mau-xanh-duong-luxury-blue.png",
+      "file": "assets/colors/president/blue.webp"
+    }
+  ]
+}

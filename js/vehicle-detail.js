@@ -4,6 +4,8 @@ import { vehicleViewers } from '../data/vehicle-viewers.js';
 import { colorGalleryMarkup, initColorGallery } from './color-gallery.js';
 import { localURL } from './routes.js';
 import { mountVehicleViewer } from './vehicle-viewer.js';
+import { exteriorColors } from '../data/exterior-colors.js';
+import { mountExteriorColors } from './exterior-colors.js';
 
 const id =
   document.body.dataset.page === 'product'
@@ -48,5 +50,18 @@ if (config) {
     swatches = root.querySelector('.swatches');
     name = root.querySelector('[data-color-name]');
   }
-  mountVehicleViewer(root, config, { stage, swatches, name });
+  const palette = exteriorColors[id];
+  let elements = { stage, swatches, name };
+  if (palette) elements = mountExteriorColors(root, config, palette, elements);
+  mountVehicleViewer(
+    root,
+    palette
+      ? {
+          ...config,
+          colors: palette.colors,
+          missing: 'Chưa có dữ liệu 3D hoặc ảnh đủ 360° đã xác minh.',
+        }
+      : config,
+    elements,
+  );
 }
