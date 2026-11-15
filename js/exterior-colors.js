@@ -65,7 +65,7 @@ export function mountExteriorColors(root, config, palette, elements) {
   const stage = document.createElement('div');
   stage.className = 'exterior-stage';
   oldStage.replaceWith(stage);
-  const picture = document.createElement('img');
+  let picture = document.createElement('img');
   picture.draggable = false;
   stage.append(picture);
   const swatches = document.createElement('div');
@@ -96,6 +96,34 @@ export function mountExteriorColors(root, config, palette, elements) {
   name.after(notice, scope, source);
   root.dataset.paletteStatus = palette.status;
   let ticket = 0;
+  let fade = null;
+  const motion = matchMedia('(prefers-reduced-motion: reduce)');
+  motion.addEventListener('change', () => {
+    if (motion.matches) fade?.finish();
+  });
+  async function present(src, alt, current) {
+    const next = new Image();
+    next.draggable = false;
+    next.src = src;
+    next.alt = alt;
+    await next.decode();
+    // Đợi lớp đang chuyển hoàn tất; kết quả tải cũ không được ghi đè lựa chọn mới.
+    if (fade) await fade.finished.catch(() => {});
+    if (current !== ticket) return false;
+    const previous = picture;
+    stage.append(next);
+    if (previous.naturalWidth && previous.src !== src && !motion.matches) {
+      fade = next.animate([{ opacity: 0 }, { opacity: 1 }], {
+        duration: 350,
+        easing: 'cubic-bezier(.22,.61,.36,1)',
+      });
+      await fade.finished.catch(() => {});
+      fade = null;
+    }
+    previous.remove();
+    picture = next;
+    return current === ticket;
+  }
   const reference = palette.reference || config.image;
   const previews = new Map();
   const buttons = palette.colors.map((color, index) => {
@@ -122,8 +150,6 @@ export function mountExteriorColors(root, config, palette, elements) {
     const available = Boolean(color?.image || color?.mask);
     root.dataset.previewState = 'loading';
     stage.setAttribute('aria-busy', 'true');
-    // Ẩn ảnh cũ trong khi tải để tên màu mới không đi cùng ảnh màu trước đó.
-    picture.style.visibility = 'hidden';
     buttons.forEach((button, i) =>
       button.setAttribute('aria-pressed', String(i === index)),
     );
@@ -143,10 +169,14 @@ export function mountExteriorColors(root, config, palette, elements) {
         src = localURL(color?.image || reference);
       }
       if (current !== ticket) return;
-      picture.src = src;
-      await picture.decode();
-      if (current !== ticket) return;
-      picture.alt = `${config.name} — ${available ? color.name : 'ảnh tham chiếu gốc, chưa có ảnh màu đã chọn'}`;
+      if (
+        !(await present(
+          src,
+          `${config.name} — ${available ? color.name : 'ảnh tham chiếu gốc, chưa có ảnh màu đã chọn'}`,
+          current,
+        ))
+      )
+        return;
       root.dataset.previewState = color?.mask
         ? 'approximate'
         : available
@@ -165,10 +195,15 @@ export function mountExteriorColors(root, config, palette, elements) {
       if (current !== ticket) return;
       root.dataset.previewState = 'unavailable';
       root.dataset.selectedColor = String(index);
-      picture.src = localURL(reference);
-      picture.alt = `${config.name} — ảnh gốc tham chiếu`;
+      if (!picture.naturalWidth) {
+        await present(
+          localURL(reference),
+          `${config.name} — ảnh gốc tham chiếu`,
+          current,
+        ).catch(() => {});
+      }
       notice.textContent =
-        'Không tải được bản xem trước. Hiển thị ảnh gốc tham chiếu; màu đã chọn chưa được mô phỏng.';
+        'Không tải được bản xem trước. Giữ ảnh đang hiển thị; màu đã chọn chưa được mô phỏng.';
     } finally {
       if (current === ticket) {
         picture.style.visibility = '';

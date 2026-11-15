@@ -103,7 +103,12 @@
 [data-vehicle-viewer] .swatches {
   flex-wrap: wrap;
 }
+[data-vehicle-viewer] .exterior-stage {
+  display: grid;
+  isolation: isolate;
+}
 [data-vehicle-viewer] .exterior-stage img {
+  grid-area: 1 / 1;
   display: block;
   width: 100%;
   height: clamp(220px, 40vw, 500px);
