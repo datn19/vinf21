@@ -1,14 +1,19 @@
 import { products, money, normalize } from '../data/products.js';
 import { prefix, pageURL } from './navigation.js';
+import { favoriteIds } from './favorite-store.js';
 
 export function card(p) {
+  const favorite = favoriteIds().has(p.id);
   return /* HTML */ `<article class="product-card">
     ${p.image ? /* HTML */ `<img src="${prefix}assets/${p.image}" alt="${p.name}" loading="lazy" />` : ''}
     <p class="eyebrow">${p.segment}</p>
     <h3>${p.name}</h3>
-    <p>
-      ${p.group === 'historical' ? 'Hồ sơ lịch sử · Đã dừng kinh doanh xe mới' : Number.isFinite(p.price) ? 'Giá snapshot: ' + money(p.price) : 'Xem cấu hình tại trang chi tiết'}
-    </p>
+    <div class="product-price-row">
+      <p>
+        ${p.group === 'historical' ? 'Hồ sơ lịch sử · Đã dừng kinh doanh xe mới' : Number.isFinite(p.price) ? 'Giá snapshot: ' + money(p.price) : 'Xem cấu hình tại trang chi tiết'}
+      </p>
+      <button class="favorite-button ${favorite ? 'is-favorite' : ''}" type="button" data-favorite="${p.id}" aria-pressed="${favorite}" aria-label="${favorite ? 'Bỏ khỏi' : 'Thêm vào'} danh sách yêu thích" title="${favorite ? 'Bỏ khỏi yêu thích' : 'Thêm vào yêu thích'}"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8l1.1 1.1L12 21l7.8-7.5 1.1-1.1a5.5 5.5 0 0 0-.1-7.8Z"/></svg></button>
+    </div>
     ${p.detail || p.detailPath ? /* HTML */ `<a class="text-link" href="${p.detailPath ? pageURL(p.detailPath) : pageURL('product', '?id=' + p.id)}">Khám phá ${p.name} →</a>` : '<p class="muted">Đã có dữ liệu danh mục; chưa tái tạo trang chi tiết.</p>'}
   </article>`;
 }

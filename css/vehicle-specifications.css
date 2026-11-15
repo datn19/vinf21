@@ -97,20 +97,13 @@
   color: #536575;
 }
 .vehicle-technical .vehicle-spec-group {
-  display: grid;
-  grid-template-columns: 210px minmax(0, 1fr);
-  gap: 24px;
-  padding: 20px 24px;
-  border-radius: 14px;
-  background: #f5f7fa;
   min-width: 0;
 }
-.vehicle-technical .vehicle-spec-category {
-  display: flex;
-  align-items: flex-start;
-  gap: 12px;
-  margin: 8px 0;
-  font-size: 17px;
+.vehicle-technical .vehicle-spec-group h3 {
+  padding: 0 8px 10px;
+  margin: 0;
+  border-bottom: 1px solid #cbd3dc;
+  font-size: 16px;
   font-weight: 600;
   line-height: 1.4;
 }
@@ -126,18 +119,13 @@
 }
 .vehicle-spec-fields tbody {
   display: grid;
-  grid-template-columns: minmax(0, 1fr);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: 24px;
 }
 .vehicle-spec-fields tr {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr);
   border-bottom: 1px solid #e1e6eb;
-}
-.vehicle-spec-fields tr:last-child {
-  border-bottom: 0;
-}
-.vehicle-technical .vehicle-spec-fields td {
-  text-align: right;
 }
 .vehicle-technical .vehicle-spec-fields th,
 .vehicle-technical .vehicle-spec-fields td {
@@ -228,7 +216,7 @@
 .vehicle-spec-information {
   display: grid;
   grid-template-columns: minmax(0, 1fr);
-  gap: 14px;
+  gap: 24px;
   align-items: start;
 }
 .vehicle-feature-grid[data-card-count='1'] {
@@ -243,7 +231,7 @@
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 @media (max-width: 1023px) {
-  .vehicle-technical .vehicle-spec-group {
+  .vehicle-spec-fields tbody {
     grid-template-columns: minmax(0, 1fr);
     gap: 8px;
     padding: 18px;
@@ -276,3 +264,7 @@
     grid-template-columns: minmax(0, 1fr);
   }
 }
+
+.vehicle-summary-price-row { display: flex; align-items: center; justify-content: center; gap: 18px; margin: 10px 0 24px; }
+.vehicle-summary-price-row .vehicle-summary-price { margin: 0; }
+.vehicle-summary-price-row .vehicle-favorite-button { position: static; inset: auto; z-index: auto; flex: 0 0 48px; width: 48px; height: 48px; }

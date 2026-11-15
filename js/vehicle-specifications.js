@@ -6,30 +6,14 @@ import {
 import { localURL } from './routes.js';
 import { money } from '../data/products.js';
 
-// Nét SVG dùng chung, chỉ mang tính trang trí; tên nhóm là nhãn truy cập.
-const groupIcons = [
-  'M4 8h16v10H4z M7 8V5h10v3 M8 12h8 M8 15h4',
-  'M5 7h14v13H5z M9 7V4h6v3 M9 13h6 M12 10v6',
-  'M13 2 5 14h6l-1 8 9-13h-6z',
-  'M5 19V5h7l3 4h5v10 M5 5h7 M5 19h15',
-  'M4 7h16v10H4z M7 4v3 M17 4v3 M7 17v3 M17 17v3',
-  'M12 3 4 6v6c0 5 8 9 8 9s8-4 8-9V6z M8 12l3 3 5-6',
-  'M3 4h18v13H3z M8 21h8 M12 17v4',
-  'M6 3v11h12v7 M6 9h9v5 M3 14h3v7',
-  'M3 7h18v10H3z M7 7v4 M11 7v3 M15 7v4 M19 7v3',
-  'M5 3h9v18H5z M5 9h9 M14 7h3l3 4v7h-3v-6',
+// Chỉ gộp nhóm trình bày; giữ nguyên ID, giá trị và nguồn của từng trường.
+const displayGroups = [
+  ['Động cơ & vận hành', ['Động cơ và vận hành']],
+  ['Pin, sạc & quãng đường', ['Pin', 'Sạc', 'Quãng đường']],
+  ['Khung gầm & an toàn', ['Khung gầm', 'An toàn']],
+  ['Công nghệ & tiện nghi', ['Công nghệ', 'Tiện nghi']],
+  ['Nhiên liệu & khí thải', ['Nhiên liệu và khí thải']],
 ];
-function categoryHeading(title, index) {
-  const heading = element('h3', null, 'vehicle-spec-category');
-  const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
-  svg.setAttribute('viewBox', '0 0 24 24');
-  svg.setAttribute('aria-hidden', 'true');
-  const path = document.createElementNS(svg.namespaceURI, 'path');
-  path.setAttribute('d', groupIcons[index]);
-  svg.append(path);
-  heading.append(svg, element('span', title));
-  return heading;
-}
 
 const element = (tag, text, className) => {
   const node = document.createElement(tag);
@@ -150,15 +134,29 @@ export function mountVehicleSpecifications(main, viewer) {
           : model.name,
       ),
     );
-    description.append(
-      element(
-        'p',
-        variant.price != null
-          ? money(variant.price)
-          : 'Giá: chưa xác minh theo phiên bản/thời điểm',
-        'vehicle-summary-price',
-      ),
+    const price = element(
+      'p',
+      variant.price != null
+        ? money(variant.price)
+        : '\u0047i\u00e1: ch\u01b0a x\u00e1c minh theo phi\u00ean b\u1ea3n/th\u1eddi \u0111i\u1ec3m',
+      'vehicle-summary-price',
     );
+    const favoriteButton = element('button');
+    favoriteButton.type = 'button';
+    favoriteButton.className = 'favorite-button vehicle-favorite-button';
+    favoriteButton.dataset.favorite = model.id;
+    favoriteButton.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8l1.1 1.1L12 21l7.8-7.5 1.1-1.1a5.5 5.5 0 0 0-.1-7.8Z"/></svg>';
+    function syncFavoriteButton() {
+      const active = favoriteIds().has(model.id);
+      favoriteButton.classList.toggle('is-favorite', active);
+      favoriteButton.setAttribute('aria-pressed', String(active));
+      favoriteButton.setAttribute('aria-label', active ? 'Bỏ khỏi danh sách yêu thích' : 'Thêm vào danh sách yêu thích');
+      favoriteButton.title = active ? 'Bỏ khỏi yêu thích' : 'Thêm vào yêu thích';
+    }
+syncFavoriteButton();
+    const priceRow = element('div', null, 'vehicle-summary-price-row');
+    priceRow.append(price, favoriteButton);
+    description.append(priceRow);
     const quick = element('dl', null, 'vehicle-quick-stats');
     for (const [label, value] of [
       ...variant.quick,
@@ -184,35 +182,19 @@ export function mountVehicleSpecifications(main, viewer) {
     specifications.replaceChildren(element('h2', 'Thông số kỹ thuật'));
     const information = element('div', null, 'vehicle-spec-information');
     const fields = getSpecificationFields(model, index);
-    const groups = [
-      ...specificationGroupOrder.filter((title) => title !== 'Kích thước'),
-      'Kích thước',
-    ];
-    for (const title of groups) {
-      const rows = fields.filter((field) => field.group === title);
+    const dimensions = fields.filter((field) => field.group === 'Kích thước');
+    visualData.replaceChildren(element('h3', 'Kích thước'), table(dimensions));
+    visualData.hidden = !dimensions.length;
+    for (const [title, groups] of displayGroups) {
+      const rows = groups.flatMap((group) =>
+        fields.filter((field) => field.group === group),
+      );
       if (!rows.length) continue;
       const groupBlock = element('div', null, 'vehicle-spec-group');
       const fieldTable = table(rows);
       fieldTable.className = 'vehicle-spec-fields';
       fieldTable.setAttribute('aria-label', title);
-      groupBlock.append(
-        categoryHeading(
-          title === 'Động cơ và vận hành' ? 'Động cơ & vận hành' : title,
-          [
-            'Động cơ và vận hành',
-            'Pin',
-            'Sạc',
-            'Quãng đường',
-            'Khung gầm',
-            'An toàn',
-            'Công nghệ',
-            'Tiện nghi',
-            'Kích thước',
-            'Nhiên liệu và khí thải',
-          ].indexOf(title),
-        ),
-        fieldTable,
-      );
+      groupBlock.append(element('h3', title), fieldTable);
       information.append(groupBlock);
     }
     specifications.append(information);

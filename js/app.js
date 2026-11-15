@@ -36,6 +36,7 @@ import { card, renderCatalog } from './catalog.js';
 import { renderProduct } from './product.js';
 import { renderTestDrive } from './forms.js';
 import { renderCompare } from './compare.js';
+import { initFavoriteButtons } from './favorite-store.js';
 
 mountNavigation();
 const main = document.querySelector('main');
@@ -295,3 +296,4 @@ initAccordions();
 initSlider();
 localizeLinks();
 initHorizontalScroll();
+initFavoriteButtons();
