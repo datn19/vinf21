@@ -1,10 +1,10 @@
+import { mountLocator } from './location-locator.js';
 import {
   serviceContent,
   documentCatalogs,
   policyContent,
   contractDocuments,
   newsItems,
-  locations,
 } from '../data/destination-content.js';
 import { destinations } from '../data/destinations.js';
 import { localURL } from './routes.js';
@@ -51,19 +51,7 @@ export function renderDocuments(main, page) {
 }
 
 export function renderLocations(main, page) {
-  main.innerHTML =
-    pageHeading(
-      page,
-      'Tra cứu danh mục địa điểm chọn lọc từ bài công bố chính thức',
-    ) +
-    `<section class="container"><aside class="info"><h2>Danh mục lịch sử, không phải bản đồ trực tiếp</h2><p>Các địa chỉ bên dưới được công bố năm 2022–2023, giữ tên đơn vị hành chính tại thời điểm nguồn. Chưa xác nhận hoạt động, giờ mở cửa hoặc tình trạng cổng sạc hiện tại.</p><p>${officialLink(page.source, 'Mở hệ thống tra cứu hiện tại của VinFast')} để xác nhận trước khi đi. Không tự động truy cập vị trí của bạn.</p></aside>
-    ${searchForm('Tìm tên hoặc địa chỉ', [...new Set(locations.map((item) => item.category))])}<div class="destination-grid" data-results></div></section>${sourceMarkup(page)}`;
-  filterCards(
-    main,
-    (item) =>
-      `<article class="destination-card"><p class="eyebrow">${item.category}</p><h2>${item.title}</h2><p>${item.address}</p><p>${item.description}</p><p>Thời điểm nguồn: ${item.date}</p><div class="destination-inline">${officialLink(item.url, 'Bài công bố địa điểm')}${officialLink('https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent(item.title + ' ' + item.address), 'Tìm địa chỉ trên bản đồ')}</div></article>`,
-    locations,
-  );
+  mountLocator(main, page);
 }
 
 export function renderPolicy(main, page) {

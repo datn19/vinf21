@@ -1,0 +1,148 @@
+.locator-heading {
+  padding-block: 24px;
+}
+.locator-heading h1 {
+  font-size: clamp(26px, 4vw, 38px);
+}
+.locator-heading p,
+.locator-note {
+  color: #596b7a;
+  font-size: 13px;
+}
+.locator {
+  display: grid;
+  padding-block: 0;
+  grid-template-columns: minmax(280px, 360px) minmax(0, 1fr);
+  gap: 20px;
+}
+.locator-sidebar,
+.locator-map-panel {
+  min-width: 0;
+}
+.locator-filters {
+  display: grid;
+  gap: 12px;
+}
+.locator-filters > label {
+  display: grid;
+  gap: 6px;
+}
+.locator-filters input[type='search'],
+.locator-filters select {
+  width: 100%;
+  min-height: 42px;
+  padding: 8px;
+  border: 1px solid #ccd5df;
+  background: white;
+}
+.locator-filters fieldset {
+  border: 1px solid #e1e6ec;
+  padding: 10px;
+}
+.locator-filters fieldset label {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  margin-block: 8px;
+}
+.locator-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+}
+.locator button {
+  padding: 9px 12px;
+  min-height: 42px;
+  background: #fff;
+  color: #1464f4;
+  border: 1px solid #ccd5df;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.locator-results {
+  max-height: 460px;
+  overflow-y: auto;
+}
+.locator-results article {
+  border: 1px solid #e1e6ec;
+  padding: 14px;
+  margin-bottom: 10px;
+}
+.locator-results article.is-selected {
+  border-color: #1464f4;
+  background: #f3f7ff;
+}
+.locator-results h2 {
+  font-size: 18px;
+  margin: 0 0 8px;
+}
+.locator-results p {
+  margin-block: 8px;
+}
+.locator-results a {
+  font-size: 13px;
+}
+.locator-category {
+  color: #1464f4;
+  font-size: 13px;
+}
+.locator-map-panel {
+  position: sticky;
+  top: 90px;
+  align-self: start;
+}
+#locator-map {
+  height: 650px;
+  width: 100%;
+  background: #edf1f5;
+  z-index: 0;
+}
+.locator-pin {
+  display: grid;
+  place-items: center;
+  border: 2px solid white;
+  border-radius: 50%;
+  background: #1464f4;
+  color: white;
+  font-weight: bold;
+  box-shadow: 0 2px 5px #0004;
+}
+.locator-pin.charging {
+  background: #16734e;
+}
+.locator-sources {
+  padding-block: 24px;
+  font-size: 14px;
+}
+.locator-switch {
+  display: none;
+}
+@media (max-width: 767px) {
+  .locator {
+    display: block;
+  }
+  .locator-switch {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 12px;
+  }
+  .locator-switch [aria-pressed='true'] {
+    background: #1464f4;
+    color: white;
+  }
+  .locator[data-view='list'] .locator-map-panel,
+  .locator[data-view='map'] .locator-sidebar {
+    display: none;
+  }
+  .locator-map-panel {
+    position: static;
+  }
+  #locator-map {
+    height: 65vh;
+    min-height: 360px;
+  }
+  .locator-results {
+    max-height: 60vh;
+  }
+}
