@@ -56,12 +56,37 @@ body.shared-chrome .brand img {
   object-fit: contain;
 }
 body.shared-chrome .account-trigger {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
   border: 0;
   background: white;
   color: #202328;
   padding: 12px 0;
   font-size: 14px;
   white-space: nowrap;
+}
+body.shared-chrome .account-trigger-icon {
+  width: 20px;
+  height: 20px;
+  flex: 0 0 20px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.6;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+body.shared-chrome [data-account-label] {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+body.shared-chrome .account-trigger:hover {
+  color: var(--blue);
+}
+body.shared-chrome .account-trigger:focus-visible,
+body.shared-chrome .header-cta:focus-visible {
+  outline: 2px solid var(--blue);
+  outline-offset: 4px;
 }
 body.shared-chrome .mega-menu {
   padding: 0;
@@ -200,7 +225,7 @@ body.shared-chrome .has-tools [role='tablist'] {
     padding: 12px 20px;
   }
 }
-@media (max-width: 1200px) {
+@media (max-width: 1050px) {
   body.shared-chrome .account-trigger {
     display: none;
   }
@@ -250,8 +275,16 @@ body.shared-chrome .has-tools [role='tablist'] {
   }
 }
 @media (max-width: 1200px) and (min-width: 1051px) {
+  body.shared-chrome .header-inner {
+    padding-inline: 20px;
+    gap: 12px;
+  }
+  body.shared-chrome .nav-trigger,
+  body.shared-chrome .nav-direct > a {
+    font-size: 12px;
+  }
   body.shared-chrome .header-cta {
-    display: none;
+    padding-inline: 12px;
   }
 }
 @media (max-width: 1050px) {

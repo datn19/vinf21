@@ -30,8 +30,11 @@ export function mountNavigation() {
         Menu ☰
       </button>
       <nav id="main-nav" aria-label="Điều hướng chính">${homeMenuMarkup()}</nav>
+      <a class="button header-cta" href="${pageURL('test-drive')}"
+        >Đăng ký lái thử</a
+      >
       <div class="account-area">
-        <button type="button" class="account-trigger" aria-expanded="false" aria-haspopup="true">Tài khoản</button>
+        <button type="button" class="account-trigger" aria-expanded="false" aria-haspopup="true"><svg class="account-trigger-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="8" r="4" /><path d="M4 21v-2a8 8 0 0 1 16 0v2" /></svg><span data-account-label>Tài khoản</span></button>
         <section class="account-menu" id="account-menu" aria-label="Menu tài khoản" hidden>
           <div class="account-menu-heading"><span class="account-avatar" aria-hidden="true">V</span><div><strong data-menu-name>Xin chào</strong><small data-menu-email></small></div></div>
           <a class="account-menu-link" href="${pageURL('catalog')}"><span>Khám phá xe</span><span aria-hidden="true">→</span></a>
@@ -40,9 +43,6 @@ export function mountNavigation() {
           <button class="account-signout" type="button" data-signout>Đăng xuất</button>
         </section>
       </div>
-      <a class="button header-cta" href="${pageURL('test-drive')}"
-        >Đăng ký lái thử</a
-      >
     </div>
     <dialog id="account-notice" class="account-dialog" aria-labelledby="account-title">
       <button type="button" class="dialog-close" data-close-account aria-label="Đóng">×</button>
@@ -58,7 +58,7 @@ export function mountNavigation() {
   function currentSession() { try { return JSON.parse(localStorage.getItem('vinfast-session') || 'null'); } catch { return null; } }
   function renderAccountMenu() {
     const session = currentSession();
-    accountTrigger.textContent = session ? (session.name || 'Tài khoản') : 'Tài khoản';
+    accountTrigger.querySelector('[data-account-label]').textContent = session ? (session.name || 'Tài khoản') : 'Tài khoản';
     accountTrigger.setAttribute('aria-expanded', String(!accountMenu.hidden));
     accountMenu.querySelector('[data-menu-name]').textContent = session ? `Xin chào, ${session.name || 'bạn'}` : 'Xin chào';
     accountMenu.querySelector('[data-menu-email]').textContent = session?.email || '';
@@ -110,7 +110,7 @@ export function mountNavigation() {
       feedback.textContent = 'Email hoặc mật khẩu chưa đúng.'; return;
     }
     localStorage.setItem('vinfast-session', JSON.stringify({ email: data.email, name: accounts[data.email].name }));
-    document.querySelector('.account-trigger').textContent = accounts[data.email].name || 'Tài khoản';
+    accountTrigger.querySelector('[data-account-label]').textContent = accounts[data.email].name || 'Tài khoản';
     feedback.textContent = accountMode === 'register' ? '\u0054\u00e0i kho\u1ea3n \u0111\u00e3 \u0111\u01b0\u1ee3c t\u1ea1o tr\u00ean thi\u1ebft b\u1ecb n\u00e0y.' : '\u0110\u0103ng nh\u1eadp th\u00e0nh c\u00f4ng.';
     renderAccountMenu();
     dialog.close();
