@@ -1,4 +1,3 @@
-import { locatorLocations as locations } from '../data/locator-locations.js';
 import { locations as historicalLocations } from '../data/destination-content.js';
 import { localURL } from './routes.js';
 import { escapeHTML as esc } from './destination-shared.js';
@@ -10,10 +9,17 @@ const normalize = (value) =>
     .replace(/[đĐ]/g, 'd')
     .toLowerCase();
 const unique = (values) => [...new Set(values.filter(Boolean))];
+const hasCoordinates = (item) =>
+  Number.isFinite(item.lat) && Number.isFinite(item.lng);
 const directions = (item) =>
   'https://www.google.com/maps/dir/?api=1&destination=' +
-  encodeURIComponent(`${item.lat},${item.lng}`);
+  encodeURIComponent(
+    hasCoordinates(item)
+      ? `${item.lat},${item.lng}`
+      : `${item.name}, ${item.address}`,
+  );
 function distance(from, item) {
+  if (!hasCoordinates(item)) return Infinity;
   const rad = (value) => (value * Math.PI) / 180;
   const a =
     Math.sin(rad(item.lat - from.latitude) / 2) ** 2 +
@@ -32,6 +38,9 @@ function script(path) {
   });
 }
 export async function mountLocator(main) {
+  // Chỉ tải danh mục toàn quốc khi mở trang tra cứu.
+  const { locatorLocations: locations } =
+    await import('../data/locator-locations.js');
   for (const file of [
     'assets/vendor/leaflet/leaflet.css',
     'assets/vendor/leaflet/cluster.css',
@@ -44,7 +53,7 @@ export async function mountLocator(main) {
     document.head.append(link);
   }
   const categories = unique(locations.map((item) => item.category));
-  main.innerHTML = `<section class="container locator-heading"><h1>Tìm Showroom & Trạm sạc</h1><p>Danh mục thử nghiệm: 3 địa điểm tại Hà Nội, đối chiếu OpenStreetMap ngày 16/11/2026. Chưa xác nhận hoạt động hiện tại, địa chỉ đầy đủ hoặc phường/xã mới. Không có trạng thái sạc trực tiếp. <a href="https://vinfastauto.com/vn_vi/tim-kiem-showroom-tram-sac" target="_blank" rel="noopener">Tra cứu chính thức VinFast</a>.</p></section>
+  main.innerHTML = `<section class="container locator-heading"><h1>Tìm Showroom & Trạm sạc</h1><p>${locations.length} địa điểm có nguồn đối chiếu, gồm ${locations.filter(hasCoordinates).length} điểm bản đồ. Phạm vi còn thiếu; địa chỉ lịch sử và tỉnh/thành phân vùng tham khảo được ghi chú riêng. Chưa xác nhận hoạt động thực địa, không có trạng thái sạc trực tiếp. <a href="https://vinfastauto.com/vn_vi/tim-kiem-showroom-tram-sac" target="_blank" rel="noopener">Tra cứu chính thức VinFast</a>.</p></section>
   <section class="container locator"><div class="locator-switch"><button type="button" data-view="list" aria-pressed="true">Danh sách</button><button type="button" data-view="map" aria-pressed="false">Bản đồ</button></div><aside class="locator-sidebar"><form class="locator-filters" role="search"><label>Tên hoặc địa chỉ<input name="query" type="search" placeholder="Tìm địa điểm" maxlength="150"></label><label>Tỉnh/thành phố<select name="province"><option value="">Tất cả khu vực có dữ liệu</option>${unique(
     locations.map((x) => x.province),
   )
@@ -52,7 +61,7 @@ export async function mountLocator(main) {
     .join(
       '',
     )}</select></label><label>Phường/xã<select name="ward" disabled><option value="">Chưa có dữ liệu đã xác minh</option></select></label><fieldset><legend>Loại địa điểm</legend>${categories.map((category, index) => `<label><input type="checkbox" name="category" value="${index}">${esc(category)}</label>`).join('')}</fieldset><div class="locator-actions"><button type="reset">Xóa bộ lọc</button><button type="button" data-near>Gần tôi</button></div></form><p data-count role="status"></p><p data-geo role="status"></p><div class="locator-results" aria-label="Kết quả địa điểm"></div></aside><div class="locator-map-panel"><button type="button" data-map-reset>Đặt lại bản đồ</button><p data-map-status role="status">Đang tải bản đồ…</p><div id="locator-map" aria-label="Bản đồ địa điểm"></div></div></section>
-  <section class="container locator-sources"><p>Dữ liệu bản đồ © cộng tác viên <a href="https://www.openstreetmap.org/copyright">OpenStreetMap — ODbL</a>. Tọa độ lấy từ đối tượng nguồn, không suy đoán địa chỉ. Hãy xác nhận với đơn vị vận hành trước khi đi.</p><details><summary>Địa chỉ trong các bài công bố cũ của VinFast (2022–2023)</summary>${historicalLocations.map((x) => `<p><strong>${esc(x.title)}</strong> — ${esc(x.address)}. <a href="${esc(x.url)}" target="_blank" rel="noopener">Nguồn ${esc(x.date)}</a>. Chưa đủ tọa độ để đưa lên bản đồ.</p>`).join('')}</details></section>`;
+  <section class="container locator-sources"><p>Dữ liệu ODbL © <a href="https://blokvolt.com/charging-stations/download/">BlokVolt</a>, cộng tác viên <a href="https://www.openstreetmap.org/copyright">OpenStreetMap — ODbL</a>. Tọa độ lấy từ đối tượng nguồn, chưa xác minh lối vào. Tỉnh/thành phân vùng tham khảo dùng ranh giới geoBoundaries cũ và tên tỉnh năm 2025; chưa xác minh phường/xã. Các địa chỉ từ hãng/đại lý có nguồn riêng, không có giấy phép dữ liệu mở. Hãy xác nhận với đơn vị vận hành trước khi đi.</p><details><summary>Địa chỉ trong các bài công bố cũ của VinFast (2022–2023)</summary>${historicalLocations.map((x) => `<p><strong>${esc(x.title)}</strong> — ${esc(x.address)}. <a href="${esc(x.url)}" target="_blank" rel="noopener">Nguồn ${esc(x.date)}</a>. Chưa đủ tọa độ để đưa lên bản đồ.</p>`).join('')}</details></section>`;
   const root = main.querySelector('.locator'),
     form = root.querySelector('form'),
     results = root.querySelector('.locator-results');
@@ -67,12 +76,13 @@ export async function mountLocator(main) {
   const markers = new Map();
   function fit() {
     if (!map) return;
-    if (filtered.length)
+    const mapped = filtered.filter(hasCoordinates);
+    if (mapped.length)
       map.fitBounds(
-        filtered.map((x) => [x.lat, x.lng]),
+        mapped.map((x) => [x.lat, x.lng]),
         { padding: [35, 35], maxZoom: 15, animate: false },
       );
-    else map.setView([21.04, 105.83], 11);
+    else map.setView([16.1, 106.3], 5);
   }
   function view(value) {
     root.dataset.view = value;
@@ -111,7 +121,10 @@ export async function mountLocator(main) {
     );
     filtered = locations.filter(
       (x) =>
-        (!query || normalize(x.name + ' ' + x.address).includes(query)) &&
+        (!query ||
+          normalize(x.name + ' ' + x.address + ' ' + x.province).includes(
+            query,
+          )) &&
         (!province || x.province === province) &&
         (!ward || x.ward === ward) &&
         (!types.length || types.includes(x.category)),
@@ -119,19 +132,19 @@ export async function mountLocator(main) {
     if (origin)
       filtered.sort((a, b) => distance(origin, a) - distance(origin, b));
     root.querySelector('[data-count]').textContent =
-      `${filtered.length} địa điểm${origin ? ' · sắp xếp theo khoảng cách đường chim bay' : ''}`;
+      `${filtered.length} địa điểm · ${filtered.filter(hasCoordinates).length} có tọa độ${origin ? ' · sắp xếp theo khoảng cách đường chim bay' : ''}`;
     results.innerHTML = filtered.length
       ? filtered
           .map(
             (x) =>
-              `<article data-id="${x.id}"><h2>${esc(x.name)}</h2><p class="locator-category">${esc(x.category)}</p><p>${esc(x.address)}</p>${origin ? `<p>Khoảng ${distance(origin, x).toFixed(1)} km đường chim bay</p>` : ''}<p class="locator-note">${esc(x.note)}</p><div class="locator-actions"><button type="button" data-focus="${x.id}">Xem trên bản đồ</button><a href="${directions(x)}" target="_blank" rel="noopener">Chỉ đường</a></div><a href="${x.source}" target="_blank" rel="noopener">Nguồn OSM · ${x.verifiedDate}</a></article>`,
+              `<article data-id="${x.id}"><h2>${esc(x.name)}</h2><p class="locator-category">${esc(x.category)}</p><p>${esc(x.address)} · ${esc(x.province)}</p>${x.phone ? `<p>Điện thoại: ${esc(x.phone)}</p>` : ''}${x.openingHours ? `<p>Giờ theo nguồn: ${esc(x.openingHours)}</p>` : ''}${origin && hasCoordinates(x) ? `<p>Khoảng ${distance(origin, x).toFixed(1)} km đường chim bay</p>` : ''}<p class="locator-note">${esc(x.note)}</p><div class="locator-actions">${hasCoordinates(x) ? `<button type="button" data-focus="${x.id}">Xem trên bản đồ</button>` : '<span>Chưa có tọa độ xác minh</span>'}<a href="${directions(x)}" target="_blank" rel="noopener">Chỉ đường</a></div><a href="${x.source}" target="_blank" rel="noopener">${esc(x.sourceLabel)} · ${x.verifiedDate}</a></article>`,
           )
           .join('')
       : '<p>Không tìm thấy địa điểm phù hợp. Hãy xóa hoặc đổi bộ lọc.</p>';
     if (!map) return;
     cluster.clearLayers();
     markers.clear();
-    filtered.forEach((item) => {
+    filtered.filter(hasCoordinates).forEach((item) => {
       const charging = item.category.startsWith('Trạm');
       const marker = L.marker([item.lat, item.lng], {
         title: item.name,

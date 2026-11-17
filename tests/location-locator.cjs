@@ -4,6 +4,9 @@ const {
 const { start } = require('./static-server.cjs');
 const assert = require('node:assert/strict');
 (async () => {
+  const { locatorLocations: data } =
+    await import('../data/locator-locations.js');
+  const categories = [...new Set(data.map((x) => x.category))];
   const s = await start('/vinf'),
     b = await chromium.launch();
   try {
@@ -24,13 +27,35 @@ const assert = require('node:assert/strict');
       assert.ok((await count.textContent()).startsWith('0'));
       await p.locator('button[type=reset]').click();
       await p.waitForTimeout(100);
-      assert.ok((await count.textContent()).startsWith('3'));
+      assert.equal(
+        await p.locator('.locator-results article').count(),
+        data.length,
+      );
+      for (const province of [...new Set(data.map((x) => x.province))]) {
+        await p.locator('[name=province]').selectOption(province);
+        assert.equal(
+          await p.locator('.locator-results article').count(),
+          data.filter((x) => x.province === province).length,
+        );
+      }
       await p.locator('[name=province]').selectOption('Hà Nội');
       assert.ok(await p.locator('[name=ward]').isDisabled());
       await p.locator('[name=category]').nth(0).check();
-      assert.ok((await count.textContent()).startsWith('2'));
+      assert.equal(
+        await p.locator('.locator-results article').count(),
+        data.filter(
+          (x) => x.province === 'Hà Nội' && x.category === categories[0],
+        ).length,
+      );
       await p.locator('[name=category]').nth(1).check();
-      assert.ok((await count.textContent()).startsWith('3'));
+      assert.equal(
+        await p.locator('.locator-results article').count(),
+        data.filter(
+          (x) =>
+            x.province === 'Hà Nội' &&
+            categories.slice(0, 2).includes(x.category),
+        ).length,
+      );
       if (width > 767) {
         for (let i = 0; i < 6; i++)
           await p.locator('.leaflet-control-zoom-out').click();
@@ -63,6 +88,31 @@ const assert = require('node:assert/strict');
           await p.locator('.locator-results article').first().textContent()
         ).includes('Phạm Văn Đồng'),
       );
+      await p.locator('button[type=reset]').click();
+      await p.waitForTimeout(100);
+      for (const [index, category] of categories.entries()) {
+        await p.locator('[name=category]').nth(index).check();
+        assert.equal(
+          await p.locator('.locator-results article').count(),
+          data.filter((x) => x.category === category).length,
+        );
+        await p.locator('[name=category]').nth(index).uncheck();
+      }
+      await search.fill('Xanh Mekong');
+      assert.equal(await p.locator('[data-focus]').count(), 0);
+      const dest = await p
+        .locator('.locator-results .locator-actions a')
+        .getAttribute('href');
+      assert.ok(decodeURIComponent(dest).includes('Võ Nguyên Giáp'));
+      assert.ok(
+        !(await p.locator('.locator-results').textContent()).includes(
+          'Infinity',
+        ),
+      );
+      await search.fill('xanh mekong');
+      assert.equal(await p.locator('.locator-results article').count(), 1);
+      await p.locator('button[type=reset]').click();
+      await p.waitForTimeout(100);
       await c.clearPermissions();
       await p.evaluate(() => {
         navigator.geolocation.getCurrentPosition = (ok, fail) =>

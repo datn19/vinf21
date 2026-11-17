@@ -1,6 +1,8 @@
 // Dữ liệu dẫn xuất OpenStreetMap, ODbL 1.0; đối chiếu API công khai 16/11/2026.
+import { nationalLocations } from './locator-national.js';
+import { addressLocations } from './locator-addresses.js';
 export const locationLicense = 'https://www.openstreetmap.org/copyright';
-export const locatorLocations = [
+const existingLocations = [
   {
     id: 'osm-node-13157575597',
     name: 'Cửa hàng Xe máy điện VinFast Phạm Văn Đồng',
@@ -44,5 +46,17 @@ export const locatorLocations = [
   ...location,
   verifiedDate: '2026-11-16',
   license: 'ODbL-1.0',
+  phone: null,
+  openingHours: null,
+  sourceLabel: 'OpenStreetMap',
+  verificationStatus: 'VERIFIED AND IMPLEMENTED',
   verification: 'Đối chiếu bản ghi OSM; chưa xác nhận hoạt động thực địa',
 }));
+// Một địa điểm chỉ xuất hiện một lần nếu được nhập từ nhiều nguồn.
+export const locatorLocations = [
+  ...new Map(
+    [...existingLocations, ...nationalLocations, ...addressLocations].map(
+      (item) => [item.id, item],
+    ),
+  ).values(),
+];
