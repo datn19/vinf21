@@ -1,0 +1,4354 @@
+{
+  "date": "2026-11-17",
+  "extractSource": "https://download.geofabrik.de/asia/vietnam.html",
+  "snapshot": "2026-11-16T21:22:36Z",
+  "duplicatesRemoved": [],
+  "possibleDuplicates": [
+    {
+      "ids": [
+        "osm-node-14040638226",
+        "osm-node-14040638225"
+      ],
+      "distanceMetres": 17,
+      "reason": "Gần nhau, cùng loại; chưa đủ bằng chứng trùng danh tính"
+    }
+  ],
+  "records": [
+    {
+      "id": "osm-node-10115637617",
+      "source": "https://www.openstreetmap.org/node/10115637617",
+      "reason": "Loại địa điểm hoặc quyền tiếp cận chưa phù hợp",
+      "tags": {
+        "addr:housenumber": "72",
+        "addr:street": "Ba Đình",
+        "name": "Công ty Innov Green Kontum",
+        "office": "company",
+        "opening_hours": "Su-Th 07:30-17:00; Fr-Sa 00:00-24:00",
+        "phone": "02603913134"
+      }
+    },
+    {
+      "id": "osm-node-10115637618",
+      "source": "https://www.openstreetmap.org/node/10115637618",
+      "reason": "Loại địa điểm hoặc quyền tiếp cận chưa phù hợp",
+      "tags": {
+        "addr:housenumber": "72",
+        "addr:street": "Ba Đình",
+        "name": "Innov Green Kon Tum",
+        "office": "company"
+      }
+    },
+    {
+      "id": "osm-node-11200062845",
+      "source": "https://www.openstreetmap.org/node/11200062845",
+      "reason": "Loại địa điểm hoặc quyền tiếp cận chưa phù hợp",
+      "tags": {
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "man_made": "charge_point",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561",
+        "socket:type2_combo": "2",
+        "socket:type2_combo:output": "60 kW"
+      }
+    },
+    {
+      "id": "osm-node-11200062846",
+      "source": "https://www.openstreetmap.org/node/11200062846",
+      "reason": "Loại địa điểm hoặc quyền tiếp cận chưa phù hợp",
+      "tags": {
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "man_made": "charge_point",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561",
+        "socket:type2_combo": "2",
+        "socket:type2_combo:output": "60 kW"
+      }
+    },
+    {
+      "id": "osm-node-11200062847",
+      "source": "https://www.openstreetmap.org/node/11200062847",
+      "reason": "Loại địa điểm hoặc quyền tiếp cận chưa phù hợp",
+      "tags": {
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "man_made": "charge_point",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561",
+        "socket:type2_combo": "2",
+        "socket:type2_combo:output": "60 kW"
+      }
+    },
+    {
+      "id": "osm-node-11200062848",
+      "source": "https://www.openstreetmap.org/node/11200062848",
+      "reason": "Loại địa điểm hoặc quyền tiếp cận chưa phù hợp",
+      "tags": {
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "man_made": "charge_point",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561",
+        "socket:type2_combo": "2",
+        "socket:type2_combo:output": "60 kW"
+      }
+    },
+    {
+      "id": "osm-node-11200062849",
+      "source": "https://www.openstreetmap.org/node/11200062849",
+      "reason": "Loại địa điểm hoặc quyền tiếp cận chưa phù hợp",
+      "tags": {
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "man_made": "charge_point",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561",
+        "socket:type2_combo": "2",
+        "socket:type2_combo:output": "60 kW"
+      }
+    },
+    {
+      "id": "osm-node-11200062850",
+      "source": "https://www.openstreetmap.org/node/11200062850",
+      "reason": "Loại địa điểm hoặc quyền tiếp cận chưa phù hợp",
+      "tags": {
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "man_made": "charge_point",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561",
+        "socket:type2_combo": "2",
+        "socket:type2_combo:output": "60 kW"
+      }
+    },
+    {
+      "id": "osm-node-11200062851",
+      "source": "https://www.openstreetmap.org/node/11200062851",
+      "reason": "Loại địa điểm hoặc quyền tiếp cận chưa phù hợp",
+      "tags": {
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "man_made": "charge_point",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561",
+        "socket:type2_combo": "2",
+        "socket:type2_combo:output": "60 kW"
+      }
+    },
+    {
+      "id": "osm-node-11200062852",
+      "source": "https://www.openstreetmap.org/node/11200062852",
+      "reason": "Loại địa điểm hoặc quyền tiếp cận chưa phù hợp",
+      "tags": {
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "man_made": "charge_point",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561",
+        "socket:type2_combo": "2",
+        "socket:type2_combo:output": "60 kW"
+      }
+    },
+    {
+      "id": "osm-node-11200062853",
+      "source": "https://www.openstreetmap.org/node/11200062853",
+      "reason": "Loại địa điểm hoặc quyền tiếp cận chưa phù hợp",
+      "tags": {
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "man_made": "charge_point",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561",
+        "socket:type2_combo": "2",
+        "socket:type2_combo:output": "60 kW"
+      }
+    },
+    {
+      "id": "osm-node-11200062854",
+      "source": "https://www.openstreetmap.org/node/11200062854",
+      "reason": "Loại địa điểm hoặc quyền tiếp cận chưa phù hợp",
+      "tags": {
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "man_made": "charge_point",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561",
+        "socket:type2_combo": "2",
+        "socket:type2_combo:output": "60 kW"
+      }
+    },
+    {
+      "id": "osm-node-11200062855",
+      "source": "https://www.openstreetmap.org/node/11200062855",
+      "reason": "Loại địa điểm hoặc quyền tiếp cận chưa phù hợp",
+      "tags": {
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "man_made": "charge_point",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561",
+        "socket:type2_combo": "2",
+        "socket:type2_combo:output": "60 kW"
+      }
+    },
+    {
+      "id": "osm-node-11200062856",
+      "source": "https://www.openstreetmap.org/node/11200062856",
+      "reason": "Loại địa điểm hoặc quyền tiếp cận chưa phù hợp",
+      "tags": {
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "man_made": "charge_point",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561",
+        "socket:type2_combo": "2",
+        "socket:type2_combo:output": "60 kW"
+      }
+    },
+    {
+      "id": "osm-node-11200062989",
+      "source": "https://www.openstreetmap.org/node/11200062989",
+      "reason": "Loại địa điểm hoặc quyền tiếp cận chưa phù hợp",
+      "tags": {
+        "access": "private",
+        "amenity": "charging_station",
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "fee": "yes",
+        "moped": "yes",
+        "name": "VinFast (xe máy điện)",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561"
+      }
+    },
+    {
+      "id": "osm-node-11207515038",
+      "source": "https://www.openstreetmap.org/node/11207515038",
+      "reason": "Loại địa điểm hoặc quyền tiếp cận chưa phù hợp",
+      "tags": {
+        "access": "private",
+        "amenity": "charging_station",
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "fee": "yes",
+        "moped": "yes",
+        "name": "VinFast (xe máy điện)",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561",
+        "socket:schuko": "8"
+      }
+    },
+    {
+      "id": "osm-node-11302063351",
+      "source": "https://www.openstreetmap.org/node/11302063351",
+      "reason": "Loại địa điểm hoặc quyền tiếp cận chưa phù hợp",
+      "tags": {
+        "man_made": "charge_point",
+        "name": "Trạm sạc điện VinFast"
+      }
+    },
+    {
+      "id": "osm-node-11563334814",
+      "source": "https://www.openstreetmap.org/node/11563334814",
+      "reason": "Loại địa điểm hoặc quyền tiếp cận chưa phù hợp",
+      "tags": {
+        "addr:city": "Hà Nội",
+        "addr:district": "Quận Bắc Từ Liêm",
+        "addr:housenumber": "455",
+        "addr:province": "Hà Nội",
+        "addr:street": "Đường Hoàng Quốc Việt",
+        "addr:subdistrict": "Phường Cổ Nhuế 1",
+        "name": "Xưởng dịch vụ Xe máy điện VinFast CarOn Hoàng Quốc Việt",
+        "shop": "motorcycle_repair",
+        "source": "mapillary",
+        "website": "https://caron.vn/"
+      }
+    },
+    {
+      "id": "osm-node-11777218045",
+      "source": "https://www.openstreetmap.org/node/11777218045",
+      "reason": "Loại địa điểm hoặc quyền tiếp cận chưa phù hợp",
+      "tags": {
+        "addr:district": "Quận Nam Từ Liêm",
+        "addr:province": "Thành phố Hà Nội",
+        "addr:street": "Xưởng Dịch Vụ Vinfast Smart City, Đại Lộ Thăng Long,",
+        "addr:subdistrict": "Phường Tây Mỗ",
+        "name": "Xưởng Dịch Vụ Vinfast Smart City, Đại Lộ Thăng Long,"
+      }
+    },
+    {
+      "id": "osm-node-12221203714",
+      "source": "https://www.openstreetmap.org/node/12221203714",
+      "reason": "Loại địa điểm hoặc quyền tiếp cận chưa phù hợp",
+      "tags": {
+        "name": "V Green Home",
+        "tourism": "guest_house"
+      }
+    },
+    {
+      "id": "osm-node-12696818056",
+      "source": "https://www.openstreetmap.org/node/12696818056",
+      "reason": "Loại địa điểm hoặc quyền tiếp cận chưa phù hợp",
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Vinfast Minh Đạo Bắc Ninh",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "id": "osm-node-13152453186",
+      "source": "https://www.openstreetmap.org/node/13152453186",
+      "reason": "Loại địa điểm hoặc quyền tiếp cận chưa phù hợp",
+      "tags": {
+        "addr:housenumber": "1H",
+        "addr:street": "Phố Trần Quang Diệu",
+        "name": "Xưởng dịch vụ Xe máy điện VinFast Huy Hiệu 3",
+        "shop": "motorcycle_repair"
+      }
+    },
+    {
+      "id": "osm-node-13152453188",
+      "source": "https://www.openstreetmap.org/node/13152453188",
+      "reason": "Loại địa điểm hoặc quyền tiếp cận chưa phù hợp",
+      "tags": {
+        "addr:housenumber": "116",
+        "addr:street": "Phố Đông Các",
+        "name": "Xưởng dịch vụ Xe máy điện VinFast Huy Hiệu 4",
+        "shop": "motorcycle_repair"
+      }
+    },
+    {
+      "id": "osm-node-13152453193",
+      "source": "https://www.openstreetmap.org/node/13152453193",
+      "reason": "Loại địa điểm hoặc quyền tiếp cận chưa phù hợp",
+      "tags": {
+        "name": "Xưởng dịch vụ Xe máy điện VinFast CarOn Mễ Trì",
+        "shop": "motorcycle_repair"
+      }
+    },
+    {
+      "id": "osm-node-13295987418",
+      "source": "https://www.openstreetmap.org/node/13295987418",
+      "reason": "Loại địa điểm hoặc quyền tiếp cận chưa phù hợp",
+      "tags": {
+        "addr:street": "tầng 1, toà CT5B",
+        "name": "Xưởng dịch vụ Xe máy điện VinFast CarOn Từ Liêm",
+        "shop": "motorcycle_repair"
+      }
+    },
+    {
+      "id": "osm-node-13377624713",
+      "source": "https://www.openstreetmap.org/node/13377624713",
+      "reason": "Loại địa điểm hoặc quyền tiếp cận chưa phù hợp",
+      "tags": {
+        "addr:district": "Kiến Tường",
+        "addr:housenumber": "7",
+        "addr:province": "Long An",
+        "addr:street": "Nguyễn Thị Diện",
+        "addr:subdistrict": "Phường 3",
+        "craft": "electrician",
+        "name": "Trạm sạc Vinfast"
+      }
+    },
+    {
+      "id": "osm-node-13392985205",
+      "source": "https://www.openstreetmap.org/node/13392985205",
+      "reason": "Loại địa điểm hoặc quyền tiếp cận chưa phù hợp",
+      "tags": {
+        "information": "stele",
+        "name": "Vinfast Haiphong Factory",
+        "tourism": "information"
+      }
+    },
+    {
+      "id": "osm-node-13394493101",
+      "source": "https://www.openstreetmap.org/node/13394493101",
+      "reason": "Loại địa điểm hoặc quyền tiếp cận chưa phù hợp",
+      "tags": {
+        "addr:city": "Thành phố Bắc Ninh",
+        "addr:province": "Bac Ninh",
+        "addr:street": "Đường Huỳnh Thúc Kháng",
+        "addr:subdistrict": "Phường Tân Tiến",
+        "amenity": "car_rental",
+        "name": "Xưởng dịch vụ Vinfast Đào Dương",
+        "phone": "0888 012 929",
+        "website": "https://vinfastotodaoduong.com/"
+      }
+    },
+    {
+      "id": "osm-node-13396607601",
+      "source": "https://www.openstreetmap.org/node/13396607601",
+      "reason": "Loại địa điểm hoặc quyền tiếp cận chưa phù hợp",
+      "tags": {
+        "addr:city": "Thành phố Bắc Ninh",
+        "addr:province": "Bac Ninh",
+        "addr:street": "Đường Huỳnh Thúc Kháng",
+        "addr:subdistrict": "Phường Tân Tiến",
+        "internet_access": "wlan",
+        "name": "Vinfast Đào Dương",
+        "opening_hours": "Mo-Su 07:30-18:00",
+        "phone": "0888 012 929",
+        "shop": "clothes"
+      }
+    },
+    {
+      "id": "osm-node-13452819776",
+      "source": "https://www.openstreetmap.org/node/13452819776",
+      "reason": "Loại địa điểm hoặc quyền tiếp cận chưa phù hợp",
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Trạm biến áp VinFast",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "id": "osm-node-13452819791",
+      "source": "https://www.openstreetmap.org/node/13452819791",
+      "reason": "Loại địa điểm hoặc quyền tiếp cận chưa phù hợp",
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Đối diện Trạm biến áp VinFast",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "id": "osm-node-13658912837",
+      "source": "https://www.openstreetmap.org/node/13658912837",
+      "reason": "Loại địa điểm hoặc quyền tiếp cận chưa phù hợp",
+      "tags": {
+        "access": "yes",
+        "amenity": "vending_machine",
+        "battery_swap": "yes",
+        "brand": "VinFast",
+        "capacity": "6 batteries",
+        "charge": "9000 VND/battery",
+        "currency:VND": "yes",
+        "fee": "yes",
+        "motorcycle": "yes",
+        "name": "Tủ đổi pin VinFast",
+        "name:en": "VinFast Battery-swapping Cabinet",
+        "operator": "VinFast",
+        "payment:app": "yes",
+        "vending": "battery_swap"
+      }
+    },
+    {
+      "id": "osm-node-13658912838",
+      "source": "https://www.openstreetmap.org/node/13658912838",
+      "reason": "Loại địa điểm hoặc quyền tiếp cận chưa phù hợp",
+      "tags": {
+        "access": "yes",
+        "amenity": "vending_machine",
+        "battery_swap": "yes",
+        "brand": "VinFast",
+        "capacity": "6 batteries",
+        "charge": "9000 VND/battery",
+        "currency:VND": "yes",
+        "fee": "yes",
+        "motorcycle": "yes",
+        "name": "Tủ đổi pin VinFast",
+        "name:en": "VinFast Battery-swapping Cabinet",
+        "operator": "VinFast",
+        "payment:app": "yes",
+        "vending": "battery_swap"
+      }
+    },
+    {
+      "id": "osm-node-13658912839",
+      "source": "https://www.openstreetmap.org/node/13658912839",
+      "reason": "Loại địa điểm hoặc quyền tiếp cận chưa phù hợp",
+      "tags": {
+        "access": "yes",
+        "amenity": "vending_machine",
+        "battery_swap": "yes",
+        "brand": "VinFast",
+        "capacity": "6 batteries",
+        "charge": "9000 VND/battery",
+        "currency:VND": "yes",
+        "fee": "yes",
+        "motorcycle": "yes",
+        "name": "Tủ đổi pin VinFast",
+        "name:en": "VinFast Battery-swapping Cabinet",
+        "operator": "VinFast",
+        "payment:app": "yes",
+        "vending": "battery_swap"
+      }
+    },
+    {
+      "id": "osm-node-13658912840",
+      "source": "https://www.openstreetmap.org/node/13658912840",
+      "reason": "Loại địa điểm hoặc quyền tiếp cận chưa phù hợp",
+      "tags": {
+        "access": "yes",
+        "amenity": "vending_machine",
+        "battery_swap": "yes",
+        "brand": "VinFast",
+        "capacity": "6 batteries",
+        "charge": "9000 VND/battery",
+        "currency:VND": "yes",
+        "fee": "yes",
+        "motorcycle": "yes",
+        "name": "Tủ đổi pin VinFast",
+        "name:en": "VinFast Battery-swapping Cabinet",
+        "operator": "VinFast",
+        "payment:app": "yes",
+        "vending": "battery_swap"
+      }
+    },
+    {
+      "id": "osm-node-13658912841",
+      "source": "https://www.openstreetmap.org/node/13658912841",
+      "reason": "Loại địa điểm hoặc quyền tiếp cận chưa phù hợp",
+      "tags": {
+        "access": "yes",
+        "amenity": "vending_machine",
+        "battery_swap": "yes",
+        "brand": "VinFast",
+        "capacity": "6 batteries",
+        "charge": "9000 VND/battery",
+        "currency:VND": "yes",
+        "fee": "yes",
+        "motorcycle": "yes",
+        "name": "Tủ đổi pin VinFast",
+        "name:en": "VinFast Battery-swapping Cabinet",
+        "operator": "VinFast",
+        "payment:app": "yes",
+        "vending": "battery_swap"
+      }
+    },
+    {
+      "id": "osm-node-13658912842",
+      "source": "https://www.openstreetmap.org/node/13658912842",
+      "reason": "Loại địa điểm hoặc quyền tiếp cận chưa phù hợp",
+      "tags": {
+        "access": "yes",
+        "amenity": "vending_machine",
+        "battery_swap": "yes",
+        "brand": "VinFast",
+        "capacity": "6 batteries",
+        "charge": "9000 VND/battery",
+        "currency:VND": "yes",
+        "fee": "yes",
+        "motorcycle": "yes",
+        "name": "Tủ đổi pin VinFast",
+        "name:en": "VinFast Battery-swapping Cabinet",
+        "operator": "VinFast",
+        "payment:app": "yes",
+        "vending": "battery_swap"
+      }
+    },
+    {
+      "id": "osm-node-13658912843",
+      "source": "https://www.openstreetmap.org/node/13658912843",
+      "reason": "Loại địa điểm hoặc quyền tiếp cận chưa phù hợp",
+      "tags": {
+        "access": "yes",
+        "amenity": "vending_machine",
+        "battery_swap": "yes",
+        "brand": "VinFast",
+        "capacity": "6 batteries",
+        "charge": "9000 VND/battery",
+        "currency:VND": "yes",
+        "fee": "yes",
+        "motorcycle": "yes",
+        "name": "Tủ đổi pin VinFast",
+        "name:en": "VinFast Battery-swapping Cabinet",
+        "operator": "VinFast",
+        "payment:app": "yes",
+        "vending": "battery_swap"
+      }
+    },
+    {
+      "id": "osm-node-13658912844",
+      "source": "https://www.openstreetmap.org/node/13658912844",
+      "reason": "Loại địa điểm hoặc quyền tiếp cận chưa phù hợp",
+      "tags": {
+        "access": "yes",
+        "amenity": "vending_machine",
+        "battery_swap": "yes",
+        "brand": "VinFast",
+        "capacity": "6 batteries",
+        "charge": "9000 VND/battery",
+        "currency:VND": "yes",
+        "fee": "yes",
+        "motorcycle": "yes",
+        "name": "Tủ đổi pin VinFast",
+        "name:en": "VinFast Battery-swapping Cabinet",
+        "operator": "VinFast",
+        "payment:app": "yes",
+        "vending": "battery_swap"
+      }
+    },
+    {
+      "id": "osm-node-13661963307",
+      "source": "https://www.openstreetmap.org/node/13661963307",
+      "reason": "Loại địa điểm hoặc quyền tiếp cận chưa phù hợp",
+      "tags": {
+        "access": "yes",
+        "amenity": "vending_machine",
+        "battery_swap": "yes",
+        "brand": "VinFast",
+        "capacity": "6 batteries",
+        "charge": "9000 VND/battery",
+        "currency:VND": "yes",
+        "fee": "yes",
+        "motorcycle": "yes",
+        "name": "Tủ đổi pin VinFast",
+        "name:en": "VinFast Battery-swapping Cabinet",
+        "operator": "VinFast",
+        "payment:app": "yes",
+        "vending": "battery_swap"
+      }
+    },
+    {
+      "id": "osm-node-13661963308",
+      "source": "https://www.openstreetmap.org/node/13661963308",
+      "reason": "Loại địa điểm hoặc quyền tiếp cận chưa phù hợp",
+      "tags": {
+        "access": "yes",
+        "amenity": "vending_machine",
+        "battery_swap": "yes",
+        "brand": "VinFast",
+        "capacity": "6 batteries",
+        "charge": "9000 VND/battery",
+        "currency:VND": "yes",
+        "fee": "yes",
+        "motorcycle": "yes",
+        "name": "Tủ đổi pin VinFast",
+        "name:en": "VinFast Battery-swapping Cabinet",
+        "operator": "VinFast",
+        "payment:app": "yes",
+        "vending": "battery_swap"
+      }
+    },
+    {
+      "id": "osm-node-13661963309",
+      "source": "https://www.openstreetmap.org/node/13661963309",
+      "reason": "Loại địa điểm hoặc quyền tiếp cận chưa phù hợp",
+      "tags": {
+        "access": "yes",
+        "amenity": "vending_machine",
+        "battery_swap": "yes",
+        "brand": "VinFast",
+        "capacity": "6 batteries",
+        "charge": "9000 VND/battery",
+        "currency:VND": "yes",
+        "fee": "yes",
+        "motorcycle": "yes",
+        "name": "Tủ đổi pin VinFast",
+        "name:en": "VinFast Battery-swapping Cabinet",
+        "operator": "VinFast",
+        "payment:app": "yes",
+        "vending": "battery_swap"
+      }
+    },
+    {
+      "id": "osm-node-13661963310",
+      "source": "https://www.openstreetmap.org/node/13661963310",
+      "reason": "Loại địa điểm hoặc quyền tiếp cận chưa phù hợp",
+      "tags": {
+        "access": "yes",
+        "amenity": "vending_machine",
+        "battery_swap": "yes",
+        "brand": "VinFast",
+        "capacity": "6 batteries",
+        "charge": "9000 VND/battery",
+        "currency:VND": "yes",
+        "fee": "yes",
+        "motorcycle": "yes",
+        "name": "Tủ đổi pin VinFast",
+        "name:en": "VinFast Battery-swapping Cabinet",
+        "operator": "VinFast",
+        "payment:app": "yes",
+        "vending": "battery_swap"
+      }
+    },
+    {
+      "id": "osm-node-13661963311",
+      "source": "https://www.openstreetmap.org/node/13661963311",
+      "reason": "Loại địa điểm hoặc quyền tiếp cận chưa phù hợp",
+      "tags": {
+        "access": "yes",
+        "amenity": "vending_machine",
+        "battery_swap": "yes",
+        "brand": "VinFast",
+        "capacity": "6 batteries",
+        "charge": "9000 VND/battery",
+        "currency:VND": "yes",
+        "fee": "yes",
+        "motorcycle": "yes",
+        "name": "Tủ đổi pin VinFast",
+        "name:en": "VinFast Battery-swapping Cabinet",
+        "operator": "VinFast",
+        "payment:app": "yes",
+        "vending": "battery_swap"
+      }
+    },
+    {
+      "id": "osm-node-13661963313",
+      "source": "https://www.openstreetmap.org/node/13661963313",
+      "reason": "Loại địa điểm hoặc quyền tiếp cận chưa phù hợp",
+      "tags": {
+        "access": "yes",
+        "amenity": "vending_machine",
+        "battery_swap": "yes",
+        "brand": "VinFast",
+        "capacity": "6 batteries",
+        "charge": "9000 VND/battery",
+        "currency:VND": "yes",
+        "fee": "yes",
+        "motorcycle": "yes",
+        "name": "Tủ đổi pin VinFast",
+        "name:en": "VinFast Battery-swapping Cabinet",
+        "operator": "VinFast",
+        "payment:app": "yes",
+        "vending": "battery_swap"
+      }
+    },
+    {
+      "id": "osm-node-13661963314",
+      "source": "https://www.openstreetmap.org/node/13661963314",
+      "reason": "Loại địa điểm hoặc quyền tiếp cận chưa phù hợp",
+      "tags": {
+        "access": "yes",
+        "amenity": "vending_machine",
+        "battery_swap": "yes",
+        "brand": "VinFast",
+        "capacity": "6 batteries",
+        "charge": "9000 VND/battery",
+        "currency:VND": "yes",
+        "fee": "yes",
+        "motorcycle": "yes",
+        "name": "Tủ đổi pin VinFast",
+        "name:en": "VinFast Battery-swapping Cabinet",
+        "operator": "VinFast",
+        "payment:app": "yes",
+        "vending": "battery_swap"
+      }
+    },
+    {
+      "id": "osm-node-13662026317",
+      "source": "https://www.openstreetmap.org/node/13662026317",
+      "reason": "Loại địa điểm hoặc quyền tiếp cận chưa phù hợp",
+      "tags": {
+        "access": "yes",
+        "amenity": "vending_machine",
+        "battery_swap": "yes",
+        "brand": "VinFast",
+        "capacity": "6 batteries",
+        "charge": "9000 VND/battery",
+        "currency:VND": "yes",
+        "fee": "yes",
+        "motorcycle": "yes",
+        "name": "Tủ đổi pin VinFast",
+        "name:en": "VinFast Battery-swapping Cabinet",
+        "operator": "VinFast",
+        "payment:app": "yes",
+        "vending": "battery_swap"
+      }
+    },
+    {
+      "id": "osm-node-13662026318",
+      "source": "https://www.openstreetmap.org/node/13662026318",
+      "reason": "Loại địa điểm hoặc quyền tiếp cận chưa phù hợp",
+      "tags": {
+        "access": "yes",
+        "amenity": "vending_machine",
+        "battery_swap": "yes",
+        "brand": "VinFast",
+        "capacity": "6 batteries",
+        "charge": "9000 VND/battery",
+        "currency:VND": "yes",
+        "fee": "yes",
+        "motorcycle": "yes",
+        "name": "Tủ đổi pin VinFast",
+        "name:en": "VinFast Battery-swapping Cabinet",
+        "operator": "VinFast",
+        "payment:app": "yes",
+        "vending": "battery_swap"
+      }
+    },
+    {
+      "id": "osm-node-13662026320",
+      "source": "https://www.openstreetmap.org/node/13662026320",
+      "reason": "Loại địa điểm hoặc quyền tiếp cận chưa phù hợp",
+      "tags": {
+        "access": "yes",
+        "amenity": "vending_machine",
+        "battery_swap": "yes",
+        "brand": "VinFast",
+        "capacity": "6 batteries",
+        "charge": "9000 VND/battery",
+        "currency:VND": "yes",
+        "fee": "yes",
+        "motorcycle": "yes",
+        "name": "Tủ đổi pin VinFast",
+        "name:en": "VinFast Battery-swapping Cabinet",
+        "operator": "VinFast",
+        "payment:app": "yes",
+        "vending": "battery_swap"
+      }
+    },
+    {
+      "id": "osm-node-13662026321",
+      "source": "https://www.openstreetmap.org/node/13662026321",
+      "reason": "Loại địa điểm hoặc quyền tiếp cận chưa phù hợp",
+      "tags": {
+        "access": "yes",
+        "amenity": "vending_machine",
+        "battery_swap": "yes",
+        "brand": "VinFast",
+        "capacity": "6 batteries",
+        "charge": "9000 VND/battery",
+        "currency:VND": "yes",
+        "fee": "yes",
+        "motorcycle": "yes",
+        "name": "Tủ đổi pin VinFast",
+        "name:en": "VinFast Battery-swapping Cabinet",
+        "operator": "VinFast",
+        "payment:app": "yes",
+        "vending": "battery_swap"
+      }
+    },
+    {
+      "id": "osm-node-13662026322",
+      "source": "https://www.openstreetmap.org/node/13662026322",
+      "reason": "Loại địa điểm hoặc quyền tiếp cận chưa phù hợp",
+      "tags": {
+        "access": "yes",
+        "amenity": "vending_machine",
+        "battery_swap": "yes",
+        "brand": "VinFast",
+        "capacity": "6 batteries",
+        "charge": "9000 VND/battery",
+        "currency:VND": "yes",
+        "fee": "yes",
+        "motorcycle": "yes",
+        "name": "Tủ đổi pin VinFast",
+        "name:en": "VinFast Battery-swapping Cabinet",
+        "operator": "VinFast",
+        "payment:app": "yes",
+        "vending": "battery_swap"
+      }
+    },
+    {
+      "id": "osm-node-13662026323",
+      "source": "https://www.openstreetmap.org/node/13662026323",
+      "reason": "Loại địa điểm hoặc quyền tiếp cận chưa phù hợp",
+      "tags": {
+        "access": "yes",
+        "amenity": "vending_machine",
+        "battery_swap": "yes",
+        "brand": "VinFast",
+        "capacity": "6 batteries",
+        "charge": "9000 VND/battery",
+        "currency:VND": "yes",
+        "fee": "yes",
+        "motorcycle": "yes",
+        "name": "Tủ đổi pin VinFast",
+        "name:en": "VinFast Battery-swapping Cabinet",
+        "operator": "VinFast",
+        "payment:app": "yes",
+        "vending": "battery_swap"
+      }
+    },
+    {
+      "id": "osm-node-13662026324",
+      "source": "https://www.openstreetmap.org/node/13662026324",
+      "reason": "Loại địa điểm hoặc quyền tiếp cận chưa phù hợp",
+      "tags": {
+        "access": "yes",
+        "amenity": "vending_machine",
+        "battery_swap": "yes",
+        "brand": "VinFast",
+        "capacity": "6 batteries",
+        "charge": "9000 VND/battery",
+        "currency:VND": "yes",
+        "fee": "yes",
+        "motorcycle": "yes",
+        "name": "Tủ đổi pin VinFast",
+        "name:en": "VinFast Battery-swapping Cabinet",
+        "operator": "VinFast",
+        "payment:app": "yes",
+        "vending": "battery_swap"
+      }
+    },
+    {
+      "id": "osm-node-13662026325",
+      "source": "https://www.openstreetmap.org/node/13662026325",
+      "reason": "Loại địa điểm hoặc quyền tiếp cận chưa phù hợp",
+      "tags": {
+        "access": "yes",
+        "amenity": "vending_machine",
+        "battery_swap": "yes",
+        "brand": "VinFast",
+        "capacity": "6 batteries",
+        "charge": "9000 VND/battery",
+        "currency:VND": "yes",
+        "fee": "yes",
+        "motorcycle": "yes",
+        "name": "Tủ đổi pin VinFast",
+        "name:en": "VinFast Battery-swapping Cabinet",
+        "operator": "VinFast",
+        "payment:app": "yes",
+        "vending": "battery_swap"
+      }
+    },
+    {
+      "id": "osm-node-13665050690",
+      "source": "https://www.openstreetmap.org/node/13665050690",
+      "reason": "Loại địa điểm hoặc quyền tiếp cận chưa phù hợp",
+      "tags": {
+        "access": "yes",
+        "amenity": "vending_machine",
+        "battery_swap": "yes",
+        "brand": "VinFast",
+        "capacity": "6 batteries",
+        "charge": "9000 VND/battery",
+        "currency:VND": "yes",
+        "fee": "yes",
+        "motorcycle": "yes",
+        "name": "Tủ đổi pin VinFast",
+        "name:en": "VinFast Battery-swapping Cabinet",
+        "operator": "VinFast",
+        "payment:app": "yes",
+        "vending": "battery_swap"
+      }
+    },
+    {
+      "id": "osm-node-13665050691",
+      "source": "https://www.openstreetmap.org/node/13665050691",
+      "reason": "Loại địa điểm hoặc quyền tiếp cận chưa phù hợp",
+      "tags": {
+        "access": "yes",
+        "amenity": "vending_machine",
+        "battery_swap": "yes",
+        "brand": "VinFast",
+        "capacity": "6 batteries",
+        "charge": "9000 VND/battery",
+        "currency:VND": "yes",
+        "fee": "yes",
+        "motorcycle": "yes",
+        "name": "Tủ đổi pin VinFast",
+        "name:en": "VinFast Battery-swapping Cabinet",
+        "operator": "VinFast",
+        "payment:app": "yes",
+        "vending": "battery_swap"
+      }
+    },
+    {
+      "id": "osm-node-13665050692",
+      "source": "https://www.openstreetmap.org/node/13665050692",
+      "reason": "Loại địa điểm hoặc quyền tiếp cận chưa phù hợp",
+      "tags": {
+        "access": "yes",
+        "amenity": "vending_machine",
+        "battery_swap": "yes",
+        "brand": "VinFast",
+        "capacity": "6 batteries",
+        "charge": "9000 VND/battery",
+        "currency:VND": "yes",
+        "fee": "yes",
+        "motorcycle": "yes",
+        "name": "Tủ đổi pin VinFast",
+        "name:en": "VinFast Battery-swapping Cabinet",
+        "operator": "VinFast",
+        "payment:app": "yes",
+        "vending": "battery_swap"
+      }
+    },
+    {
+      "id": "osm-node-13665050693",
+      "source": "https://www.openstreetmap.org/node/13665050693",
+      "reason": "Loại địa điểm hoặc quyền tiếp cận chưa phù hợp",
+      "tags": {
+        "access": "yes",
+        "amenity": "vending_machine",
+        "battery_swap": "yes",
+        "brand": "VinFast",
+        "capacity": "6 batteries",
+        "charge": "9000 VND/battery",
+        "currency:VND": "yes",
+        "fee": "yes",
+        "motorcycle": "yes",
+        "name": "Tủ đổi pin VinFast",
+        "name:en": "VinFast Battery-swapping Cabinet",
+        "operator": "VinFast",
+        "payment:app": "yes",
+        "vending": "battery_swap"
+      }
+    },
+    {
+      "id": "osm-node-13665050694",
+      "source": "https://www.openstreetmap.org/node/13665050694",
+      "reason": "Loại địa điểm hoặc quyền tiếp cận chưa phù hợp",
+      "tags": {
+        "access": "yes",
+        "amenity": "vending_machine",
+        "battery_swap": "yes",
+        "brand": "VinFast",
+        "capacity": "6 batteries",
+        "charge": "9000 VND/battery",
+        "currency:VND": "yes",
+        "fee": "yes",
+        "motorcycle": "yes",
+        "name": "Tủ đổi pin VinFast",
+        "name:en": "VinFast Battery-swapping Cabinet",
+        "operator": "VinFast",
+        "payment:app": "yes",
+        "vending": "battery_swap"
+      }
+    },
+    {
+      "id": "osm-node-13665081202",
+      "source": "https://www.openstreetmap.org/node/13665081202",
+      "reason": "Loại địa điểm hoặc quyền tiếp cận chưa phù hợp",
+      "tags": {
+        "access": "yes",
+        "amenity": "vending_machine",
+        "battery_swap": "yes",
+        "brand": "VinFast",
+        "capacity": "6 batteries",
+        "charge": "9000 VND/battery",
+        "currency:VND": "yes",
+        "fee": "yes",
+        "motorcycle": "yes",
+        "name": "Tủ đổi pin VinFast",
+        "name:en": "VinFast Battery-swapping Cabinet",
+        "operator": "VinFast",
+        "payment:app": "yes",
+        "vending": "battery_swap"
+      }
+    },
+    {
+      "id": "osm-node-13665081203",
+      "source": "https://www.openstreetmap.org/node/13665081203",
+      "reason": "Loại địa điểm hoặc quyền tiếp cận chưa phù hợp",
+      "tags": {
+        "access": "yes",
+        "amenity": "vending_machine",
+        "battery_swap": "yes",
+        "brand": "VinFast",
+        "capacity": "6 batteries",
+        "charge": "9000 VND/battery",
+        "currency:VND": "yes",
+        "fee": "yes",
+        "motorcycle": "yes",
+        "name": "Tủ đổi pin VinFast",
+        "name:en": "VinFast Battery-swapping Cabinet",
+        "operator": "VinFast",
+        "payment:app": "yes",
+        "vending": "battery_swap"
+      }
+    },
+    {
+      "id": "osm-node-13665081204",
+      "source": "https://www.openstreetmap.org/node/13665081204",
+      "reason": "Loại địa điểm hoặc quyền tiếp cận chưa phù hợp",
+      "tags": {
+        "access": "yes",
+        "amenity": "vending_machine",
+        "battery_swap": "yes",
+        "brand": "VinFast",
+        "capacity": "6 batteries",
+        "charge": "9000 VND/battery",
+        "currency:VND": "yes",
+        "fee": "yes",
+        "motorcycle": "yes",
+        "name": "Tủ đổi pin VinFast",
+        "name:en": "VinFast Battery-swapping Cabinet",
+        "operator": "VinFast",
+        "payment:app": "yes",
+        "vending": "battery_swap"
+      }
+    },
+    {
+      "id": "osm-node-13665081205",
+      "source": "https://www.openstreetmap.org/node/13665081205",
+      "reason": "Loại địa điểm hoặc quyền tiếp cận chưa phù hợp",
+      "tags": {
+        "access": "yes",
+        "amenity": "vending_machine",
+        "battery_swap": "yes",
+        "brand": "VinFast",
+        "capacity": "6 batteries",
+        "charge": "9000 VND/battery",
+        "currency:VND": "yes",
+        "fee": "yes",
+        "motorcycle": "yes",
+        "name": "Tủ đổi pin VinFast",
+        "name:en": "VinFast Battery-swapping Cabinet",
+        "operator": "VinFast",
+        "payment:app": "yes",
+        "vending": "battery_swap"
+      }
+    },
+    {
+      "id": "osm-node-13665081206",
+      "source": "https://www.openstreetmap.org/node/13665081206",
+      "reason": "Loại địa điểm hoặc quyền tiếp cận chưa phù hợp",
+      "tags": {
+        "access": "yes",
+        "amenity": "vending_machine",
+        "battery_swap": "yes",
+        "brand": "VinFast",
+        "capacity": "6 batteries",
+        "charge": "9000 VND/battery",
+        "currency:VND": "yes",
+        "fee": "yes",
+        "motorcycle": "yes",
+        "name": "Tủ đổi pin VinFast",
+        "name:en": "VinFast Battery-swapping Cabinet",
+        "operator": "VinFast",
+        "payment:app": "yes",
+        "vending": "battery_swap"
+      }
+    },
+    {
+      "id": "osm-node-13665081207",
+      "source": "https://www.openstreetmap.org/node/13665081207",
+      "reason": "Loại địa điểm hoặc quyền tiếp cận chưa phù hợp",
+      "tags": {
+        "access": "yes",
+        "amenity": "vending_machine",
+        "battery_swap": "yes",
+        "brand": "VinFast",
+        "capacity": "6 batteries",
+        "charge": "9000 VND/battery",
+        "currency:VND": "yes",
+        "fee": "yes",
+        "motorcycle": "yes",
+        "name": "Tủ đổi pin VinFast",
+        "name:en": "VinFast Battery-swapping Cabinet",
+        "operator": "VinFast",
+        "payment:app": "yes",
+        "vending": "battery_swap"
+      }
+    },
+    {
+      "id": "osm-node-13665081208",
+      "source": "https://www.openstreetmap.org/node/13665081208",
+      "reason": "Loại địa điểm hoặc quyền tiếp cận chưa phù hợp",
+      "tags": {
+        "access": "yes",
+        "amenity": "vending_machine",
+        "battery_swap": "yes",
+        "brand": "VinFast",
+        "capacity": "6 batteries",
+        "charge": "9000 VND/battery",
+        "currency:VND": "yes",
+        "fee": "yes",
+        "motorcycle": "yes",
+        "name": "Tủ đổi pin VinFast",
+        "name:en": "VinFast Battery-swapping Cabinet",
+        "operator": "VinFast",
+        "payment:app": "yes",
+        "vending": "battery_swap"
+      }
+    },
+    {
+      "id": "osm-node-13665081209",
+      "source": "https://www.openstreetmap.org/node/13665081209",
+      "reason": "Loại địa điểm hoặc quyền tiếp cận chưa phù hợp",
+      "tags": {
+        "access": "yes",
+        "amenity": "vending_machine",
+        "battery_swap": "yes",
+        "brand": "VinFast",
+        "capacity": "6 batteries",
+        "charge": "9000 VND/battery",
+        "currency:VND": "yes",
+        "fee": "yes",
+        "motorcycle": "yes",
+        "name": "Tủ đổi pin VinFast",
+        "name:en": "VinFast Battery-swapping Cabinet",
+        "operator": "VinFast",
+        "payment:app": "yes",
+        "vending": "battery_swap"
+      }
+    },
+    {
+      "id": "osm-node-13665105580",
+      "source": "https://www.openstreetmap.org/node/13665105580",
+      "reason": "Loại địa điểm hoặc quyền tiếp cận chưa phù hợp",
+      "tags": {
+        "access": "yes",
+        "amenity": "vending_machine",
+        "battery_swap": "yes",
+        "brand": "VinFast",
+        "capacity": "6 batteries",
+        "charge": "9000 VND/battery",
+        "currency:VND": "yes",
+        "description": "Vị trí ở lối quay đầu dưới cầu vượt Mễ Trì",
+        "fee": "yes",
+        "motorcycle": "yes",
+        "name": "Tủ đổi pin VinFast",
+        "name:en": "VinFast Battery-swapping Cabinet",
+        "operator": "VinFast",
+        "payment:app": "yes",
+        "vending": "battery_swap"
+      }
+    },
+    {
+      "id": "osm-node-13665105581",
+      "source": "https://www.openstreetmap.org/node/13665105581",
+      "reason": "Loại địa điểm hoặc quyền tiếp cận chưa phù hợp",
+      "tags": {
+        "access": "yes",
+        "amenity": "vending_machine",
+        "battery_swap": "yes",
+        "brand": "VinFast",
+        "capacity": "6 batteries",
+        "charge": "9000 VND/battery",
+        "currency:VND": "yes",
+        "fee": "yes",
+        "motorcycle": "yes",
+        "name": "Tủ đổi pin VinFast",
+        "name:en": "VinFast Battery-swapping Cabinet",
+        "operator": "VinFast",
+        "payment:app": "yes",
+        "vending": "battery_swap"
+      }
+    },
+    {
+      "id": "osm-node-13665105582",
+      "source": "https://www.openstreetmap.org/node/13665105582",
+      "reason": "Loại địa điểm hoặc quyền tiếp cận chưa phù hợp",
+      "tags": {
+        "access": "yes",
+        "amenity": "vending_machine",
+        "battery_swap": "yes",
+        "brand": "VinFast",
+        "capacity": "6 batteries",
+        "charge": "9000 VND/battery",
+        "currency:VND": "yes",
+        "fee": "yes",
+        "motorcycle": "yes",
+        "name": "Tủ đổi pin VinFast",
+        "name:en": "VinFast Battery-swapping Cabinet",
+        "operator": "VinFast",
+        "payment:app": "yes",
+        "vending": "battery_swap"
+      }
+    },
+    {
+      "id": "osm-node-13665105583",
+      "source": "https://www.openstreetmap.org/node/13665105583",
+      "reason": "Loại địa điểm hoặc quyền tiếp cận chưa phù hợp",
+      "tags": {
+        "access": "yes",
+        "amenity": "vending_machine",
+        "battery_swap": "yes",
+        "brand": "VinFast",
+        "capacity": "6 batteries",
+        "charge": "9000 VND/battery",
+        "currency:VND": "yes",
+        "fee": "yes",
+        "motorcycle": "yes",
+        "name": "Tủ đổi pin VinFast",
+        "name:en": "VinFast Battery-swapping Cabinet",
+        "operator": "VinFast",
+        "payment:app": "yes",
+        "vending": "battery_swap"
+      }
+    },
+    {
+      "id": "osm-node-13665105584",
+      "source": "https://www.openstreetmap.org/node/13665105584",
+      "reason": "Loại địa điểm hoặc quyền tiếp cận chưa phù hợp",
+      "tags": {
+        "access": "yes",
+        "amenity": "vending_machine",
+        "battery_swap": "yes",
+        "brand": "VinFast",
+        "capacity": "6 batteries",
+        "charge": "9000 VND/battery",
+        "currency:VND": "yes",
+        "fee": "yes",
+        "motorcycle": "yes",
+        "name": "Tủ đổi pin VinFast",
+        "name:en": "VinFast Battery-swapping Cabinet",
+        "operator": "VinFast",
+        "payment:app": "yes",
+        "vending": "battery_swap"
+      }
+    },
+    {
+      "id": "osm-node-13665105585",
+      "source": "https://www.openstreetmap.org/node/13665105585",
+      "reason": "Loại địa điểm hoặc quyền tiếp cận chưa phù hợp",
+      "tags": {
+        "access": "yes",
+        "amenity": "vending_machine",
+        "battery_swap": "yes",
+        "brand": "VinFast",
+        "capacity": "6 batteries",
+        "charge": "9000 VND/battery",
+        "currency:VND": "yes",
+        "fee": "yes",
+        "motorcycle": "yes",
+        "name": "Tủ đổi pin VinFast",
+        "name:en": "VinFast Battery-swapping Cabinet",
+        "operator": "VinFast",
+        "payment:app": "yes",
+        "vending": "battery_swap"
+      }
+    },
+    {
+      "id": "osm-node-13667135444",
+      "source": "https://www.openstreetmap.org/node/13667135444",
+      "reason": "Loại địa điểm hoặc quyền tiếp cận chưa phù hợp",
+      "tags": {
+        "access": "yes",
+        "amenity": "vending_machine",
+        "battery_swap": "yes",
+        "brand": "VinFast",
+        "capacity": "6 batteries",
+        "charge": "9000 VND/battery",
+        "currency:VND": "yes",
+        "fee": "yes",
+        "motorcycle": "yes",
+        "name": "Tủ đổi pin VinFast",
+        "name:en": "VinFast Battery-swapping Cabinet",
+        "operator": "VinFast",
+        "payment:app": "yes",
+        "vending": "battery_swap"
+      }
+    },
+    {
+      "id": "osm-node-13667135445",
+      "source": "https://www.openstreetmap.org/node/13667135445",
+      "reason": "Loại địa điểm hoặc quyền tiếp cận chưa phù hợp",
+      "tags": {
+        "access": "yes",
+        "amenity": "vending_machine",
+        "battery_swap": "yes",
+        "brand": "VinFast",
+        "capacity": "6 batteries",
+        "charge": "9000 VND/battery",
+        "currency:VND": "yes",
+        "fee": "yes",
+        "motorcycle": "yes",
+        "name": "Tủ đổi pin VinFast",
+        "name:en": "VinFast Battery-swapping Cabinet",
+        "operator": "VinFast",
+        "payment:app": "yes",
+        "vending": "battery_swap"
+      }
+    },
+    {
+      "id": "osm-node-13667135446",
+      "source": "https://www.openstreetmap.org/node/13667135446",
+      "reason": "Loại địa điểm hoặc quyền tiếp cận chưa phù hợp",
+      "tags": {
+        "access": "yes",
+        "amenity": "vending_machine",
+        "battery_swap": "yes",
+        "brand": "VinFast",
+        "capacity": "6 batteries",
+        "charge": "9000 VND/battery",
+        "currency:VND": "yes",
+        "fee": "yes",
+        "motorcycle": "yes",
+        "name": "Tủ đổi pin VinFast",
+        "name:en": "VinFast Battery-swapping Cabinet",
+        "operator": "VinFast",
+        "payment:app": "yes",
+        "vending": "battery_swap"
+      }
+    },
+    {
+      "id": "osm-node-13667135447",
+      "source": "https://www.openstreetmap.org/node/13667135447",
+      "reason": "Loại địa điểm hoặc quyền tiếp cận chưa phù hợp",
+      "tags": {
+        "access": "yes",
+        "amenity": "vending_machine",
+        "battery_swap": "yes",
+        "brand": "VinFast",
+        "capacity": "6 batteries",
+        "charge": "9000 VND/battery",
+        "currency:VND": "yes",
+        "fee": "yes",
+        "motorcycle": "yes",
+        "name": "Tủ đổi pin VinFast",
+        "name:en": "VinFast Battery-swapping Cabinet",
+        "operator": "VinFast",
+        "payment:app": "yes",
+        "vending": "battery_swap"
+      }
+    },
+    {
+      "id": "osm-node-13667135448",
+      "source": "https://www.openstreetmap.org/node/13667135448",
+      "reason": "Loại địa điểm hoặc quyền tiếp cận chưa phù hợp",
+      "tags": {
+        "access": "yes",
+        "amenity": "vending_machine",
+        "battery_swap": "yes",
+        "brand": "VinFast",
+        "capacity": "6 batteries",
+        "charge": "9000 VND/battery",
+        "currency:VND": "yes",
+        "fee": "yes",
+        "motorcycle": "yes",
+        "name": "Tủ đổi pin VinFast",
+        "name:en": "VinFast Battery-swapping Cabinet",
+        "operator": "VinFast",
+        "payment:app": "yes",
+        "vending": "battery_swap"
+      }
+    },
+    {
+      "id": "osm-node-13667135449",
+      "source": "https://www.openstreetmap.org/node/13667135449",
+      "reason": "Loại địa điểm hoặc quyền tiếp cận chưa phù hợp",
+      "tags": {
+        "access": "yes",
+        "amenity": "vending_machine",
+        "battery_swap": "yes",
+        "brand": "VinFast",
+        "capacity": "6 batteries",
+        "charge": "9000 VND/battery",
+        "currency:VND": "yes",
+        "fee": "yes",
+        "motorcycle": "yes",
+        "name": "Tủ đổi pin VinFast",
+        "name:en": "VinFast Battery-swapping Cabinet",
+        "operator": "VinFast",
+        "payment:app": "yes",
+        "vending": "battery_swap"
+      }
+    },
+    {
+      "id": "osm-node-13667135450",
+      "source": "https://www.openstreetmap.org/node/13667135450",
+      "reason": "Loại địa điểm hoặc quyền tiếp cận chưa phù hợp",
+      "tags": {
+        "access": "yes",
+        "amenity": "vending_machine",
+        "battery_swap": "yes",
+        "brand": "VinFast",
+        "capacity": "6 batteries",
+        "charge": "9000 VND/battery",
+        "currency:VND": "yes",
+        "fee": "yes",
+        "motorcycle": "yes",
+        "name": "Tủ đổi pin VinFast",
+        "name:en": "VinFast Battery-swapping Cabinet",
+        "operator": "VinFast",
+        "payment:app": "yes",
+        "vending": "battery_swap"
+      }
+    },
+    {
+      "id": "osm-node-13667135451",
+      "source": "https://www.openstreetmap.org/node/13667135451",
+      "reason": "Loại địa điểm hoặc quyền tiếp cận chưa phù hợp",
+      "tags": {
+        "access": "yes",
+        "amenity": "vending_machine",
+        "battery_swap": "yes",
+        "brand": "VinFast",
+        "capacity": "6 batteries",
+        "charge": "9000 VND/battery",
+        "currency:VND": "yes",
+        "fee": "yes",
+        "motorcycle": "yes",
+        "name": "Tủ đổi pin VinFast",
+        "name:en": "VinFast Battery-swapping Cabinet",
+        "operator": "VinFast",
+        "payment:app": "yes",
+        "vending": "battery_swap"
+      }
+    },
+    {
+      "id": "osm-node-13668264613",
+      "source": "https://www.openstreetmap.org/node/13668264613",
+      "reason": "Loại địa điểm hoặc quyền tiếp cận chưa phù hợp",
+      "tags": {
+        "access": "yes",
+        "amenity": "vending_machine",
+        "battery_swap": "yes",
+        "brand": "VinFast",
+        "capacity": "6 batteries",
+        "charge": "9000 VND/battery",
+        "currency:VND": "yes",
+        "fee": "yes",
+        "motorcycle": "yes",
+        "name": "Tủ đổi pin VinFast",
+        "name:en": "VinFast Battery-swapping Cabinet",
+        "operator": "VinFast",
+        "payment:app": "yes",
+        "vending": "battery_swap"
+      }
+    },
+    {
+      "id": "osm-node-13668264614",
+      "source": "https://www.openstreetmap.org/node/13668264614",
+      "reason": "Loại địa điểm hoặc quyền tiếp cận chưa phù hợp",
+      "tags": {
+        "access": "yes",
+        "amenity": "vending_machine",
+        "battery_swap": "yes",
+        "brand": "VinFast",
+        "capacity": "6 batteries",
+        "charge": "9000 VND/battery",
+        "currency:VND": "yes",
+        "description": "Trong sân trạm sạc Đức An, Tổng kho thủy sản số 107 phố Ngụy Như Kon Tum.",
+        "fee": "yes",
+        "motorcycle": "yes",
+        "name": "Tủ đổi pin VinFast",
+        "name:en": "VinFast Battery-swapping Cabinet",
+        "operator": "VinFast",
+        "payment:app": "yes",
+        "vending": "battery_swap"
+      }
+    },
+    {
+      "id": "osm-node-13668264615",
+      "source": "https://www.openstreetmap.org/node/13668264615",
+      "reason": "Loại địa điểm hoặc quyền tiếp cận chưa phù hợp",
+      "tags": {
+        "access": "yes",
+        "amenity": "vending_machine",
+        "battery_swap": "yes",
+        "brand": "VinFast",
+        "capacity": "6 batteries",
+        "charge": "9000 VND/battery",
+        "currency:VND": "yes",
+        "fee": "yes",
+        "motorcycle": "yes",
+        "name": "Tủ đổi pin VinFast",
+        "name:en": "VinFast Battery-swapping Cabinet",
+        "operator": "VinFast",
+        "payment:app": "yes",
+        "vending": "battery_swap"
+      }
+    },
+    {
+      "id": "osm-node-13668264616",
+      "source": "https://www.openstreetmap.org/node/13668264616",
+      "reason": "Loại địa điểm hoặc quyền tiếp cận chưa phù hợp",
+      "tags": {
+        "access": "yes",
+        "amenity": "vending_machine",
+        "battery_swap": "yes",
+        "brand": "VinFast",
+        "capacity": "6 batteries",
+        "charge": "9000 VND/battery",
+        "currency:VND": "yes",
+        "fee": "yes",
+        "motorcycle": "yes",
+        "name": "Tủ đổi pin VinFast",
+        "name:en": "VinFast Battery-swapping Cabinet",
+        "operator": "VinFast",
+        "payment:app": "yes",
+        "vending": "battery_swap"
+      }
+    },
+    {
+      "id": "osm-node-13668264617",
+      "source": "https://www.openstreetmap.org/node/13668264617",
+      "reason": "Loại địa điểm hoặc quyền tiếp cận chưa phù hợp",
+      "tags": {
+        "access": "yes",
+        "amenity": "vending_machine",
+        "battery_swap": "yes",
+        "brand": "VinFast",
+        "capacity": "6 batteries",
+        "charge": "9000 VND/battery",
+        "currency:VND": "yes",
+        "fee": "yes",
+        "motorcycle": "yes",
+        "name": "Tủ đổi pin VinFast",
+        "name:en": "VinFast Battery-swapping Cabinet",
+        "operator": "VinFast",
+        "payment:app": "yes",
+        "vending": "battery_swap"
+      }
+    },
+    {
+      "id": "osm-node-13668264618",
+      "source": "https://www.openstreetmap.org/node/13668264618",
+      "reason": "Loại địa điểm hoặc quyền tiếp cận chưa phù hợp",
+      "tags": {
+        "access": "yes",
+        "amenity": "vending_machine",
+        "battery_swap": "yes",
+        "brand": "VinFast",
+        "capacity": "6 batteries",
+        "charge": "9000 VND/battery",
+        "currency:VND": "yes",
+        "fee": "yes",
+        "motorcycle": "yes",
+        "name": "Tủ đổi pin VinFast",
+        "name:en": "VinFast Battery-swapping Cabinet",
+        "operator": "VinFast",
+        "payment:app": "yes",
+        "vending": "battery_swap"
+      }
+    },
+    {
+      "id": "osm-node-13668264619",
+      "source": "https://www.openstreetmap.org/node/13668264619",
+      "reason": "Loại địa điểm hoặc quyền tiếp cận chưa phù hợp",
+      "tags": {
+        "access": "yes",
+        "amenity": "vending_machine",
+        "battery_swap": "yes",
+        "brand": "VinFast",
+        "capacity": "6 batteries",
+        "charge": "9000 VND/battery",
+        "currency:VND": "yes",
+        "fee": "yes",
+        "motorcycle": "yes",
+        "name": "Tủ đổi pin VinFast",
+        "name:en": "VinFast Battery-swapping Cabinet",
+        "operator": "VinFast",
+        "payment:app": "yes",
+        "vending": "battery_swap"
+      }
+    },
+    {
+      "id": "osm-node-13668264620",
+      "source": "https://www.openstreetmap.org/node/13668264620",
+      "reason": "Loại địa điểm hoặc quyền tiếp cận chưa phù hợp",
+      "tags": {
+        "access": "yes",
+        "amenity": "vending_machine",
+        "battery_swap": "yes",
+        "brand": "VinFast",
+        "capacity": "6 batteries",
+        "charge": "9000 VND/battery",
+        "currency:VND": "yes",
+        "fee": "yes",
+        "motorcycle": "yes",
+        "name": "Tủ đổi pin VinFast",
+        "name:en": "VinFast Battery-swapping Cabinet",
+        "operator": "VinFast",
+        "payment:app": "yes",
+        "vending": "battery_swap"
+      }
+    },
+    {
+      "id": "osm-node-13668264622",
+      "source": "https://www.openstreetmap.org/node/13668264622",
+      "reason": "Loại địa điểm hoặc quyền tiếp cận chưa phù hợp",
+      "tags": {
+        "access": "yes",
+        "amenity": "vending_machine",
+        "battery_swap": "yes",
+        "brand": "VinFast",
+        "capacity": "6 batteries",
+        "charge": "9000 VND/battery",
+        "currency:VND": "yes",
+        "fee": "yes",
+        "motorcycle": "yes",
+        "name": "Tủ đổi pin VinFast",
+        "name:en": "VinFast Battery-swapping Cabinet",
+        "operator": "VinFast",
+        "payment:app": "yes",
+        "vending": "battery_swap"
+      }
+    },
+    {
+      "id": "osm-node-13668264623",
+      "source": "https://www.openstreetmap.org/node/13668264623",
+      "reason": "Loại địa điểm hoặc quyền tiếp cận chưa phù hợp",
+      "tags": {
+        "access": "yes",
+        "amenity": "vending_machine",
+        "battery_swap": "yes",
+        "brand": "VinFast",
+        "capacity": "6 batteries",
+        "charge": "9000 VND/battery",
+        "currency:VND": "yes",
+        "fee": "yes",
+        "motorcycle": "yes",
+        "name": "Tủ đổi pin VinFast",
+        "name:en": "VinFast Battery-swapping Cabinet",
+        "operator": "VinFast",
+        "payment:app": "yes",
+        "vending": "battery_swap"
+      }
+    },
+    {
+      "id": "osm-node-13668264624",
+      "source": "https://www.openstreetmap.org/node/13668264624",
+      "reason": "Loại địa điểm hoặc quyền tiếp cận chưa phù hợp",
+      "tags": {
+        "access": "yes",
+        "amenity": "vending_machine",
+        "battery_swap": "yes",
+        "brand": "VinFast",
+        "capacity": "6 batteries",
+        "charge": "9000 VND/battery",
+        "currency:VND": "yes",
+        "fee": "yes",
+        "motorcycle": "yes",
+        "name": "Tủ đổi pin VinFast",
+        "name:en": "VinFast Battery-swapping Cabinet",
+        "operator": "VinFast",
+        "payment:app": "yes",
+        "vending": "battery_swap"
+      }
+    },
+    {
+      "id": "osm-node-13668264625",
+      "source": "https://www.openstreetmap.org/node/13668264625",
+      "reason": "Loại địa điểm hoặc quyền tiếp cận chưa phù hợp",
+      "tags": {
+        "access": "yes",
+        "amenity": "vending_machine",
+        "battery_swap": "yes",
+        "brand": "VinFast",
+        "capacity": "6 batteries",
+        "charge": "9000 VND/battery",
+        "currency:VND": "yes",
+        "fee": "yes",
+        "motorcycle": "yes",
+        "name": "Tủ đổi pin VinFast",
+        "name:en": "VinFast Battery-swapping Cabinet",
+        "operator": "VinFast",
+        "payment:app": "yes",
+        "vending": "battery_swap"
+      }
+    },
+    {
+      "id": "osm-node-13668264626",
+      "source": "https://www.openstreetmap.org/node/13668264626",
+      "reason": "Loại địa điểm hoặc quyền tiếp cận chưa phù hợp",
+      "tags": {
+        "access": "yes",
+        "amenity": "vending_machine",
+        "battery_swap": "yes",
+        "brand": "VinFast",
+        "capacity": "6 batteries",
+        "charge": "9000 VND/battery",
+        "currency:VND": "yes",
+        "fee": "yes",
+        "motorcycle": "yes",
+        "name": "Tủ đổi pin VinFast",
+        "name:en": "VinFast Battery-swapping Cabinet",
+        "operator": "VinFast",
+        "payment:app": "yes",
+        "vending": "battery_swap"
+      }
+    },
+    {
+      "id": "osm-node-13668264627",
+      "source": "https://www.openstreetmap.org/node/13668264627",
+      "reason": "Loại địa điểm hoặc quyền tiếp cận chưa phù hợp",
+      "tags": {
+        "access": "yes",
+        "amenity": "vending_machine",
+        "battery_swap": "yes",
+        "brand": "VinFast",
+        "capacity": "6 batteries",
+        "charge": "9000 VND/battery",
+        "currency:VND": "yes",
+        "fee": "yes",
+        "motorcycle": "yes",
+        "name": "Tủ đổi pin VinFast",
+        "name:en": "VinFast Battery-swapping Cabinet",
+        "operator": "VinFast",
+        "payment:app": "yes",
+        "vending": "battery_swap"
+      }
+    },
+    {
+      "id": "osm-node-13668857499",
+      "source": "https://www.openstreetmap.org/node/13668857499",
+      "reason": "Loại địa điểm hoặc quyền tiếp cận chưa phù hợp",
+      "tags": {
+        "access": "yes",
+        "amenity": "vending_machine",
+        "battery_swap": "yes",
+        "brand": "VinFast",
+        "capacity": "6 batteries",
+        "charge": "9000 VND/battery",
+        "currency:VND": "yes",
+        "fee": "yes",
+        "motorcycle": "yes",
+        "name": "Tủ đổi pin VinFast",
+        "name:en": "VinFast Battery-swapping Cabinet",
+        "operator": "VinFast",
+        "payment:app": "yes",
+        "vending": "battery_swap"
+      }
+    },
+    {
+      "id": "osm-node-13668863745",
+      "source": "https://www.openstreetmap.org/node/13668863745",
+      "reason": "Loại địa điểm hoặc quyền tiếp cận chưa phù hợp",
+      "tags": {
+        "access": "yes",
+        "amenity": "vending_machine",
+        "battery_swap": "yes",
+        "brand": "VinFast",
+        "capacity": "6 batteries",
+        "charge": "9000 VND/battery",
+        "currency:VND": "yes",
+        "description": "Tủ nằm trong cửa hàng",
+        "fee": "yes",
+        "indoor": "yes",
+        "motorcycle": "yes",
+        "name": "Tủ đổi pin VinFast",
+        "name:en": "VinFast Battery-swapping Cabinet",
+        "operator": "VinFast",
+        "payment:app": "yes",
+        "vending": "battery_swap"
+      }
+    },
+    {
+      "id": "osm-node-13668863746",
+      "source": "https://www.openstreetmap.org/node/13668863746",
+      "reason": "Loại địa điểm hoặc quyền tiếp cận chưa phù hợp",
+      "tags": {
+        "access": "yes",
+        "amenity": "vending_machine",
+        "battery_swap": "yes",
+        "brand": "VinFast",
+        "capacity": "6 batteries",
+        "charge": "9000 VND/battery",
+        "currency:VND": "yes",
+        "description": "Tủ nằm trong cửa hàng",
+        "fee": "yes",
+        "indoor": "yes",
+        "motorcycle": "yes",
+        "name": "Tủ đổi pin VinFast",
+        "name:en": "VinFast Battery-swapping Cabinet",
+        "operator": "VinFast",
+        "payment:app": "yes",
+        "vending": "battery_swap"
+      }
+    },
+    {
+      "id": "osm-node-13668863747",
+      "source": "https://www.openstreetmap.org/node/13668863747",
+      "reason": "Loại địa điểm hoặc quyền tiếp cận chưa phù hợp",
+      "tags": {
+        "access": "yes",
+        "amenity": "vending_machine",
+        "battery_swap": "yes",
+        "brand": "VinFast",
+        "capacity": "6 batteries",
+        "charge": "9000 VND/battery",
+        "currency:VND": "yes",
+        "description": "Tủ nằm trong cửa hàng",
+        "fee": "yes",
+        "indoor": "yes",
+        "motorcycle": "yes",
+        "name": "Tủ đổi pin VinFast",
+        "name:en": "VinFast Battery-swapping Cabinet",
+        "operator": "VinFast",
+        "payment:app": "yes",
+        "vending": "battery_swap"
+      }
+    },
+    {
+      "id": "osm-node-13668863748",
+      "source": "https://www.openstreetmap.org/node/13668863748",
+      "reason": "Loại địa điểm hoặc quyền tiếp cận chưa phù hợp",
+      "tags": {
+        "access": "yes",
+        "amenity": "vending_machine",
+        "battery_swap": "yes",
+        "brand": "VinFast",
+        "capacity": "6 batteries",
+        "charge": "9000 VND/battery",
+        "currency:VND": "yes",
+        "description": "Tủ nằm trong cửa hàng",
+        "fee": "yes",
+        "indoor": "yes",
+        "motorcycle": "yes",
+        "name": "Tủ đổi pin VinFast",
+        "name:en": "VinFast Battery-swapping Cabinet",
+        "operator": "VinFast",
+        "payment:app": "yes",
+        "vending": "battery_swap"
+      }
+    },
+    {
+      "id": "osm-node-13668863749",
+      "source": "https://www.openstreetmap.org/node/13668863749",
+      "reason": "Loại địa điểm hoặc quyền tiếp cận chưa phù hợp",
+      "tags": {
+        "access": "yes",
+        "amenity": "vending_machine",
+        "battery_swap": "yes",
+        "brand": "VinFast",
+        "capacity": "6 batteries",
+        "charge": "9000 VND/battery",
+        "currency:VND": "yes",
+        "description": "Tủ nằm trong cửa hàng",
+        "fee": "yes",
+        "indoor": "yes",
+        "motorcycle": "yes",
+        "name": "Tủ đổi pin VinFast",
+        "name:en": "VinFast Battery-swapping Cabinet",
+        "operator": "VinFast",
+        "payment:app": "yes",
+        "vending": "battery_swap"
+      }
+    },
+    {
+      "id": "osm-node-13668880968",
+      "source": "https://www.openstreetmap.org/node/13668880968",
+      "reason": "Loại địa điểm hoặc quyền tiếp cận chưa phù hợp",
+      "tags": {
+        "access": "yes",
+        "amenity": "vending_machine",
+        "battery_swap": "yes",
+        "brand": "VinFast",
+        "capacity": "6 batteries",
+        "charge": "9000 VND/battery",
+        "currency:VND": "yes",
+        "description": "Tủ nằm trong cửa hàng",
+        "fee": "yes",
+        "indoor": "yes",
+        "motorcycle": "yes",
+        "name": "Tủ đổi pin VinFast",
+        "name:en": "VinFast Battery-swapping Cabinet",
+        "operator": "VinFast",
+        "payment:app": "yes",
+        "vending": "battery_swap"
+      }
+    },
+    {
+      "id": "osm-node-13668880969",
+      "source": "https://www.openstreetmap.org/node/13668880969",
+      "reason": "Loại địa điểm hoặc quyền tiếp cận chưa phù hợp",
+      "tags": {
+        "access": "yes",
+        "amenity": "vending_machine",
+        "battery_swap": "yes",
+        "brand": "VinFast",
+        "capacity": "6 batteries",
+        "charge": "9000 VND/battery",
+        "currency:VND": "yes",
+        "description": "Tủ nằm trong cửa hàng",
+        "fee": "yes",
+        "indoor": "yes",
+        "motorcycle": "yes",
+        "name": "Tủ đổi pin VinFast",
+        "name:en": "VinFast Battery-swapping Cabinet",
+        "operator": "VinFast",
+        "payment:app": "yes",
+        "vending": "battery_swap"
+      }
+    },
+    {
+      "id": "osm-node-13668880970",
+      "source": "https://www.openstreetmap.org/node/13668880970",
+      "reason": "Loại địa điểm hoặc quyền tiếp cận chưa phù hợp",
+      "tags": {
+        "access": "yes",
+        "amenity": "vending_machine",
+        "battery_swap": "yes",
+        "brand": "VinFast",
+        "capacity": "6 batteries",
+        "charge": "9000 VND/battery",
+        "currency:VND": "yes",
+        "description": "Tủ nằm trong cửa hàng",
+        "fee": "yes",
+        "indoor": "yes",
+        "motorcycle": "yes",
+        "name": "Tủ đổi pin VinFast",
+        "name:en": "VinFast Battery-swapping Cabinet",
+        "operator": "VinFast",
+        "payment:app": "yes",
+        "vending": "battery_swap"
+      }
+    },
+    {
+      "id": "osm-node-13668881201",
+      "source": "https://www.openstreetmap.org/node/13668881201",
+      "reason": "Loại địa điểm hoặc quyền tiếp cận chưa phù hợp",
+      "tags": {
+        "access": "yes",
+        "amenity": "vending_machine",
+        "battery_swap": "yes",
+        "brand": "VinFast",
+        "capacity": "6 batteries",
+        "charge": "9000 VND/battery",
+        "currency:VND": "yes",
+        "fee": "yes",
+        "motorcycle": "yes",
+        "name": "Tủ đổi pin VinFast",
+        "name:en": "VinFast Battery-swapping Cabinet",
+        "operator": "VinFast",
+        "payment:app": "yes",
+        "vending": "battery_swap"
+      }
+    },
+    {
+      "id": "osm-node-13668881202",
+      "source": "https://www.openstreetmap.org/node/13668881202",
+      "reason": "Loại địa điểm hoặc quyền tiếp cận chưa phù hợp",
+      "tags": {
+        "access": "yes",
+        "amenity": "vending_machine",
+        "battery_swap": "yes",
+        "brand": "VinFast",
+        "capacity": "6 batteries",
+        "charge": "9000 VND/battery",
+        "currency:VND": "yes",
+        "fee": "yes",
+        "motorcycle": "yes",
+        "name": "Tủ đổi pin VinFast",
+        "name:en": "VinFast Battery-swapping Cabinet",
+        "operator": "VinFast",
+        "payment:app": "yes",
+        "vending": "battery_swap"
+      }
+    },
+    {
+      "id": "osm-node-13669035764",
+      "source": "https://www.openstreetmap.org/node/13669035764",
+      "reason": "Loại địa điểm hoặc quyền tiếp cận chưa phù hợp",
+      "tags": {
+        "access": "yes",
+        "amenity": "vending_machine",
+        "battery_swap": "yes",
+        "brand": "VinFast",
+        "capacity": "6 batteries",
+        "charge": "9000 VND/battery",
+        "currency:VND": "yes",
+        "description": "Tủ nằm trong cửa hàng",
+        "fee": "yes",
+        "indoor": "yes",
+        "motorcycle": "yes",
+        "name": "Tủ đổi pin VinFast",
+        "name:en": "VinFast Battery-swapping Cabinet",
+        "operator": "VinFast",
+        "payment:app": "yes",
+        "vending": "battery_swap"
+      }
+    },
+    {
+      "id": "osm-node-13669035765",
+      "source": "https://www.openstreetmap.org/node/13669035765",
+      "reason": "Loại địa điểm hoặc quyền tiếp cận chưa phù hợp",
+      "tags": {
+        "access": "yes",
+        "amenity": "vending_machine",
+        "battery_swap": "yes",
+        "brand": "VinFast",
+        "capacity": "6 batteries",
+        "charge": "9000 VND/battery",
+        "currency:VND": "yes",
+        "description": "Tủ nằm trong cửa hàng",
+        "fee": "yes",
+        "indoor": "yes",
+        "motorcycle": "yes",
+        "name": "Tủ đổi pin VinFast",
+        "name:en": "VinFast Battery-swapping Cabinet",
+        "operator": "VinFast",
+        "payment:app": "yes",
+        "vending": "battery_swap"
+      }
+    },
+    {
+      "id": "osm-node-13669035766",
+      "source": "https://www.openstreetmap.org/node/13669035766",
+      "reason": "Loại địa điểm hoặc quyền tiếp cận chưa phù hợp",
+      "tags": {
+        "access": "yes",
+        "amenity": "vending_machine",
+        "battery_swap": "yes",
+        "brand": "VinFast",
+        "capacity": "6 batteries",
+        "charge": "9000 VND/battery",
+        "currency:VND": "yes",
+        "description": "Tủ nằm trong cửa hàng",
+        "fee": "yes",
+        "indoor": "yes",
+        "motorcycle": "yes",
+        "name": "Tủ đổi pin VinFast",
+        "name:en": "VinFast Battery-swapping Cabinet",
+        "operator": "VinFast",
+        "payment:app": "yes",
+        "vending": "battery_swap"
+      }
+    },
+    {
+      "id": "osm-node-13669035767",
+      "source": "https://www.openstreetmap.org/node/13669035767",
+      "reason": "Loại địa điểm hoặc quyền tiếp cận chưa phù hợp",
+      "tags": {
+        "access": "yes",
+        "amenity": "vending_machine",
+        "battery_swap": "yes",
+        "brand": "VinFast",
+        "capacity": "6 batteries",
+        "charge": "9000 VND/battery",
+        "currency:VND": "yes",
+        "description": "Tủ nằm trong cửa hàng",
+        "fee": "yes",
+        "indoor": "yes",
+        "motorcycle": "yes",
+        "name": "Tủ đổi pin VinFast",
+        "name:en": "VinFast Battery-swapping Cabinet",
+        "operator": "VinFast",
+        "payment:app": "yes",
+        "vending": "battery_swap"
+      }
+    },
+    {
+      "id": "osm-node-13669035769",
+      "source": "https://www.openstreetmap.org/node/13669035769",
+      "reason": "Loại địa điểm hoặc quyền tiếp cận chưa phù hợp",
+      "tags": {
+        "access": "yes",
+        "amenity": "vending_machine",
+        "battery_swap": "yes",
+        "brand": "VinFast",
+        "capacity": "6 batteries",
+        "charge": "9000 VND/battery",
+        "currency:VND": "yes",
+        "description": "Tủ nằm trong cửa hàng",
+        "fee": "yes",
+        "indoor": "yes",
+        "motorcycle": "yes",
+        "name": "Tủ đổi pin VinFast",
+        "name:en": "VinFast Battery-swapping Cabinet",
+        "operator": "VinFast",
+        "payment:app": "yes",
+        "vending": "battery_swap"
+      }
+    },
+    {
+      "id": "osm-node-13669035770",
+      "source": "https://www.openstreetmap.org/node/13669035770",
+      "reason": "Loại địa điểm hoặc quyền tiếp cận chưa phù hợp",
+      "tags": {
+        "access": "yes",
+        "amenity": "vending_machine",
+        "battery_swap": "yes",
+        "brand": "VinFast",
+        "capacity": "6 batteries",
+        "charge": "9000 VND/battery",
+        "currency:VND": "yes",
+        "description": "Tủ nằm trong cửa hàng",
+        "fee": "yes",
+        "indoor": "yes",
+        "motorcycle": "yes",
+        "name": "Tủ đổi pin VinFast",
+        "name:en": "VinFast Battery-swapping Cabinet",
+        "operator": "VinFast",
+        "payment:app": "yes",
+        "vending": "battery_swap"
+      }
+    },
+    {
+      "id": "osm-node-13669035771",
+      "source": "https://www.openstreetmap.org/node/13669035771",
+      "reason": "Loại địa điểm hoặc quyền tiếp cận chưa phù hợp",
+      "tags": {
+        "access": "yes",
+        "amenity": "vending_machine",
+        "battery_swap": "yes",
+        "brand": "VinFast",
+        "capacity": "6 batteries",
+        "charge": "9000 VND/battery",
+        "currency:VND": "yes",
+        "fee": "yes",
+        "motorcycle": "yes",
+        "name": "Tủ đổi pin VinFast",
+        "name:en": "VinFast Battery-swapping Cabinet",
+        "operator": "VinFast",
+        "payment:app": "yes",
+        "vending": "battery_swap"
+      }
+    },
+    {
+      "id": "osm-node-13671874409",
+      "source": "https://www.openstreetmap.org/node/13671874409",
+      "reason": "Loại địa điểm hoặc quyền tiếp cận chưa phù hợp",
+      "tags": {
+        "access": "yes",
+        "amenity": "vending_machine",
+        "battery_swap": "yes",
+        "brand": "VinFast",
+        "capacity": "6 batteries",
+        "charge": "9000 VND/battery",
+        "currency:VND": "yes",
+        "fee": "yes",
+        "motorcycle": "yes",
+        "name": "Tủ đổi pin VinFast",
+        "name:en": "VinFast Battery-swapping Cabinet",
+        "operator": "VinFast",
+        "payment:app": "yes",
+        "vending": "battery_swap"
+      }
+    },
+    {
+      "id": "osm-node-13671874410",
+      "source": "https://www.openstreetmap.org/node/13671874410",
+      "reason": "Loại địa điểm hoặc quyền tiếp cận chưa phù hợp",
+      "tags": {
+        "access": "yes",
+        "amenity": "vending_machine",
+        "battery_swap": "yes",
+        "brand": "VinFast",
+        "capacity": "6 batteries",
+        "charge": "9000 VND/battery",
+        "currency:VND": "yes",
+        "fee": "yes",
+        "motorcycle": "yes",
+        "name": "Tủ đổi pin VinFast",
+        "name:en": "VinFast Battery-swapping Cabinet",
+        "operator": "VinFast",
+        "payment:app": "yes",
+        "vending": "battery_swap"
+      }
+    },
+    {
+      "id": "osm-node-13671874411",
+      "source": "https://www.openstreetmap.org/node/13671874411",
+      "reason": "Loại địa điểm hoặc quyền tiếp cận chưa phù hợp",
+      "tags": {
+        "access": "yes",
+        "amenity": "vending_machine",
+        "battery_swap": "yes",
+        "brand": "VinFast",
+        "capacity": "6 batteries",
+        "charge": "9000 VND/battery",
+        "currency:VND": "yes",
+        "fee": "yes",
+        "motorcycle": "yes",
+        "name": "Tủ đổi pin VinFast",
+        "name:en": "VinFast Battery-swapping Cabinet",
+        "operator": "VinFast",
+        "payment:app": "yes",
+        "vending": "battery_swap"
+      }
+    },
+    {
+      "id": "osm-node-13671874412",
+      "source": "https://www.openstreetmap.org/node/13671874412",
+      "reason": "Loại địa điểm hoặc quyền tiếp cận chưa phù hợp",
+      "tags": {
+        "access": "yes",
+        "amenity": "vending_machine",
+        "battery_swap": "yes",
+        "brand": "VinFast",
+        "capacity": "6 batteries",
+        "charge": "9000 VND/battery",
+        "currency:VND": "yes",
+        "description": "Nằm trong trạm sạc trong khuôn viên trụ sở Báo Lao động",
+        "fee": "yes",
+        "motorcycle": "yes",
+        "name": "Tủ đổi pin VinFast",
+        "name:en": "VinFast Battery-swapping Cabinet",
+        "operator": "VinFast",
+        "payment:app": "yes",
+        "vending": "battery_swap"
+      }
+    },
+    {
+      "id": "osm-node-13671874413",
+      "source": "https://www.openstreetmap.org/node/13671874413",
+      "reason": "Loại địa điểm hoặc quyền tiếp cận chưa phù hợp",
+      "tags": {
+        "access": "yes",
+        "amenity": "vending_machine",
+        "battery_swap": "yes",
+        "brand": "VinFast",
+        "capacity": "6 batteries",
+        "charge": "9000 VND/battery",
+        "currency:VND": "yes",
+        "fee": "yes",
+        "motorcycle": "yes",
+        "name": "Tủ đổi pin VinFast",
+        "name:en": "VinFast Battery-swapping Cabinet",
+        "operator": "VinFast",
+        "payment:app": "yes",
+        "vending": "battery_swap"
+      }
+    },
+    {
+      "id": "osm-node-13671874414",
+      "source": "https://www.openstreetmap.org/node/13671874414",
+      "reason": "Loại địa điểm hoặc quyền tiếp cận chưa phù hợp",
+      "tags": {
+        "access": "yes",
+        "amenity": "vending_machine",
+        "battery_swap": "yes",
+        "brand": "VinFast",
+        "capacity": "6 batteries",
+        "charge": "9000 VND/battery",
+        "currency:VND": "yes",
+        "fee": "yes",
+        "motorcycle": "yes",
+        "name": "Tủ đổi pin VinFast",
+        "name:en": "VinFast Battery-swapping Cabinet",
+        "operator": "VinFast",
+        "payment:app": "yes",
+        "vending": "battery_swap"
+      }
+    },
+    {
+      "id": "osm-node-13671874415",
+      "source": "https://www.openstreetmap.org/node/13671874415",
+      "reason": "Loại địa điểm hoặc quyền tiếp cận chưa phù hợp",
+      "tags": {
+        "access": "yes",
+        "amenity": "vending_machine",
+        "battery_swap": "yes",
+        "brand": "VinFast",
+        "capacity": "6 batteries",
+        "charge": "9000 VND/battery",
+        "currency:VND": "yes",
+        "fee": "yes",
+        "motorcycle": "yes",
+        "name": "Tủ đổi pin VinFast",
+        "name:en": "VinFast Battery-swapping Cabinet",
+        "operator": "VinFast",
+        "payment:app": "yes",
+        "vending": "battery_swap"
+      }
+    },
+    {
+      "id": "osm-node-13671874416",
+      "source": "https://www.openstreetmap.org/node/13671874416",
+      "reason": "Loại địa điểm hoặc quyền tiếp cận chưa phù hợp",
+      "tags": {
+        "access": "yes",
+        "amenity": "vending_machine",
+        "battery_swap": "yes",
+        "brand": "VinFast",
+        "capacity": "6 batteries",
+        "charge": "9000 VND/battery",
+        "currency:VND": "yes",
+        "fee": "yes",
+        "motorcycle": "yes",
+        "name": "Tủ đổi pin VinFast",
+        "name:en": "VinFast Battery-swapping Cabinet",
+        "operator": "VinFast",
+        "payment:app": "yes",
+        "vending": "battery_swap"
+      }
+    },
+    {
+      "id": "osm-node-13671874417",
+      "source": "https://www.openstreetmap.org/node/13671874417",
+      "reason": "Loại địa điểm hoặc quyền tiếp cận chưa phù hợp",
+      "tags": {
+        "access": "yes",
+        "amenity": "vending_machine",
+        "battery_swap": "yes",
+        "brand": "VinFast",
+        "capacity": "6 batteries",
+        "charge": "9000 VND/battery",
+        "currency:VND": "yes",
+        "fee": "yes",
+        "motorcycle": "yes",
+        "name": "Tủ đổi pin VinFast",
+        "name:en": "VinFast Battery-swapping Cabinet",
+        "operator": "VinFast",
+        "payment:app": "yes",
+        "vending": "battery_swap"
+      }
+    },
+    {
+      "id": "osm-node-13674955658",
+      "source": "https://www.openstreetmap.org/node/13674955658",
+      "reason": "Loại địa điểm hoặc quyền tiếp cận chưa phù hợp",
+      "tags": {
+        "access": "yes",
+        "amenity": "vending_machine",
+        "battery_swap": "yes",
+        "brand": "VinFast",
+        "capacity": "6 batteries",
+        "charge": "9000 VND/battery",
+        "currency:VND": "yes",
+        "fee": "yes",
+        "motorcycle": "yes",
+        "name": "Tủ đổi pin VinFast",
+        "name:en": "VinFast Battery-swapping Cabinet",
+        "operator": "VinFast",
+        "payment:app": "yes",
+        "vending": "battery_swap"
+      }
+    },
+    {
+      "id": "osm-node-13674955659",
+      "source": "https://www.openstreetmap.org/node/13674955659",
+      "reason": "Loại địa điểm hoặc quyền tiếp cận chưa phù hợp",
+      "tags": {
+        "access": "yes",
+        "amenity": "vending_machine",
+        "battery_swap": "yes",
+        "brand": "VinFast",
+        "capacity": "6 batteries",
+        "charge": "9000 VND/battery",
+        "currency:VND": "yes",
+        "fee": "yes",
+        "motorcycle": "yes",
+        "name": "Tủ đổi pin VinFast",
+        "name:en": "VinFast Battery-swapping Cabinet",
+        "operator": "VinFast",
+        "payment:app": "yes",
+        "vending": "battery_swap"
+      }
+    },
+    {
+      "id": "osm-node-13674955660",
+      "source": "https://www.openstreetmap.org/node/13674955660",
+      "reason": "Loại địa điểm hoặc quyền tiếp cận chưa phù hợp",
+      "tags": {
+        "access": "yes",
+        "amenity": "vending_machine",
+        "battery_swap": "yes",
+        "brand": "VinFast",
+        "capacity": "6 batteries",
+        "charge": "9000 VND/battery",
+        "currency:VND": "yes",
+        "fee": "yes",
+        "motorcycle": "yes",
+        "name": "Tủ đổi pin VinFast",
+        "name:en": "VinFast Battery-swapping Cabinet",
+        "operator": "VinFast",
+        "payment:app": "yes",
+        "vending": "battery_swap"
+      }
+    },
+    {
+      "id": "osm-node-13674955661",
+      "source": "https://www.openstreetmap.org/node/13674955661",
+      "reason": "Loại địa điểm hoặc quyền tiếp cận chưa phù hợp",
+      "tags": {
+        "access": "yes",
+        "amenity": "vending_machine",
+        "battery_swap": "yes",
+        "brand": "VinFast",
+        "capacity": "6 batteries",
+        "charge": "9000 VND/battery",
+        "currency:VND": "yes",
+        "fee": "yes",
+        "motorcycle": "yes",
+        "name": "Tủ đổi pin VinFast",
+        "name:en": "VinFast Battery-swapping Cabinet",
+        "operator": "VinFast",
+        "payment:app": "yes",
+        "vending": "battery_swap"
+      }
+    },
+    {
+      "id": "osm-node-13674955662",
+      "source": "https://www.openstreetmap.org/node/13674955662",
+      "reason": "Loại địa điểm hoặc quyền tiếp cận chưa phù hợp",
+      "tags": {
+        "access": "yes",
+        "amenity": "vending_machine",
+        "battery_swap": "yes",
+        "brand": "VinFast",
+        "capacity": "6 batteries",
+        "charge": "9000 VND/battery",
+        "currency:VND": "yes",
+        "description": "Sân trạm sạc trong Khu liên hợp thể thao Thanh Hà",
+        "fee": "yes",
+        "motorcycle": "yes",
+        "name": "Tủ đổi pin VinFast",
+        "name:en": "VinFast Battery-swapping Cabinet",
+        "operator": "VinFast",
+        "payment:app": "yes",
+        "vending": "battery_swap"
+      }
+    },
+    {
+      "id": "osm-node-13674976562",
+      "source": "https://www.openstreetmap.org/node/13674976562",
+      "reason": "Loại địa điểm hoặc quyền tiếp cận chưa phù hợp",
+      "tags": {
+        "access": "yes",
+        "amenity": "vending_machine",
+        "battery_swap": "yes",
+        "brand": "VinFast",
+        "capacity": "6 batteries",
+        "charge": "9000 VND/battery",
+        "currency:VND": "yes",
+        "fee": "yes",
+        "motorcycle": "yes",
+        "name": "Tủ đổi pin VinFast",
+        "name:en": "VinFast Battery-swapping Cabinet",
+        "operator": "VinFast",
+        "payment:app": "yes",
+        "vending": "battery_swap"
+      }
+    },
+    {
+      "id": "osm-node-13674976563",
+      "source": "https://www.openstreetmap.org/node/13674976563",
+      "reason": "Loại địa điểm hoặc quyền tiếp cận chưa phù hợp",
+      "tags": {
+        "access": "yes",
+        "amenity": "vending_machine",
+        "battery_swap": "yes",
+        "brand": "VinFast",
+        "capacity": "6 batteries",
+        "charge": "9000 VND/battery",
+        "currency:VND": "yes",
+        "description": "Sân phía trước Tòa nhà Phương Anh",
+        "fee": "yes",
+        "motorcycle": "yes",
+        "name": "Tủ đổi pin VinFast",
+        "name:en": "VinFast Battery-swapping Cabinet",
+        "operator": "VinFast",
+        "payment:app": "yes",
+        "vending": "battery_swap"
+      }
+    },
+    {
+      "id": "osm-node-13674976573",
+      "source": "https://www.openstreetmap.org/node/13674976573",
+      "reason": "Loại địa điểm hoặc quyền tiếp cận chưa phù hợp",
+      "tags": {
+        "access": "yes",
+        "amenity": "vending_machine",
+        "battery_swap": "yes",
+        "brand": "VinFast",
+        "capacity": "6 batteries",
+        "charge": "9000 VND/battery",
+        "currency:VND": "yes",
+        "description": "Sân trạm sạc trong khuôn viên Xí nghiệp trung đại tu ô tô Hà Nội",
+        "fee": "yes",
+        "motorcycle": "yes",
+        "name": "Tủ đổi pin VinFast",
+        "name:en": "VinFast Battery-swapping Cabinet",
+        "operator": "VinFast",
+        "payment:app": "yes",
+        "vending": "battery_swap"
+      }
+    },
+    {
+      "id": "osm-node-13674976574",
+      "source": "https://www.openstreetmap.org/node/13674976574",
+      "reason": "Loại địa điểm hoặc quyền tiếp cận chưa phù hợp",
+      "tags": {
+        "access": "yes",
+        "amenity": "vending_machine",
+        "battery_swap": "yes",
+        "brand": "VinFast",
+        "capacity": "6 batteries",
+        "charge": "9000 VND/battery",
+        "currency:VND": "yes",
+        "description": "Sân trạm sạc sau cây xăng HFC",
+        "fee": "yes",
+        "motorcycle": "yes",
+        "name": "Tủ đổi pin VinFast",
+        "name:en": "VinFast Battery-swapping Cabinet",
+        "operator": "VinFast",
+        "payment:app": "yes",
+        "vending": "battery_swap"
+      }
+    },
+    {
+      "id": "osm-node-13674976590",
+      "source": "https://www.openstreetmap.org/node/13674976590",
+      "reason": "Loại địa điểm hoặc quyền tiếp cận chưa phù hợp",
+      "tags": {
+        "access": "yes",
+        "amenity": "vending_machine",
+        "battery_swap": "yes",
+        "brand": "VinFast",
+        "capacity": "6 batteries",
+        "charge": "9000 VND/battery",
+        "currency:VND": "yes",
+        "description": "Sân trạm sạc Fast+ nằm trong bến xe Giáp Bát",
+        "fee": "yes",
+        "motorcycle": "yes",
+        "name": "Tủ đổi pin VinFast",
+        "name:en": "VinFast Battery-swapping Cabinet",
+        "operator": "VinFast",
+        "payment:app": "yes",
+        "vending": "battery_swap"
+      }
+    },
+    {
+      "id": "osm-node-13674976596",
+      "source": "https://www.openstreetmap.org/node/13674976596",
+      "reason": "Loại địa điểm hoặc quyền tiếp cận chưa phù hợp",
+      "tags": {
+        "access": "yes",
+        "amenity": "vending_machine",
+        "battery_swap": "yes",
+        "brand": "VinFast",
+        "capacity": "6 batteries",
+        "charge": "9000 VND/battery",
+        "currency:VND": "yes",
+        "description": "Sân trạm sạc trong khuôn viên Bến xe Đuôi Cá",
+        "fee": "yes",
+        "motorcycle": "yes",
+        "name": "Tủ đổi pin VinFast",
+        "name:en": "VinFast Battery-swapping Cabinet",
+        "operator": "VinFast",
+        "payment:app": "yes",
+        "vending": "battery_swap"
+      }
+    },
+    {
+      "id": "osm-node-13675000201",
+      "source": "https://www.openstreetmap.org/node/13675000201",
+      "reason": "Loại địa điểm hoặc quyền tiếp cận chưa phù hợp",
+      "tags": {
+        "access": "yes",
+        "amenity": "vending_machine",
+        "battery_swap": "yes",
+        "brand": "VinFast",
+        "capacity": "6 batteries",
+        "charge": "9000 VND/battery",
+        "currency:VND": "yes",
+        "fee": "yes",
+        "motorcycle": "yes",
+        "name": "Tủ đổi pin VinFast",
+        "name:en": "VinFast Battery-swapping Cabinet",
+        "operator": "VinFast",
+        "payment:app": "yes",
+        "vending": "battery_swap"
+      }
+    },
+    {
+      "id": "osm-node-13675000202",
+      "source": "https://www.openstreetmap.org/node/13675000202",
+      "reason": "Loại địa điểm hoặc quyền tiếp cận chưa phù hợp",
+      "tags": {
+        "access": "yes",
+        "amenity": "vending_machine",
+        "battery_swap": "yes",
+        "brand": "VinFast",
+        "capacity": "6 batteries",
+        "charge": "9000 VND/battery",
+        "currency:VND": "yes",
+        "fee": "yes",
+        "motorcycle": "yes",
+        "name": "Tủ đổi pin VinFast",
+        "name:en": "VinFast Battery-swapping Cabinet",
+        "operator": "VinFast",
+        "payment:app": "yes",
+        "vending": "battery_swap"
+      }
+    },
+    {
+      "id": "osm-node-13675000203",
+      "source": "https://www.openstreetmap.org/node/13675000203",
+      "reason": "Loại địa điểm hoặc quyền tiếp cận chưa phù hợp",
+      "tags": {
+        "access": "yes",
+        "amenity": "vending_machine",
+        "battery_swap": "yes",
+        "brand": "VinFast",
+        "capacity": "6 batteries",
+        "charge": "9000 VND/battery",
+        "currency:VND": "yes",
+        "fee": "yes",
+        "motorcycle": "yes",
+        "name": "Tủ đổi pin VinFast",
+        "name:en": "VinFast Battery-swapping Cabinet",
+        "operator": "VinFast",
+        "payment:app": "yes",
+        "vending": "battery_swap"
+      }
+    },
+    {
+      "id": "osm-node-13675000204",
+      "source": "https://www.openstreetmap.org/node/13675000204",
+      "reason": "Loại địa điểm hoặc quyền tiếp cận chưa phù hợp",
+      "tags": {
+        "access": "yes",
+        "amenity": "vending_machine",
+        "battery_swap": "yes",
+        "brand": "VinFast",
+        "capacity": "6 batteries",
+        "charge": "9000 VND/battery",
+        "currency:VND": "yes",
+        "fee": "yes",
+        "motorcycle": "yes",
+        "name": "Tủ đổi pin VinFast",
+        "name:en": "VinFast Battery-swapping Cabinet",
+        "operator": "VinFast",
+        "payment:app": "yes",
+        "vending": "battery_swap"
+      }
+    },
+    {
+      "id": "osm-node-13675000205",
+      "source": "https://www.openstreetmap.org/node/13675000205",
+      "reason": "Loại địa điểm hoặc quyền tiếp cận chưa phù hợp",
+      "tags": {
+        "access": "yes",
+        "amenity": "vending_machine",
+        "battery_swap": "yes",
+        "brand": "VinFast",
+        "capacity": "6 batteries",
+        "charge": "9000 VND/battery",
+        "currency:VND": "yes",
+        "fee": "yes",
+        "motorcycle": "yes",
+        "name": "Tủ đổi pin VinFast",
+        "name:en": "VinFast Battery-swapping Cabinet",
+        "operator": "VinFast",
+        "payment:app": "yes",
+        "vending": "battery_swap"
+      }
+    },
+    {
+      "id": "osm-node-13675000206",
+      "source": "https://www.openstreetmap.org/node/13675000206",
+      "reason": "Loại địa điểm hoặc quyền tiếp cận chưa phù hợp",
+      "tags": {
+        "access": "yes",
+        "amenity": "vending_machine",
+        "battery_swap": "yes",
+        "brand": "VinFast",
+        "capacity": "6 batteries",
+        "charge": "9000 VND/battery",
+        "currency:VND": "yes",
+        "fee": "yes",
+        "motorcycle": "yes",
+        "name": "Tủ đổi pin VinFast",
+        "name:en": "VinFast Battery-swapping Cabinet",
+        "operator": "VinFast",
+        "payment:app": "yes",
+        "vending": "battery_swap"
+      }
+    },
+    {
+      "id": "osm-node-13675000207",
+      "source": "https://www.openstreetmap.org/node/13675000207",
+      "reason": "Loại địa điểm hoặc quyền tiếp cận chưa phù hợp",
+      "tags": {
+        "access": "yes",
+        "amenity": "vending_machine",
+        "battery_swap": "yes",
+        "brand": "VinFast",
+        "capacity": "6 batteries",
+        "charge": "9000 VND/battery",
+        "currency:VND": "yes",
+        "fee": "yes",
+        "motorcycle": "yes",
+        "name": "Tủ đổi pin VinFast",
+        "name:en": "VinFast Battery-swapping Cabinet",
+        "operator": "VinFast",
+        "payment:app": "yes",
+        "vending": "battery_swap"
+      }
+    },
+    {
+      "id": "osm-node-13675000208",
+      "source": "https://www.openstreetmap.org/node/13675000208",
+      "reason": "Loại địa điểm hoặc quyền tiếp cận chưa phù hợp",
+      "tags": {
+        "access": "yes",
+        "amenity": "vending_machine",
+        "battery_swap": "yes",
+        "brand": "VinFast",
+        "capacity": "6 batteries",
+        "charge": "9000 VND/battery",
+        "currency:VND": "yes",
+        "description": "Sân trạm sạc phía sau tòa The Light",
+        "fee": "yes",
+        "motorcycle": "yes",
+        "name": "Tủ đổi pin VinFast",
+        "name:en": "VinFast Battery-swapping Cabinet",
+        "operator": "VinFast",
+        "payment:app": "yes",
+        "vending": "battery_swap"
+      }
+    },
+    {
+      "id": "osm-node-13680891727",
+      "source": "https://www.openstreetmap.org/node/13680891727",
+      "reason": "Loại địa điểm hoặc quyền tiếp cận chưa phù hợp",
+      "tags": {
+        "access": "yes",
+        "amenity": "vending_machine",
+        "battery_swap": "yes",
+        "brand": "VinFast",
+        "capacity": "6 batteries",
+        "charge": "9000 VND/battery",
+        "currency:VND": "yes",
+        "fee": "yes",
+        "motorcycle": "yes",
+        "name": "Tủ đổi pin VinFast",
+        "name:en": "VinFast Battery-swapping Cabinet",
+        "operator": "VinFast",
+        "payment:app": "yes",
+        "vending": "battery_swap"
+      }
+    },
+    {
+      "id": "osm-node-13680891728",
+      "source": "https://www.openstreetmap.org/node/13680891728",
+      "reason": "Loại địa điểm hoặc quyền tiếp cận chưa phù hợp",
+      "tags": {
+        "access": "yes",
+        "amenity": "vending_machine",
+        "battery_swap": "yes",
+        "brand": "VinFast",
+        "capacity": "6 batteries",
+        "charge": "9000 VND/battery",
+        "currency:VND": "yes",
+        "fee": "yes",
+        "motorcycle": "yes",
+        "name": "Tủ đổi pin VinFast",
+        "name:en": "VinFast Battery-swapping Cabinet",
+        "operator": "VinFast",
+        "payment:app": "yes",
+        "vending": "battery_swap"
+      }
+    },
+    {
+      "id": "osm-node-13680891729",
+      "source": "https://www.openstreetmap.org/node/13680891729",
+      "reason": "Loại địa điểm hoặc quyền tiếp cận chưa phù hợp",
+      "tags": {
+        "access": "yes",
+        "amenity": "vending_machine",
+        "battery_swap": "yes",
+        "brand": "VinFast",
+        "capacity": "6 batteries",
+        "charge": "9000 VND/battery",
+        "currency:VND": "yes",
+        "fee": "yes",
+        "motorcycle": "yes",
+        "name": "Tủ đổi pin VinFast",
+        "name:en": "VinFast Battery-swapping Cabinet",
+        "operator": "VinFast",
+        "payment:app": "yes",
+        "vending": "battery_swap"
+      }
+    },
+    {
+      "id": "osm-node-13680891731",
+      "source": "https://www.openstreetmap.org/node/13680891731",
+      "reason": "Loại địa điểm hoặc quyền tiếp cận chưa phù hợp",
+      "tags": {
+        "access": "yes",
+        "amenity": "vending_machine",
+        "battery_swap": "yes",
+        "brand": "VinFast",
+        "capacity": "6 batteries",
+        "charge": "9000 VND/battery",
+        "currency:VND": "yes",
+        "fee": "yes",
+        "motorcycle": "yes",
+        "name": "Tủ đổi pin VinFast",
+        "name:en": "VinFast Battery-swapping Cabinet",
+        "operator": "VinFast",
+        "payment:app": "yes",
+        "vending": "battery_swap"
+      }
+    },
+    {
+      "id": "osm-node-13684800188",
+      "source": "https://www.openstreetmap.org/node/13684800188",
+      "reason": "Loại địa điểm hoặc quyền tiếp cận chưa phù hợp",
+      "tags": {
+        "access": "yes",
+        "amenity": "vending_machine",
+        "battery_swap": "yes",
+        "brand": "VinFast",
+        "capacity": "6 batteries",
+        "charge": "9000 VND/battery",
+        "currency:VND": "yes",
+        "fee": "yes",
+        "motorcycle": "yes",
+        "name": "Tủ đổi pin VinFast",
+        "name:en": "VinFast Battery-swapping Cabinet",
+        "operator": "VinFast",
+        "payment:app": "yes",
+        "vending": "battery_swap"
+      }
+    },
+    {
+      "id": "osm-node-13684800189",
+      "source": "https://www.openstreetmap.org/node/13684800189",
+      "reason": "Loại địa điểm hoặc quyền tiếp cận chưa phù hợp",
+      "tags": {
+        "access": "yes",
+        "amenity": "vending_machine",
+        "battery_swap": "yes",
+        "brand": "VinFast",
+        "capacity": "6 batteries",
+        "charge": "9000 VND/battery",
+        "currency:VND": "yes",
+        "fee": "yes",
+        "motorcycle": "yes",
+        "name": "Tủ đổi pin VinFast",
+        "name:en": "VinFast Battery-swapping Cabinet",
+        "operator": "VinFast",
+        "payment:app": "yes",
+        "vending": "battery_swap"
+      }
+    },
+    {
+      "id": "osm-node-13684800190",
+      "source": "https://www.openstreetmap.org/node/13684800190",
+      "reason": "Loại địa điểm hoặc quyền tiếp cận chưa phù hợp",
+      "tags": {
+        "access": "yes",
+        "amenity": "vending_machine",
+        "battery_swap": "yes",
+        "brand": "VinFast",
+        "capacity": "6 batteries",
+        "charge": "9000 VND/battery",
+        "currency:VND": "yes",
+        "fee": "yes",
+        "motorcycle": "yes",
+        "name": "Tủ đổi pin VinFast",
+        "name:en": "VinFast Battery-swapping Cabinet",
+        "operator": "VinFast",
+        "payment:app": "yes",
+        "vending": "battery_swap"
+      }
+    },
+    {
+      "id": "osm-node-13684800191",
+      "source": "https://www.openstreetmap.org/node/13684800191",
+      "reason": "Loại địa điểm hoặc quyền tiếp cận chưa phù hợp",
+      "tags": {
+        "access": "yes",
+        "amenity": "vending_machine",
+        "battery_swap": "yes",
+        "brand": "VinFast",
+        "capacity": "6 batteries",
+        "charge": "9000 VND/battery",
+        "currency:VND": "yes",
+        "fee": "yes",
+        "motorcycle": "yes",
+        "name": "Tủ đổi pin VinFast",
+        "name:en": "VinFast Battery-swapping Cabinet",
+        "operator": "VinFast",
+        "payment:app": "yes",
+        "vending": "battery_swap"
+      }
+    },
+    {
+      "id": "osm-node-13684800192",
+      "source": "https://www.openstreetmap.org/node/13684800192",
+      "reason": "Loại địa điểm hoặc quyền tiếp cận chưa phù hợp",
+      "tags": {
+        "access": "yes",
+        "amenity": "vending_machine",
+        "battery_swap": "yes",
+        "brand": "VinFast",
+        "capacity": "6 batteries",
+        "charge": "9000 VND/battery",
+        "currency:VND": "yes",
+        "fee": "yes",
+        "motorcycle": "yes",
+        "name": "Tủ đổi pin VinFast",
+        "name:en": "VinFast Battery-swapping Cabinet",
+        "operator": "VinFast",
+        "payment:app": "yes",
+        "vending": "battery_swap"
+      }
+    },
+    {
+      "id": "osm-node-13685837261",
+      "source": "https://www.openstreetmap.org/node/13685837261",
+      "reason": "Loại địa điểm hoặc quyền tiếp cận chưa phù hợp",
+      "tags": {
+        "access": "yes",
+        "amenity": "vending_machine",
+        "battery_swap": "yes",
+        "brand": "VinFast",
+        "capacity": "6 batteries",
+        "charge": "9000 VND/battery",
+        "currency:VND": "yes",
+        "fee": "yes",
+        "motorcycle": "yes",
+        "name": "Tủ đổi pin VinFast",
+        "name:en": "VinFast Battery-swapping Cabinet",
+        "operator": "VinFast",
+        "payment:app": "yes",
+        "vending": "battery_swap"
+      }
+    },
+    {
+      "id": "osm-node-13685837263",
+      "source": "https://www.openstreetmap.org/node/13685837263",
+      "reason": "Loại địa điểm hoặc quyền tiếp cận chưa phù hợp",
+      "tags": {
+        "access": "yes",
+        "amenity": "vending_machine",
+        "battery_swap": "yes",
+        "brand": "VinFast",
+        "capacity": "6 batteries",
+        "charge": "9000 VND/battery",
+        "currency:VND": "yes",
+        "fee": "yes",
+        "motorcycle": "yes",
+        "name": "Tủ đổi pin VinFast",
+        "name:en": "VinFast Battery-swapping Cabinet",
+        "operator": "VinFast",
+        "payment:app": "yes",
+        "vending": "battery_swap"
+      }
+    },
+    {
+      "id": "osm-node-13685837264",
+      "source": "https://www.openstreetmap.org/node/13685837264",
+      "reason": "Loại địa điểm hoặc quyền tiếp cận chưa phù hợp",
+      "tags": {
+        "access": "yes",
+        "amenity": "vending_machine",
+        "battery_swap": "yes",
+        "brand": "VinFast",
+        "capacity": "6 batteries",
+        "charge": "9000 VND/battery",
+        "currency:VND": "yes",
+        "fee": "yes",
+        "motorcycle": "yes",
+        "name": "Tủ đổi pin VinFast",
+        "name:en": "VinFast Battery-swapping Cabinet",
+        "operator": "VinFast",
+        "payment:app": "yes",
+        "vending": "battery_swap"
+      }
+    },
+    {
+      "id": "osm-node-13685837272",
+      "source": "https://www.openstreetmap.org/node/13685837272",
+      "reason": "Loại địa điểm hoặc quyền tiếp cận chưa phù hợp",
+      "tags": {
+        "access": "yes",
+        "amenity": "vending_machine",
+        "battery_swap": "yes",
+        "brand": "VinFast",
+        "capacity": "6 batteries",
+        "charge": "9000 VND/battery",
+        "currency:VND": "yes",
+        "fee": "yes",
+        "motorcycle": "yes",
+        "name": "Tủ đổi pin VinFast",
+        "name:en": "VinFast Battery-swapping Cabinet",
+        "operator": "VinFast",
+        "payment:app": "yes",
+        "vending": "battery_swap"
+      }
+    },
+    {
+      "id": "osm-node-13686451916",
+      "source": "https://www.openstreetmap.org/node/13686451916",
+      "reason": "Loại địa điểm hoặc quyền tiếp cận chưa phù hợp",
+      "tags": {
+        "access": "yes",
+        "amenity": "vending_machine",
+        "battery_swap": "yes",
+        "brand": "VinFast",
+        "capacity": "6 batteries",
+        "charge": "9000 VND/battery",
+        "currency:VND": "yes",
+        "fee": "yes",
+        "motorcycle": "yes",
+        "name": "Tủ đổi pin VinFast",
+        "name:en": "VinFast Battery-swapping Cabinet",
+        "operator": "VinFast",
+        "payment:app": "yes",
+        "vending": "battery_swap"
+      }
+    },
+    {
+      "id": "osm-node-13686451918",
+      "source": "https://www.openstreetmap.org/node/13686451918",
+      "reason": "Loại địa điểm hoặc quyền tiếp cận chưa phù hợp",
+      "tags": {
+        "access": "yes",
+        "amenity": "vending_machine",
+        "battery_swap": "yes",
+        "brand": "VinFast",
+        "capacity": "6 batteries",
+        "charge": "9000 VND/battery",
+        "currency:VND": "yes",
+        "fee": "yes",
+        "motorcycle": "yes",
+        "name": "Tủ đổi pin VinFast",
+        "name:en": "VinFast Battery-swapping Cabinet",
+        "operator": "VinFast",
+        "payment:app": "yes",
+        "vending": "battery_swap"
+      }
+    },
+    {
+      "id": "osm-node-13686451919",
+      "source": "https://www.openstreetmap.org/node/13686451919",
+      "reason": "Loại địa điểm hoặc quyền tiếp cận chưa phù hợp",
+      "tags": {
+        "access": "yes",
+        "amenity": "vending_machine",
+        "battery_swap": "yes",
+        "brand": "VinFast",
+        "capacity": "6 batteries",
+        "charge": "9000 VND/battery",
+        "currency:VND": "yes",
+        "fee": "yes",
+        "motorcycle": "yes",
+        "name": "Tủ đổi pin VinFast",
+        "name:en": "VinFast Battery-swapping Cabinet",
+        "operator": "VinFast",
+        "payment:app": "yes",
+        "vending": "battery_swap"
+      }
+    },
+    {
+      "id": "osm-node-13690004468",
+      "source": "https://www.openstreetmap.org/node/13690004468",
+      "reason": "Loại địa điểm hoặc quyền tiếp cận chưa phù hợp",
+      "tags": {
+        "access": "yes",
+        "amenity": "vending_machine",
+        "battery_swap": "yes",
+        "brand": "VinFast",
+        "capacity": "6 batteries",
+        "charge": "9000 VND/battery",
+        "currency:VND": "yes",
+        "fee": "yes",
+        "motorcycle": "yes",
+        "name": "Tủ đổi pin VinFast",
+        "name:en": "VinFast Battery-swapping Cabinet",
+        "operator": "VinFast",
+        "payment:app": "yes",
+        "vending": "battery_swap"
+      }
+    },
+    {
+      "id": "osm-node-13690004469",
+      "source": "https://www.openstreetmap.org/node/13690004469",
+      "reason": "Loại địa điểm hoặc quyền tiếp cận chưa phù hợp",
+      "tags": {
+        "access": "yes",
+        "amenity": "vending_machine",
+        "battery_swap": "yes",
+        "brand": "VinFast",
+        "capacity": "6 batteries",
+        "charge": "9000 VND/battery",
+        "currency:VND": "yes",
+        "fee": "yes",
+        "motorcycle": "yes",
+        "name": "Tủ đổi pin VinFast",
+        "name:en": "VinFast Battery-swapping Cabinet",
+        "operator": "VinFast",
+        "payment:app": "yes",
+        "vending": "battery_swap"
+      }
+    },
+    {
+      "id": "osm-node-13701533098",
+      "source": "https://www.openstreetmap.org/node/13701533098",
+      "reason": "Loại địa điểm hoặc quyền tiếp cận chưa phù hợp",
+      "tags": {
+        "access": "yes",
+        "amenity": "vending_machine",
+        "battery_swap": "yes",
+        "brand": "VinFast",
+        "capacity": "6 batteries",
+        "charge": "9000 VND/battery",
+        "currency:VND": "yes",
+        "description": "Nằm trong cửa hàng",
+        "fee": "yes",
+        "motorcycle": "yes",
+        "name": "Tủ đổi pin VinFast",
+        "name:en": "VinFast Battery-swapping Cabinet",
+        "operator": "VinFast",
+        "payment:app": "yes",
+        "vending": "battery_swap"
+      }
+    },
+    {
+      "id": "osm-node-13701533099",
+      "source": "https://www.openstreetmap.org/node/13701533099",
+      "reason": "Loại địa điểm hoặc quyền tiếp cận chưa phù hợp",
+      "tags": {
+        "access": "yes",
+        "amenity": "vending_machine",
+        "battery_swap": "yes",
+        "brand": "VinFast",
+        "capacity": "6 batteries",
+        "charge": "9000 VND/battery",
+        "currency:VND": "yes",
+        "fee": "yes",
+        "motorcycle": "yes",
+        "name": "Tủ đổi pin VinFast",
+        "name:en": "VinFast Battery-swapping Cabinet",
+        "operator": "VinFast",
+        "payment:app": "yes",
+        "vending": "battery_swap"
+      }
+    },
+    {
+      "id": "osm-node-13701533100",
+      "source": "https://www.openstreetmap.org/node/13701533100",
+      "reason": "Loại địa điểm hoặc quyền tiếp cận chưa phù hợp",
+      "tags": {
+        "access": "yes",
+        "amenity": "vending_machine",
+        "battery_swap": "yes",
+        "brand": "VinFast",
+        "capacity": "6 batteries",
+        "charge": "9000 VND/battery",
+        "currency:VND": "yes",
+        "fee": "yes",
+        "motorcycle": "yes",
+        "name": "Tủ đổi pin VinFast",
+        "name:en": "VinFast Battery-swapping Cabinet",
+        "operator": "VinFast",
+        "payment:app": "yes",
+        "vending": "battery_swap"
+      }
+    },
+    {
+      "id": "osm-node-13701538802",
+      "source": "https://www.openstreetmap.org/node/13701538802",
+      "reason": "Loại địa điểm hoặc quyền tiếp cận chưa phù hợp",
+      "tags": {
+        "access": "yes",
+        "amenity": "vending_machine",
+        "battery_swap": "yes",
+        "brand": "VinFast",
+        "capacity": "6 batteries",
+        "charge": "9000 VND/battery",
+        "currency:VND": "yes",
+        "fee": "yes",
+        "motorcycle": "yes",
+        "name": "Tủ đổi pin VinFast",
+        "name:en": "VinFast Battery-swapping Cabinet",
+        "operator": "VinFast",
+        "payment:app": "yes",
+        "vending": "battery_swap"
+      }
+    },
+    {
+      "id": "osm-node-13701538803",
+      "source": "https://www.openstreetmap.org/node/13701538803",
+      "reason": "Loại địa điểm hoặc quyền tiếp cận chưa phù hợp",
+      "tags": {
+        "access": "yes",
+        "amenity": "vending_machine",
+        "battery_swap": "yes",
+        "brand": "VinFast",
+        "capacity": "6 batteries",
+        "charge": "9000 VND/battery",
+        "currency:VND": "yes",
+        "fee": "yes",
+        "motorcycle": "yes",
+        "name": "Tủ đổi pin VinFast",
+        "name:en": "VinFast Battery-swapping Cabinet",
+        "operator": "VinFast",
+        "payment:app": "yes",
+        "vending": "battery_swap"
+      }
+    },
+    {
+      "id": "osm-node-13701538804",
+      "source": "https://www.openstreetmap.org/node/13701538804",
+      "reason": "Loại địa điểm hoặc quyền tiếp cận chưa phù hợp",
+      "tags": {
+        "access": "yes",
+        "amenity": "vending_machine",
+        "battery_swap": "yes",
+        "brand": "VinFast",
+        "capacity": "6 batteries",
+        "charge": "9000 VND/battery",
+        "currency:VND": "yes",
+        "fee": "yes",
+        "motorcycle": "yes",
+        "name": "Tủ đổi pin VinFast",
+        "name:en": "VinFast Battery-swapping Cabinet",
+        "operator": "VinFast",
+        "payment:app": "yes",
+        "vending": "battery_swap"
+      }
+    },
+    {
+      "id": "osm-node-13701538805",
+      "source": "https://www.openstreetmap.org/node/13701538805",
+      "reason": "Loại địa điểm hoặc quyền tiếp cận chưa phù hợp",
+      "tags": {
+        "access": "yes",
+        "amenity": "vending_machine",
+        "battery_swap": "yes",
+        "brand": "VinFast",
+        "capacity": "6 batteries",
+        "charge": "9000 VND/battery",
+        "currency:VND": "yes",
+        "fee": "yes",
+        "motorcycle": "yes",
+        "name": "Tủ đổi pin VinFast",
+        "name:en": "VinFast Battery-swapping Cabinet",
+        "operator": "VinFast",
+        "payment:app": "yes",
+        "vending": "battery_swap"
+      }
+    },
+    {
+      "id": "osm-node-13703724838",
+      "source": "https://www.openstreetmap.org/node/13703724838",
+      "reason": "Loại địa điểm hoặc quyền tiếp cận chưa phù hợp",
+      "tags": {
+        "access": "yes",
+        "amenity": "vending_machine",
+        "battery_swap": "yes",
+        "brand": "VinFast",
+        "capacity": "6 batteries",
+        "charge": "9000 VND/battery",
+        "currency:VND": "yes",
+        "fee": "yes",
+        "motorcycle": "yes",
+        "name": "Tủ đổi pin VinFast",
+        "name:en": "VinFast Battery-swapping Cabinet",
+        "operator": "VinFast",
+        "payment:app": "yes",
+        "vending": "battery_swap"
+      }
+    },
+    {
+      "id": "osm-node-13703724839",
+      "source": "https://www.openstreetmap.org/node/13703724839",
+      "reason": "Loại địa điểm hoặc quyền tiếp cận chưa phù hợp",
+      "tags": {
+        "access": "yes",
+        "amenity": "vending_machine",
+        "battery_swap": "yes",
+        "brand": "VinFast",
+        "capacity": "6 batteries",
+        "charge": "9000 VND/battery",
+        "currency:VND": "yes",
+        "fee": "yes",
+        "motorcycle": "yes",
+        "name": "Tủ đổi pin VinFast",
+        "name:en": "VinFast Battery-swapping Cabinet",
+        "operator": "VinFast",
+        "payment:app": "yes",
+        "vending": "battery_swap"
+      }
+    },
+    {
+      "id": "osm-node-13705740557",
+      "source": "https://www.openstreetmap.org/node/13705740557",
+      "reason": "Loại địa điểm hoặc quyền tiếp cận chưa phù hợp",
+      "tags": {
+        "access": "yes",
+        "amenity": "vending_machine",
+        "battery_swap": "yes",
+        "brand": "VinFast",
+        "capacity": "6 batteries",
+        "charge": "9000 VND/battery",
+        "currency:VND": "yes",
+        "fee": "yes",
+        "motorcycle": "yes",
+        "name": "Tủ đổi pin VinFast",
+        "name:en": "VinFast Battery-swapping Cabinet",
+        "operator": "VinFast",
+        "payment:app": "yes",
+        "vending": "battery_swap"
+      }
+    },
+    {
+      "id": "osm-node-13705740558",
+      "source": "https://www.openstreetmap.org/node/13705740558",
+      "reason": "Loại địa điểm hoặc quyền tiếp cận chưa phù hợp",
+      "tags": {
+        "access": "yes",
+        "amenity": "vending_machine",
+        "battery_swap": "yes",
+        "brand": "VinFast",
+        "capacity": "6 batteries",
+        "charge": "9000 VND/battery",
+        "currency:VND": "yes",
+        "fee": "yes",
+        "motorcycle": "yes",
+        "name": "Tủ đổi pin VinFast",
+        "name:en": "VinFast Battery-swapping Cabinet",
+        "operator": "VinFast",
+        "payment:app": "yes",
+        "vending": "battery_swap"
+      }
+    },
+    {
+      "id": "osm-node-13705740559",
+      "source": "https://www.openstreetmap.org/node/13705740559",
+      "reason": "Loại địa điểm hoặc quyền tiếp cận chưa phù hợp",
+      "tags": {
+        "access": "yes",
+        "amenity": "vending_machine",
+        "battery_swap": "yes",
+        "brand": "VinFast",
+        "capacity": "6 batteries",
+        "charge": "9000 VND/battery",
+        "currency:VND": "yes",
+        "fee": "yes",
+        "motorcycle": "yes",
+        "name": "Tủ đổi pin VinFast",
+        "name:en": "VinFast Battery-swapping Cabinet",
+        "operator": "VinFast",
+        "payment:app": "yes",
+        "vending": "battery_swap"
+      }
+    },
+    {
+      "id": "osm-node-13711363966",
+      "source": "https://www.openstreetmap.org/node/13711363966",
+      "reason": "Loại địa điểm hoặc quyền tiếp cận chưa phù hợp",
+      "tags": {
+        "access": "yes",
+        "amenity": "vending_machine",
+        "battery_swap": "yes",
+        "brand": "VinFast",
+        "capacity": "6 batteries",
+        "charge": "9000 VND/battery",
+        "currency:VND": "yes",
+        "fee": "yes",
+        "motorcycle": "yes",
+        "name": "Tủ đổi pin VinFast",
+        "name:en": "VinFast Battery-swapping Cabinet",
+        "operator": "VinFast",
+        "payment:app": "yes",
+        "vending": "battery_swap"
+      }
+    },
+    {
+      "id": "osm-node-13713784559",
+      "source": "https://www.openstreetmap.org/node/13713784559",
+      "reason": "Loại địa điểm hoặc quyền tiếp cận chưa phù hợp",
+      "tags": {
+        "access": "yes",
+        "amenity": "vending_machine",
+        "battery_swap": "yes",
+        "brand": "VinFast",
+        "capacity": "6 batteries",
+        "charge": "9000 VND/battery",
+        "currency:VND": "yes",
+        "fee": "yes",
+        "motorcycle": "yes",
+        "name": "Tủ đổi pin VinFast",
+        "name:en": "VinFast Battery-swapping Cabinet",
+        "operator": "VinFast",
+        "payment:app": "yes",
+        "vending": "battery_swap"
+      }
+    },
+    {
+      "id": "osm-node-13716360230",
+      "source": "https://www.openstreetmap.org/node/13716360230",
+      "reason": "Loại địa điểm hoặc quyền tiếp cận chưa phù hợp",
+      "tags": {
+        "access": "yes",
+        "amenity": "vending_machine",
+        "battery_swap": "yes",
+        "brand": "VinFast",
+        "capacity": "6 batteries",
+        "charge": "9000 VND/battery",
+        "currency:VND": "yes",
+        "fee": "yes",
+        "motorcycle": "yes",
+        "name": "Tủ đổi pin VinFast",
+        "name:en": "VinFast Battery-swapping Cabinet",
+        "operator": "VinFast",
+        "payment:app": "yes",
+        "vending": "battery_swap"
+      }
+    },
+    {
+      "id": "osm-node-13716360231",
+      "source": "https://www.openstreetmap.org/node/13716360231",
+      "reason": "Loại địa điểm hoặc quyền tiếp cận chưa phù hợp",
+      "tags": {
+        "access": "yes",
+        "amenity": "vending_machine",
+        "battery_swap": "yes",
+        "brand": "VinFast",
+        "capacity": "6 batteries",
+        "charge": "9000 VND/battery",
+        "currency:VND": "yes",
+        "fee": "yes",
+        "motorcycle": "yes",
+        "name": "Tủ đổi pin VinFast",
+        "name:en": "VinFast Battery-swapping Cabinet",
+        "operator": "VinFast",
+        "payment:app": "yes",
+        "vending": "battery_swap"
+      }
+    },
+    {
+      "id": "osm-node-13723243059",
+      "source": "https://www.openstreetmap.org/node/13723243059",
+      "reason": "Loại địa điểm hoặc quyền tiếp cận chưa phù hợp",
+      "tags": {
+        "access": "yes",
+        "amenity": "vending_machine",
+        "battery_swap": "yes",
+        "brand": "VinFast",
+        "capacity": "6 batteries",
+        "charge": "9000 VND/battery",
+        "currency:VND": "yes",
+        "fee": "yes",
+        "motorcycle": "yes",
+        "name": "Tủ đổi pin VinFast",
+        "name:en": "VinFast Battery-swapping Cabinet",
+        "operator": "VinFast",
+        "payment:app": "yes",
+        "vending": "battery_swap"
+      }
+    },
+    {
+      "id": "osm-node-13724542907",
+      "source": "https://www.openstreetmap.org/node/13724542907",
+      "reason": "Loại địa điểm hoặc quyền tiếp cận chưa phù hợp",
+      "tags": {
+        "access": "yes",
+        "amenity": "vending_machine",
+        "battery_swap": "yes",
+        "brand": "VinFast",
+        "capacity": "6 batteries",
+        "charge": "9000 VND/battery",
+        "currency:VND": "yes",
+        "fee": "yes",
+        "motorcycle": "yes",
+        "name": "Tủ đổi pin VinFast",
+        "name:en": "VinFast Battery-swapping Cabinet",
+        "operator": "VinFast",
+        "payment:app": "yes",
+        "vending": "battery_swap"
+      }
+    },
+    {
+      "id": "osm-node-13733944816",
+      "source": "https://www.openstreetmap.org/node/13733944816",
+      "reason": "Loại địa điểm hoặc quyền tiếp cận chưa phù hợp",
+      "tags": {
+        "access": "yes",
+        "amenity": "vending_machine",
+        "battery_swap": "yes",
+        "brand": "VinFast",
+        "capacity": "6 batteries",
+        "charge": "9000 VND/battery",
+        "currency:VND": "yes",
+        "description": "Nằm trong cửa hàng",
+        "fee": "yes",
+        "motorcycle": "yes",
+        "name": "Tủ đổi pin VinFast",
+        "name:en": "VinFast Battery-swapping Cabinet",
+        "operator": "VinFast",
+        "payment:app": "yes",
+        "vending": "battery_swap"
+      }
+    },
+    {
+      "id": "osm-node-13751705234",
+      "source": "https://www.openstreetmap.org/node/13751705234",
+      "reason": "Loại địa điểm hoặc quyền tiếp cận chưa phù hợp",
+      "tags": {
+        "access": "yes",
+        "amenity": "vending_machine",
+        "battery_swap": "yes",
+        "brand": "VinFast",
+        "capacity": "6 batteries",
+        "charge": "9000 VND/battery",
+        "currency:VND": "yes",
+        "fee": "yes",
+        "motorcycle": "yes",
+        "name": "Tủ đổi pin VinFast",
+        "name:en": "VinFast Battery-swapping Cabinet",
+        "operator": "VinFast",
+        "payment:app": "yes",
+        "vending": "battery_swap"
+      }
+    },
+    {
+      "id": "osm-node-13751705235",
+      "source": "https://www.openstreetmap.org/node/13751705235",
+      "reason": "Loại địa điểm hoặc quyền tiếp cận chưa phù hợp",
+      "tags": {
+        "access": "yes",
+        "amenity": "vending_machine",
+        "battery_swap": "yes",
+        "brand": "VinFast",
+        "capacity": "6 batteries",
+        "charge": "9000 VND/battery",
+        "currency:VND": "yes",
+        "fee": "yes",
+        "motorcycle": "yes",
+        "name": "Tủ đổi pin VinFast",
+        "name:en": "VinFast Battery-swapping Cabinet",
+        "operator": "VinFast",
+        "payment:app": "yes",
+        "vending": "battery_swap"
+      }
+    },
+    {
+      "id": "osm-node-14127536425",
+      "source": "https://www.openstreetmap.org/node/14127536425",
+      "reason": "Loại địa điểm hoặc quyền tiếp cận chưa phù hợp",
+      "tags": {
+        "addr:housenumber": "219",
+        "addr:street": "Đường Nguyễn Xiển",
+        "name": "Xưởng dịch vụ Xe máy điện VinFast GMS Nguyễn Xiển",
+        "shop": "motorcycle_repair"
+      }
+    },
+    {
+      "id": "osm-way-715839927",
+      "source": "https://www.openstreetmap.org/way/715839927",
+      "reason": "Đối tượng vùng: chưa xác minh điểm đặt marker",
+      "tags": {
+        "addr:street": "Đường Kinh Dương Vương",
+        "building": "yes",
+        "name": "Vinfast",
+        "operator": "Chevrolet",
+        "shop": "car"
+      }
+    },
+    {
+      "id": "osm-way-892577425",
+      "source": "https://www.openstreetmap.org/way/892577425",
+      "reason": "Đối tượng vùng: chưa xác minh điểm đặt marker",
+      "tags": {
+        "branch": "Royal City",
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "buildingpart": "room",
+        "indoor": "yes",
+        "level": "-2",
+        "name": "VinFast",
+        "shop": "car"
+      }
+    },
+    {
+      "id": "osm-way-940004477",
+      "source": "https://www.openstreetmap.org/way/940004477",
+      "reason": "Đối tượng vùng: chưa xác minh điểm đặt marker",
+      "tags": {
+        "addr:city": "Đồng Hới",
+        "addr:district": "Phú Hải",
+        "addr:province": "Quảng Trị",
+        "addr:street": "Quang Trung",
+        "brand": "Vìnast",
+        "building": "garage",
+        "name": "Vinfast Garage",
+        "opening_hours": "Mo-Su 08:00-22:00",
+        "opening_hours:covid19": "off",
+        "operator": "Vinsgroup",
+        "shop": "car"
+      }
+    },
+    {
+      "id": "osm-way-1117030203",
+      "source": "https://www.openstreetmap.org/way/1117030203",
+      "reason": "Đối tượng vùng: chưa xác minh điểm đặt marker",
+      "tags": {
+        "addr:city": "Hà Nội",
+        "addr:district": "Đống Đa",
+        "addr:housenumber": "183",
+        "addr:province": "Hà Nội",
+        "addr:street": "Phố Yên Lãng",
+        "addr:subdistrict": "Thịnh Quang",
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "building": "yes",
+        "name": "VinFast",
+        "opening_hours": "Mo-Su 08:00-21:00",
+        "shop": "car"
+      }
+    },
+    {
+      "id": "osm-way-1208800265",
+      "source": "https://www.openstreetmap.org/way/1208800265",
+      "reason": "Đối tượng vùng: chưa xác minh điểm đặt marker",
+      "tags": {
+        "access": "yes",
+        "amenity": "charging_station",
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "capacity": "12",
+        "fee": "yes",
+        "name": "VinFast",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561"
+      }
+    },
+    {
+      "id": "osm-way-1222752686",
+      "source": "https://www.openstreetmap.org/way/1222752686",
+      "reason": "Đối tượng vùng: chưa xác minh điểm đặt marker",
+      "tags": {
+        "amenity": "charging_station",
+        "brand": "VinFast",
+        "fee": "yes"
+      }
+    },
+    {
+      "id": "osm-way-1222753571",
+      "source": "https://www.openstreetmap.org/way/1222753571",
+      "reason": "Đối tượng vùng: chưa xác minh điểm đặt marker",
+      "tags": {
+        "access": "yes",
+        "amenity": "charging_station",
+        "brand": "VinFast",
+        "operator": "VinFast"
+      }
+    },
+    {
+      "id": "osm-way-1223356296",
+      "source": "https://www.openstreetmap.org/way/1223356296",
+      "reason": "Đối tượng vùng: chưa xác minh điểm đặt marker",
+      "tags": {
+        "access": "yes",
+        "amenity": "charging_station",
+        "brand": "VinFast",
+        "operator": "VinFast"
+      }
+    },
+    {
+      "id": "osm-way-1308942233",
+      "source": "https://www.openstreetmap.org/way/1308942233",
+      "reason": "Đối tượng vùng: chưa xác minh điểm đặt marker",
+      "tags": {
+        "access": "yes",
+        "amenity": "charging_station",
+        "brand": "VinFast",
+        "manufacturer": "VinFast",
+        "operator": "VinFast"
+      }
+    },
+    {
+      "id": "osm-way-1329845851",
+      "source": "https://www.openstreetmap.org/way/1329845851",
+      "reason": "Đối tượng vùng: chưa xác minh điểm đặt marker",
+      "tags": {
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "indoor": "room",
+        "level": "0",
+        "name": "VinFast",
+        "ref": "L1-14A",
+        "service": "repair;parts;tyres",
+        "shop": "car_repair"
+      }
+    },
+    {
+      "id": "osm-way-1329845886",
+      "source": "https://www.openstreetmap.org/way/1329845886",
+      "reason": "Đối tượng vùng: chưa xác minh điểm đặt marker",
+      "tags": {
+        "access": "yes",
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "indoor": "area",
+        "level": "0",
+        "name": "VinFast",
+        "ref": "L1-K21",
+        "shop": "car"
+      }
+    },
+    {
+      "id": "osm-way-1331876572",
+      "source": "https://www.openstreetmap.org/way/1331876572",
+      "reason": "Đối tượng vùng: chưa xác minh điểm đặt marker",
+      "tags": {
+        "branch": "Times City",
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "indoor": "area",
+        "level": "-1",
+        "name": "VinFast",
+        "shop": "car"
+      }
+    },
+    {
+      "id": "osm-way-1415417823",
+      "source": "https://www.openstreetmap.org/way/1415417823",
+      "reason": "Đối tượng vùng: chưa xác minh điểm đặt marker",
+      "tags": {
+        "amenity": "charging_station",
+        "brand": "Vinfast",
+        "name": "Trạm sạc Vinfast Lộc Thắng",
+        "name:en": "Vinfast Loc Thang Charging Station"
+      }
+    },
+    {
+      "id": "osm-way-1429694652",
+      "source": "https://www.openstreetmap.org/way/1429694652",
+      "reason": "Loại địa điểm hoặc quyền tiếp cận chưa phù hợp",
+      "tags": {
+        "access": "customers",
+        "addr:housenumber": "27/1",
+        "addr:postcode": "71516",
+        "addr:province": "Thành phố Hồ Chí Minh",
+        "addr:street": "Thạnh Lộc 19",
+        "addr:subdistrict": "Phường An Phú Đông",
+        "amenity": "parking",
+        "capacity": "30",
+        "covered": "yes",
+        "fee": "yes",
+        "mobile": "0963486799",
+        "name": "Bãi giữ xe ôtô - Trạm sạc xe điện Vinfast",
+        "parking": "surface",
+        "payment:app": "yes",
+        "payment:cash": "yes",
+        "surface": "dirt"
+      }
+    },
+    {
+      "id": "osm-way-1430920105",
+      "source": "https://www.openstreetmap.org/way/1430920105",
+      "reason": "Loại địa điểm hoặc quyền tiếp cận chưa phù hợp",
+      "tags": {
+        "amenity": "parking_space",
+        "name": "Chỗ sạc điện cho xe vinfast",
+        "parking_space": "charging"
+      }
+    },
+    {
+      "id": "osm-way-1464405414",
+      "source": "https://www.openstreetmap.org/way/1464405414",
+      "reason": "Đối tượng vùng: chưa xác minh điểm đặt marker",
+      "tags": {
+        "amenity": "charging_station",
+        "brand": "Vinfast",
+        "fee": "no"
+      }
+    },
+    {
+      "id": "osm-way-1464995859",
+      "source": "https://www.openstreetmap.org/way/1464995859",
+      "reason": "Đối tượng vùng: chưa xác minh điểm đặt marker",
+      "tags": {
+        "amenity": "charging_station",
+        "brand": "Vinfast",
+        "name": "Trạm sạc Vinfast"
+      }
+    },
+    {
+      "id": "osm-way-1469783175",
+      "source": "https://www.openstreetmap.org/way/1469783175",
+      "reason": "Đối tượng vùng: chưa xác minh điểm đặt marker",
+      "tags": {
+        "amenity": "charging_station",
+        "brand": "VinFast",
+        "capacity": "11"
+      }
+    },
+    {
+      "id": "osm-way-1469783176",
+      "source": "https://www.openstreetmap.org/way/1469783176",
+      "reason": "Đối tượng vùng: chưa xác minh điểm đặt marker",
+      "tags": {
+        "amenity": "charging_station",
+        "brand": "VinFast",
+        "capacity": "8"
+      }
+    },
+    {
+      "id": "osm-way-1470274555",
+      "source": "https://www.openstreetmap.org/way/1470274555",
+      "reason": "Đối tượng vùng: chưa xác minh điểm đặt marker",
+      "tags": {
+        "building": "yes",
+        "name": "Vinfast",
+        "shop": "car"
+      }
+    },
+    {
+      "id": "osm-way-1475172443",
+      "source": "https://www.openstreetmap.org/way/1475172443",
+      "reason": "Đối tượng vùng: chưa xác minh điểm đặt marker",
+      "tags": {
+        "addr:city": "Hà Nội",
+        "addr:district": "Long Biên",
+        "addr:housenumber": "1",
+        "addr:province": "Hà Nội",
+        "addr:street": "Đường Nguyễn Văn Linh",
+        "addr:subdistrict": "Gia Thụy",
+        "branch": "Nguyễn Văn Linh",
+        "brand": "VinFast",
+        "building": "yes",
+        "name": "VinFast Nguyễn Văn Linh",
+        "opening_hours": "Mo-Su 08:00-21:00",
+        "shop": "car",
+        "website": "https://vinfastnguyenvanlinh.vn/"
+      }
+    },
+    {
+      "id": "osm-way-1481306334",
+      "source": "https://www.openstreetmap.org/way/1481306334",
+      "reason": "Đối tượng vùng: chưa xác minh điểm đặt marker",
+      "tags": {
+        "access": "customers",
+        "addr:city": "Thành phố Hồ Chí Minh",
+        "addr:country": "VN",
+        "addr:district": "Quận 12",
+        "addr:suburb": "Phường Thạnh Xuân",
+        "amenity": "charging_station",
+        "brand": "VinFast",
+        "brand:wikidata": "Q57729757",
+        "fee": "yes",
+        "motorcar": "yes",
+        "motorcycle": "yes",
+        "name": "Trạm Sạc VinFast",
+        "name:en": "VinFast Charging Station",
+        "network": "VinFast",
+        "opening_hours": "24/7",
+        "operator": "VinFast",
+        "panoramax": "67008900-28f2-43d6-ab57-206dd421302c"
+      }
+    },
+    {
+      "id": "osm-way-1492262290",
+      "source": "https://www.openstreetmap.org/way/1492262290",
+      "reason": "Đối tượng vùng: chưa xác minh điểm đặt marker",
+      "tags": {
+        "building": "yes",
+        "name": "Xưởng dịch vụ VinFast Phan Trọng Tuệ",
+        "shop": "car_repair"
+      }
+    },
+    {
+      "id": "osm-way-1501789348",
+      "source": "https://www.openstreetmap.org/way/1501789348",
+      "reason": "Đối tượng vùng: chưa xác minh điểm đặt marker",
+      "tags": {
+        "access": "yes",
+        "amenity": "charging_station",
+        "brand": "VinFast",
+        "fee": "no",
+        "operator": "VinFast"
+      }
+    },
+    {
+      "id": "osm-way-1505113106",
+      "source": "https://www.openstreetmap.org/way/1505113106",
+      "reason": "Đối tượng vùng: chưa xác minh điểm đặt marker",
+      "tags": {
+        "access": "yes",
+        "amenity": "charging_station",
+        "brand": "VinFast",
+        "name": "E-Charge Station Splendora",
+        "operator": "Công ty Cổ phần An Sơn Group"
+      }
+    },
+    {
+      "id": "osm-way-1507598614",
+      "source": "https://www.openstreetmap.org/way/1507598614",
+      "reason": "Đối tượng vùng: chưa xác minh điểm đặt marker",
+      "tags": {
+        "addr:housenumber": "5",
+        "addr:street": "Phố Trần Vỹ",
+        "building": "yes",
+        "name": "Xưởng dịch vụ VinFast GSC Trần Vỹ",
+        "shop": "car_repair"
+      }
+    },
+    {
+      "id": "osm-way-1507598615",
+      "source": "https://www.openstreetmap.org/way/1507598615",
+      "reason": "Đối tượng vùng: chưa xác minh điểm đặt marker",
+      "tags": {
+        "access": "yes",
+        "amenity": "charging_station",
+        "brand": "VinFast"
+      }
+    },
+    {
+      "id": "osm-way-1530954017",
+      "source": "https://www.openstreetmap.org/way/1530954017",
+      "reason": "Đối tượng vùng: chưa xác minh điểm đặt marker",
+      "tags": {
+        "access": "customers",
+        "amenity": "charging_station",
+        "brand": "Vinfast",
+        "name": "Trạm sạc ô tô Vinfast Ba Khe",
+        "operator": "Vinfast"
+      }
+    },
+    {
+      "id": "osm-way-1550750032",
+      "source": "https://www.openstreetmap.org/way/1550750032",
+      "reason": "Đối tượng vùng: chưa xác minh điểm đặt marker",
+      "tags": {
+        "brand": "VinFast",
+        "building": "yes",
+        "shop": "car"
+      }
+    },
+    {
+      "id": "osm-way-1551836281",
+      "source": "https://www.openstreetmap.org/way/1551836281",
+      "reason": "Loại địa điểm hoặc quyền tiếp cận chưa phù hợp",
+      "tags": {
+        "construction": "service",
+        "landuse": "construction",
+        "name": "Trạm sạc siêu tốc V-Green",
+        "name:en": "V-Green super charging station"
+      }
+    },
+    {
+      "id": "osm-way-1552637779",
+      "source": "https://www.openstreetmap.org/way/1552637779",
+      "reason": "Loại địa điểm hoặc quyền tiếp cận chưa phù hợp",
+      "tags": {
+        "electrified": "rail",
+        "frequency": "0",
+        "gauge": "1435",
+        "name": "Đường sắt đô thị sô 2 Hà Nội (Sân bay Nội Bài - Sân vận động VinFast Trống Đồng)",
+        "name:en": "Hanoi Metro Line 2 (Noi Bai International Airport - Vinfast Trong Dong Stadium)",
+        "name:ja": "ハノイ・メトロ2号線",
+        "name:vi": "Đường sắt đô thị số 2 Hà Nội (Sân bay Nội Bài - Sân vận động VinFast Trống Đồng)",
+        "name:vi-Hani": "塘鐵都市2河內",
+        "name:zh": "河內都市鐵路2號線",
+        "name:zh-Hans": "河内都市铁路2号线",
+        "name:zh-Hant": "河內都市鐵路2號線",
+        "railway": "construction",
+        "ref": "T2",
+        "route": "train",
+        "tracks": "2",
+        "type": "route",
+        "usage": "main"
+      }
+    },
+    {
+      "id": "osm-way-1552637780",
+      "source": "https://www.openstreetmap.org/way/1552637780",
+      "reason": "Loại địa điểm hoặc quyền tiếp cận chưa phù hợp",
+      "tags": {
+        "electrified": "rail",
+        "frequency": "0",
+        "gauge": "1435",
+        "name": "Đường sắt đô thị sô 2 Hà Nội (Sân bay Nội Bài - Sân vận động VinFast Trống Đồng)",
+        "name:en": "Hanoi Metro Line 2 (Noi Bai International Airport - Vinfast Trong Dong Stadium)",
+        "name:ja": "ハノイ・メトロ2号線",
+        "name:vi": "Đường sắt đô thị số 2 Hà Nội (Sân bay Nội Bài - Sân vận động VinFast Trống Đồng)",
+        "name:vi-Hani": "塘鐵都市2河內",
+        "name:zh": "河內都市鐵路2號線",
+        "name:zh-Hans": "河内都市铁路2号线",
+        "name:zh-Hant": "河內都市鐵路2號線",
+        "railway": "construction",
+        "ref": "T2",
+        "route": "train",
+        "tracks": "2",
+        "type": "route",
+        "usage": "main"
+      }
+    },
+    {
+      "id": "osm-way-1552637781",
+      "source": "https://www.openstreetmap.org/way/1552637781",
+      "reason": "Loại địa điểm hoặc quyền tiếp cận chưa phù hợp",
+      "tags": {
+        "electrified": "rail",
+        "frequency": "0",
+        "gauge": "1435",
+        "name": "Đường sắt đô thị sô 2 Hà Nội (Sân bay Nội Bài - Sân vận động VinFast Trống Đồng)",
+        "name:en": "Hanoi Metro Line 2 (Noi Bai International Airport - Vinfast Trong Dong Stadium)",
+        "name:ja": "ハノイ・メトロ2号線",
+        "name:vi": "Đường sắt đô thị số 2 Hà Nội (Sân bay Nội Bài - Sân vận động VinFast Trống Đồng)",
+        "name:vi-Hani": "塘鐵都市2河內",
+        "name:zh": "河內都市鐵路2號線",
+        "name:zh-Hans": "河内都市铁路2号线",
+        "name:zh-Hant": "河內都市鐵路2號線",
+        "railway": "construction",
+        "ref": "T2",
+        "route": "train",
+        "tracks": "2",
+        "type": "route",
+        "usage": "main"
+      }
+    },
+    {
+      "id": "osm-way-1552637782",
+      "source": "https://www.openstreetmap.org/way/1552637782",
+      "reason": "Loại địa điểm hoặc quyền tiếp cận chưa phù hợp",
+      "tags": {
+        "electrified": "rail",
+        "frequency": "0",
+        "gauge": "1435",
+        "name": "Đường sắt đô thị sô 2 Hà Nội (Sân bay Nội Bài - Sân vận động VinFast Trống Đồng)",
+        "name:en": "Hanoi Metro Line 2 (Noi Bai International Airport - Vinfast Trong Dong Stadium)",
+        "name:ja": "ハノイ・メトロ2号線",
+        "name:vi": "Đường sắt đô thị số 2 Hà Nội (Sân bay Nội Bài - Sân vận động VinFast Trống Đồng)",
+        "name:vi-Hani": "塘鐵都市2河內",
+        "name:zh": "河內都市鐵路2號線",
+        "name:zh-Hans": "河内都市铁路2号线",
+        "name:zh-Hant": "河內都市鐵路2號線",
+        "railway": "construction",
+        "ref": "T2",
+        "route": "train",
+        "tracks": "2",
+        "type": "route",
+        "usage": "main"
+      }
+    },
+    {
+      "id": "osm-way-1552637783",
+      "source": "https://www.openstreetmap.org/way/1552637783",
+      "reason": "Loại địa điểm hoặc quyền tiếp cận chưa phù hợp",
+      "tags": {
+        "electrified": "rail",
+        "frequency": "0",
+        "gauge": "1435",
+        "name": "Đường sắt đô thị số 1 Hà Nội (Nội Bài - Yên Viên - Ga Hà Nội - Ngọc Hồi - Sân vận động VinFast Trống Đồng)",
+        "name:en": "Hanoi Metro Line 1 (Noi Bai - Yen Vien - Ha Noi Station - Ngoc Hoi - Vinfast Trong Dong Stadium)",
+        "name:ja": "ハノイ・メトロ1号線",
+        "name:vi": "Đường sắt đô thị số 1 Hà Nội (Nội Bài - Yên Viên - Ga Hà Nội - Ngọc Hồi - Sân vận động VinFast Trống Đồng)",
+        "name:vi-Hani": "塘鐵都市1河內",
+        "name:zh": "河內都市鐵路1號線",
+        "name:zh-Hans": "河内都市铁路1号线",
+        "name:zh-Hant": "河內都市鐵路1號線",
+        "railway": "construction",
+        "ref": "T1",
+        "route": "train",
+        "tracks": "2",
+        "type": "route",
+        "usage": "main"
+      }
+    },
+    {
+      "id": "osm-way-1552637784",
+      "source": "https://www.openstreetmap.org/way/1552637784",
+      "reason": "Loại địa điểm hoặc quyền tiếp cận chưa phù hợp",
+      "tags": {
+        "electrified": "rail",
+        "frequency": "0",
+        "gauge": "1435",
+        "name": "Đường sắt đô thị sô 1 Hà Nội (Sân bay Nội Bài - Sân vận động VinFast Trống Đồng)",
+        "name:en": "Hanoi Metro Line 1 (Noi Bai International Airport - Vinfast Trong Dong Stadium)",
+        "name:ja": "ハノイ・メトロ1号線",
+        "name:vi": "Đường sắt đô thị số 1 Hà Nội (Sân bay Nội Bài - Sân vận động VinFast Trống Đồng)",
+        "name:vi-Hani": "塘鐵都市1河內",
+        "name:zh": "河內都市鐵路1號線",
+        "name:zh-Hans": "河内都市铁路1号线",
+        "name:zh-Hant": "河內都市鐵路1號線",
+        "railway": "construction",
+        "ref": "T1",
+        "route": "train",
+        "tracks": "2",
+        "type": "route",
+        "usage": "main"
+      }
+    },
+    {
+      "id": "osm-way-1553442140",
+      "source": "https://www.openstreetmap.org/way/1553442140",
+      "reason": "Đối tượng vùng: chưa xác minh điểm đặt marker",
+      "tags": {
+        "addr:housenumber": "55",
+        "addr:street": "Đường Phúc Lợi",
+        "landuse": "commercial",
+        "name": "Xưởng dịch vụ S2 Vinfast Phúc Lợi",
+        "phone": "+84 92 235 35 35",
+        "shop": "car_repair",
+        "website": "https://vinfastphucloi.vn"
+      }
+    },
+    {
+      "id": "osm-way-1554554315",
+      "source": "https://www.openstreetmap.org/way/1554554315",
+      "reason": "Loại địa điểm hoặc quyền tiếp cận chưa phù hợp",
+      "tags": {
+        "landuse": "construction",
+        "name": "Sân vận động Vinfast Trống Đồng",
+        "name:en": "Vinfast Trong Dong Stadium"
+      }
+    },
+    {
+      "id": "osm-way-1557244837",
+      "source": "https://www.openstreetmap.org/way/1557244837",
+      "reason": "Loại địa điểm hoặc quyền tiếp cận chưa phù hợp",
+      "tags": {
+        "brand": "Vinfast",
+        "building": "retail",
+        "name": "Cửa Hàng Xe Máy Điện Vinfast Phú Nhuận",
+        "opening_hours": "Mo-Su,PH 08:00-20:00"
+      }
+    },
+    {
+      "id": "osm-way-1568003148",
+      "source": "https://www.openstreetmap.org/way/1568003148",
+      "reason": "Đối tượng vùng: chưa xác minh điểm đặt marker",
+      "tags": {
+        "amenity": "charging_station",
+        "brand": "VinFast",
+        "name": "Trạm sạc VinFast"
+      }
+    },
+    {
+      "id": "osm-way-1577637457",
+      "source": "https://www.openstreetmap.org/way/1577637457",
+      "reason": "Loại địa điểm hoặc quyền tiếp cận chưa phù hợp",
+      "tags": {
+        "construction": "subway",
+        "construction:railway": "subway",
+        "electrified": "rail",
+        "frequency": "0",
+        "gauge": "1435",
+        "name": "Đường sắt đô thị số 1 Hà Nội (Nội Bài - Yên Viên - Ga Hà Nội - Ngọc Hồi - Sân vận động VinFast Trống Đồng)",
+        "name:en": "Hanoi Metro Line 1 (Noi Bai - Yen Vien - Ha Noi Station - Ngoc Hoi - Vinfast Trong Dong Stadium)",
+        "name:ja": "ハノイ・メトロ1号線",
+        "name:th": "รถไฟใต้ดินฮานอยสาย 1 (โหน่ยบ่าย - เอียนเวียน - สถานีฮานอย  - หงอกห่อย - สนามกีฬาด่งวินฟาสต์จ๊งด่ง)",
+        "name:vi": "Đường sắt đô thị số 1 Hà Nội (Nội Bài - Yên Viên - Ga Hà Nội - Ngọc Hồi - Sân vận động VinFast Trống Đồng)",
+        "name:vi-Hani": "塘鐵都市1河內",
+        "name:zh": "河內都市鐵路1號線",
+        "name:zh-Hans": "河内都市铁路1号线",
+        "name:zh-Hant": "河內都市鐵路1號線",
+        "railway": "construction",
+        "ref": "T1",
+        "route": "train",
+        "tracks": "2",
+        "type": "route",
+        "usage": "main"
+      }
+    },
+    {
+      "id": "osm-way-1578159797",
+      "source": "https://www.openstreetmap.org/way/1578159797",
+      "reason": "Loại địa điểm hoặc quyền tiếp cận chưa phù hợp",
+      "tags": {
+        "electrified": "rail",
+        "frequency": "0",
+        "gauge": "1435",
+        "name": "Đường sắt đô thị số 1 Hà Nội (Nội Bài - Yên Viên - Ga Hà Nội - Ngọc Hồi - Sân vận động VinFast Trống Đồng)",
+        "name:en": "Hanoi Metro Line 1 (Noi Bai - Yen Vien - Ha Noi Station - Ngoc Hoi - Vinfast Trong Dong Stadium)",
+        "name:ja": "ハノイ・メトロ1号線",
+        "name:vi": "Đường sắt đô thị số 1 Hà Nội (Nội Bài - Yên Viên - Ga Hà Nội - Ngọc Hồi - Sân vận động VinFast Trống Đồng)",
+        "name:vi-Hani": "塘鐵都市1河內",
+        "name:zh": "河內都市鐵路1號線",
+        "name:zh-Hans": "河内都市铁路1号线",
+        "name:zh-Hant": "河內都市鐵路1號線",
+        "railway": "construction",
+        "ref": "T1",
+        "route": "train",
+        "tracks": "2",
+        "type": "route",
+        "usage": "main"
+      }
+    },
+    {
+      "id": "osm-way-1578159798",
+      "source": "https://www.openstreetmap.org/way/1578159798",
+      "reason": "Loại địa điểm hoặc quyền tiếp cận chưa phù hợp",
+      "tags": {
+        "electrified": "rail",
+        "frequency": "0",
+        "gauge": "1435",
+        "name": "Đường sắt đô thị số 1 Hà Nội (Nội Bài - Yên Viên - Ga Hà Nội - Ngọc Hồi - Sân vận động VinFast Trống Đồng)",
+        "name:en": "Hanoi Metro Line 1 (Noi Bai - Yen Vien - Ha Noi Station - Ngoc Hoi - Vinfast Trong Dong Stadium)",
+        "name:ja": "ハノイ・メトロ1号線",
+        "name:vi": "Đường sắt đô thị số 1 Hà Nội (Nội Bài - Yên Viên - Ga Hà Nội - Ngọc Hồi - Sân vận động VinFast Trống Đồng)",
+        "name:vi-Hani": "塘鐵都市1河內",
+        "name:zh": "河內都市鐵路1號線",
+        "name:zh-Hans": "河内都市铁路1号线",
+        "name:zh-Hant": "河內都市鐵路1號線",
+        "railway": "construction",
+        "ref": "T1",
+        "route": "train",
+        "tracks": "2",
+        "type": "route",
+        "usage": "main"
+      }
+    },
+    {
+      "id": "osm-way-1578159799",
+      "source": "https://www.openstreetmap.org/way/1578159799",
+      "reason": "Loại địa điểm hoặc quyền tiếp cận chưa phù hợp",
+      "tags": {
+        "electrified": "rail",
+        "frequency": "0",
+        "gauge": "1435",
+        "name": "Đường sắt đô thị số 1 Hà Nội (Nội Bài - Yên Viên - Ga Hà Nội - Ngọc Hồi - Sân vận động VinFast Trống Đồng)",
+        "name:en": "Hanoi Metro Line 1 (Noi Bai - Yen Vien - Ha Noi Station - Ngoc Hoi - Vinfast Trong Dong Stadium)",
+        "name:ja": "ハノイ・メトロ1号線",
+        "name:vi": "Đường sắt đô thị số 1 Hà Nội (Nội Bài - Yên Viên - Ga Hà Nội - Ngọc Hồi - Sân vận động VinFast Trống Đồng)",
+        "name:vi-Hani": "塘鐵都市1河內",
+        "name:zh": "河內都市鐵路1號線",
+        "name:zh-Hans": "河内都市铁路1号线",
+        "name:zh-Hant": "河內都市鐵路1號線",
+        "railway": "construction",
+        "ref": "T1",
+        "route": "train",
+        "tracks": "2",
+        "type": "route",
+        "usage": "main"
+      }
+    },
+    {
+      "id": "osm-way-1578159800",
+      "source": "https://www.openstreetmap.org/way/1578159800",
+      "reason": "Loại địa điểm hoặc quyền tiếp cận chưa phù hợp",
+      "tags": {
+        "electrified": "rail",
+        "frequency": "0",
+        "gauge": "1435",
+        "name": "Đường sắt đô thị số 1 Hà Nội (Nội Bài - Yên Viên - Ga Hà Nội - Ngọc Hồi - Sân vận động VinFast Trống Đồng)",
+        "name:en": "Hanoi Metro Line 1 (Noi Bai - Yen Vien - Ha Noi Station - Ngoc Hoi - Vinfast Trong Dong Stadium)",
+        "name:ja": "ハノイ・メトロ1号線",
+        "name:vi": "Đường sắt đô thị số 1 Hà Nội (Nội Bài - Yên Viên - Ga Hà Nội - Ngọc Hồi - Sân vận động VinFast Trống Đồng)",
+        "name:vi-Hani": "塘鐵都市1河內",
+        "name:zh": "河內都市鐵路1號線",
+        "name:zh-Hans": "河内都市铁路1号线",
+        "name:zh-Hant": "河內都市鐵路1號線",
+        "railway": "construction",
+        "ref": "T1",
+        "route": "train",
+        "tracks": "2",
+        "type": "route",
+        "usage": "main"
+      }
+    },
+    {
+      "id": "osm-way-1578159801",
+      "source": "https://www.openstreetmap.org/way/1578159801",
+      "reason": "Loại địa điểm hoặc quyền tiếp cận chưa phù hợp",
+      "tags": {
+        "electrified": "rail",
+        "frequency": "0",
+        "gauge": "1435",
+        "name": "Đường sắt đô thị số 1 Hà Nội (Nội Bài - Yên Viên - Ga Hà Nội - Ngọc Hồi - Sân vận động VinFast Trống Đồng)",
+        "name:en": "Hanoi Metro Line 1 (Noi Bai - Yen Vien - Ha Noi Station - Ngoc Hoi - Vinfast Trong Dong Stadium)",
+        "name:ja": "ハノイ・メトロ1号線",
+        "name:vi": "Đường sắt đô thị số 1 Hà Nội (Nội Bài - Yên Viên - Ga Hà Nội - Ngọc Hồi - Sân vận động VinFast Trống Đồng)",
+        "name:vi-Hani": "塘鐵都市1河內",
+        "name:zh": "河內都市鐵路1號線",
+        "name:zh-Hans": "河内都市铁路1号线",
+        "name:zh-Hant": "河內都市鐵路1號線",
+        "railway": "construction",
+        "ref": "T1",
+        "route": "train",
+        "tracks": "2",
+        "type": "route",
+        "usage": "main"
+      }
+    },
+    {
+      "id": "osm-way-1578159802",
+      "source": "https://www.openstreetmap.org/way/1578159802",
+      "reason": "Loại địa điểm hoặc quyền tiếp cận chưa phù hợp",
+      "tags": {
+        "electrified": "rail",
+        "frequency": "0",
+        "gauge": "1435",
+        "name": "Đường sắt đô thị số 1 Hà Nội (Nội Bài - Yên Viên - Ga Hà Nội - Ngọc Hồi - Sân vận động VinFast Trống Đồng)",
+        "name:en": "Hanoi Metro Line 1 (Noi Bai - Yen Vien - Ha Noi Station - Ngoc Hoi - Vinfast Trong Dong Stadium)",
+        "name:ja": "ハノイ・メトロ1号線",
+        "name:vi": "Đường sắt đô thị số 1 Hà Nội (Nội Bài - Yên Viên - Ga Hà Nội - Ngọc Hồi - Sân vận động VinFast Trống Đồng)",
+        "name:vi-Hani": "塘鐵都市1河內",
+        "name:zh": "河內都市鐵路1號線",
+        "name:zh-Hans": "河内都市铁路1号线",
+        "name:zh-Hant": "河內都市鐵路1號線",
+        "railway": "construction",
+        "ref": "T1",
+        "route": "train",
+        "tracks": "2",
+        "type": "route",
+        "usage": "main"
+      }
+    }
+  ]
+}

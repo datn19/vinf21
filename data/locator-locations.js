@@ -1,6 +1,10 @@
 // Dữ liệu dẫn xuất OpenStreetMap, ODbL 1.0; đối chiếu API công khai 16/11/2026.
 import { nationalLocations } from './locator-national.js';
 import { addressLocations } from './locator-addresses.js';
+import {
+  locationQuality,
+  additionalLocations,
+} from './locator-quality-data.js';
 export const locationLicense = 'https://www.openstreetmap.org/copyright';
 const existingLocations = [
   {
@@ -53,10 +57,21 @@ const existingLocations = [
   verification: 'Đối chiếu bản ghi OSM; chưa xác nhận hoạt động thực địa',
 }));
 // Một địa điểm chỉ xuất hiện một lần nếu được nhập từ nhiều nguồn.
-export const locatorLocations = [
+export const originalLocatorLocations = [
   ...new Map(
     [...existingLocations, ...nationalLocations, ...addressLocations].map(
       (item) => [item.id, item],
     ),
   ).values(),
 ];
+// Bản gốc vẫn giữ nguyên; lớp đối chiếu có nguồn riêng và không di chuyển ghim.
+export const locatorLocations = [
+  ...originalLocatorLocations,
+  ...additionalLocations,
+].map((item) => ({
+  ...item,
+  originalAddress: item.address,
+  originalCategory: item.category,
+  originalProvince: item.province,
+  ...locationQuality[item.id],
+}));

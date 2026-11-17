@@ -6,6 +6,14 @@ const assert = require('node:assert/strict');
 (async () => {
   const { locatorLocations: data } =
     await import('../data/locator-locations.js');
+  const { searchText, directions, hasCoordinates } =
+    await import('../js/locator-quality.js');
+  const normalize = (value) =>
+    value
+      .normalize('NFD')
+      .replace(/[\u0300-\u036f]/g, '')
+      .replace(/[đĐ]/g, 'd')
+      .toLowerCase();
   const categories = [...new Set(data.map((x) => x.category))];
   const s = await start('/vinf'),
     b = await chromium.launch();
@@ -22,7 +30,11 @@ const assert = require('node:assert/strict');
         count = p.locator('[data-count]');
       await search.fill('pham van dong');
       await p.waitForTimeout(100);
-      assert.ok((await count.textContent()).startsWith('1'));
+      assert.equal(
+        await p.locator('.locator-results article').count(),
+        data.filter((x) => normalize(searchText(x)).includes('pham van dong'))
+          .length,
+      );
       await search.fill('zzzzz');
       assert.ok((await count.textContent()).startsWith('0'));
       await p.locator('button[type=reset]').click();
@@ -39,7 +51,24 @@ const assert = require('node:assert/strict');
         );
       }
       await p.locator('[name=province]').selectOption('Hà Nội');
-      assert.ok(await p.locator('[name=ward]').isDisabled());
+      const wards = [
+        ...new Set(
+          data
+            .filter((x) => x.province === 'Hà Nội')
+            .map((x) => x.ward)
+            .filter(Boolean),
+        ),
+      ];
+      assert.equal(await p.locator('[name=ward]').isDisabled(), !wards.length);
+      if (wards.length) {
+        await p.locator('[name=ward]').selectOption(wards[0]);
+        assert.equal(
+          await p.locator('.locator-results article').count(),
+          data.filter((x) => x.province === 'Hà Nội' && x.ward === wards[0])
+            .length,
+        );
+        await p.locator('[name=ward]').selectOption('');
+      }
       await p.locator('[name=category]').nth(0).check();
       assert.equal(
         await p.locator('.locator-results article').count(),
@@ -64,9 +93,14 @@ const assert = require('node:assert/strict');
       }
       await p.locator('[data-focus]').first().click();
       await p.waitForSelector('.leaflet-popup');
+      await p.waitForFunction(
+        () => document.querySelectorAll('.leaflet-popup-content').length === 1,
+      );
       assert.ok(
         (
-          await p.locator('.leaflet-popup-content a').getAttribute('href')
+          await p
+            .locator('.leaflet-popup-content a[href*="google.com/maps/dir"]')
+            .getAttribute('href')
         ).includes('destination=21.0593263'),
       );
       assert.ok(
@@ -99,7 +133,14 @@ const assert = require('node:assert/strict');
         await p.locator('[name=category]').nth(index).uncheck();
       }
       await search.fill('Xanh Mekong');
-      assert.equal(await p.locator('[data-focus]').count(), 0);
+      assert.equal(
+        await p.locator('[data-focus]').count(),
+        data.filter(
+          (x) =>
+            normalize(searchText(x)).includes('xanh mekong') &&
+            hasCoordinates(x),
+        ).length,
+      );
       const dest = await p
         .locator('.locator-results .locator-actions a')
         .getAttribute('href');
@@ -109,6 +150,44 @@ const assert = require('node:assert/strict');
           'Infinity',
         ),
       );
+      for (const province of ['Hồ Chí Minh', 'Hà Nội', 'Huế', 'Đà Nẵng']) {
+        const sample = data.find(
+          (x) =>
+            x.province === province &&
+            x.addressConfidence === 'APPROXIMATE_GEOCODED',
+        );
+        if (!sample) continue;
+        await search.fill(sample.nearbyRoad.name);
+        assert.ok(await p.locator('[data-id="' + sample.id + '"]').count());
+        const card = p.locator('[data-id="' + sample.id + '"]');
+        assert.ok(
+          (await card.textContent()).includes(
+            'Địa chỉ gần vị trí ghim (tham khảo)',
+          ),
+        );
+        await card.locator('[data-focus]').click();
+        await p.waitForSelector('.leaflet-popup');
+        await p.waitForFunction(
+          () =>
+            document.querySelectorAll('.leaflet-popup-content').length === 1,
+        );
+        assert.ok(
+          (await p.locator('.leaflet-popup-content').textContent()).includes(
+            sample.nearbyRoad.name,
+          ),
+        );
+        assert.equal(
+          await p
+            .locator('.leaflet-popup-content a[href*="google.com/maps/dir"]')
+            .getAttribute('href'),
+          directions(sample),
+        );
+        if (width === 390) await p.locator('[data-view=list]').click();
+        if (sample.ward) {
+          await search.fill(sample.ward);
+          assert.ok(await p.locator('[data-id="' + sample.id + '"]').count());
+        }
+      }
       await search.fill('xanh mekong');
       assert.equal(await p.locator('.locator-results article').count(), 1);
       await p.locator('button[type=reset]').click();

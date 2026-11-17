@@ -1,6 +1,12 @@
 import { locations as historicalLocations } from '../data/destination-content.js';
 import { localURL } from './routes.js';
 import { escapeHTML as esc } from './destination-shared.js';
+import {
+  hasCoordinates,
+  directions,
+  addressText,
+  searchText,
+} from './locator-quality.js';
 
 const normalize = (value) =>
   value
@@ -9,15 +15,46 @@ const normalize = (value) =>
     .replace(/[đĐ]/g, 'd')
     .toLowerCase();
 const unique = (values) => [...new Set(values.filter(Boolean))];
-const hasCoordinates = (item) =>
-  Number.isFinite(item.lat) && Number.isFinite(item.lng);
-const directions = (item) =>
-  'https://www.google.com/maps/dir/?api=1&destination=' +
-  encodeURIComponent(
-    hasCoordinates(item)
-      ? `${item.lat},${item.lng}`
-      : `${item.name}, ${item.address}`,
+function locationDetails(item) {
+  const coordinates = hasCoordinates(item)
+    ? '<p class="locator-note">Tọa độ nguồn: ' +
+      item.lat.toFixed(6) +
+      ', ' +
+      item.lng.toFixed(6) +
+      '. Chưa xác minh lối vào.</p>'
+    : '';
+  const source = item.addressSource
+    ? '<a href="' +
+      esc(item.addressSource) +
+      '" target="_blank" rel="noopener">Nguồn địa chỉ · ' +
+      esc(item.addressVerifiedDate) +
+      '</a>'
+    : '';
+  const issue = item.verificationIssues?.some(
+    (x) => x.field === 'historicalWard',
+  )
+    ? '<p class="locator-note">Các nguồn ghi phường khác nhau; cần xác nhận lại địa chỉ.</p>'
+    : '';
+  return (
+    '<p data-address-confidence="' +
+    esc(item.addressConfidence) +
+    '">' +
+    esc(addressText(item)) +
+    '</p><p>' +
+    esc(item.province) +
+    '</p>' +
+    coordinates +
+    issue +
+    source +
+    '<p class="locator-note">Hoạt động: chưa được xác nhận.</p>'
   );
+}
+function directionLink(item) {
+  const url = directions(item);
+  return url
+    ? '<a href="' + esc(url) + '" target="_blank" rel="noopener">Chỉ đường</a>'
+    : '<span>Chưa đủ thông tin chỉ đường</span>';
+}
 function distance(from, item) {
   if (!hasCoordinates(item)) return Infinity;
   const rad = (value) => (value * Math.PI) / 180;
@@ -53,15 +90,15 @@ export async function mountLocator(main) {
     document.head.append(link);
   }
   const categories = unique(locations.map((item) => item.category));
-  main.innerHTML = `<section class="container locator-heading"><h1>Tìm Showroom & Trạm sạc</h1><p>${locations.length} địa điểm có nguồn đối chiếu, gồm ${locations.filter(hasCoordinates).length} điểm bản đồ. Phạm vi còn thiếu; địa chỉ lịch sử và tỉnh/thành phân vùng tham khảo được ghi chú riêng. Chưa xác nhận hoạt động thực địa, không có trạng thái sạc trực tiếp. <a href="https://vinfastauto.com/vn_vi/tim-kiem-showroom-tram-sac" target="_blank" rel="noopener">Tra cứu chính thức VinFast</a>.</p></section>
+  main.innerHTML = `<section class="container locator-heading"><h1>Tìm Showroom & Trạm sạc</h1><p>${locations.length} địa điểm tham khảo có nguồn, gồm ${locations.filter(hasCoordinates).length} điểm bản đồ. Phạm vi còn thiếu; địa chỉ chính thức, đường gần ghim và địa chỉ chưa xác minh được ghi nhãn riêng. Chưa xác nhận hoạt động thực địa, không có trạng thái sạc trực tiếp. <a href="https://vinfastauto.com/vn_vi/tim-kiem-showroom-tram-sac" target="_blank" rel="noopener">Tra cứu chính thức VinFast</a>.</p></section>
   <section class="container locator"><div class="locator-switch"><button type="button" data-view="list" aria-pressed="true">Danh sách</button><button type="button" data-view="map" aria-pressed="false">Bản đồ</button></div><aside class="locator-sidebar"><form class="locator-filters" role="search"><label>Tên hoặc địa chỉ<input name="query" type="search" placeholder="Tìm địa điểm" maxlength="150"></label><label>Tỉnh/thành phố<select name="province"><option value="">Tất cả khu vực có dữ liệu</option>${unique(
     locations.map((x) => x.province),
   )
     .map((x) => `<option>${esc(x)}</option>`)
     .join(
       '',
-    )}</select></label><label>Phường/xã<select name="ward" disabled><option value="">Chưa có dữ liệu đã xác minh</option></select></label><fieldset><legend>Loại địa điểm</legend>${categories.map((category, index) => `<label><input type="checkbox" name="category" value="${index}">${esc(category)}</label>`).join('')}</fieldset><div class="locator-actions"><button type="reset">Xóa bộ lọc</button><button type="button" data-near>Gần tôi</button></div></form><p data-count role="status"></p><p data-geo role="status"></p><div class="locator-results" aria-label="Kết quả địa điểm"></div></aside><div class="locator-map-panel"><button type="button" data-map-reset>Đặt lại bản đồ</button><p data-map-status role="status">Đang tải bản đồ…</p><div id="locator-map" aria-label="Bản đồ địa điểm"></div></div></section>
-  <section class="container locator-sources"><p>Dữ liệu ODbL © <a href="https://blokvolt.com/charging-stations/download/">BlokVolt</a>, cộng tác viên <a href="https://www.openstreetmap.org/copyright">OpenStreetMap — ODbL</a>. Tọa độ lấy từ đối tượng nguồn, chưa xác minh lối vào. Tỉnh/thành phân vùng tham khảo dùng ranh giới geoBoundaries cũ và tên tỉnh năm 2025; chưa xác minh phường/xã. Các địa chỉ từ hãng/đại lý có nguồn riêng, không có giấy phép dữ liệu mở. Hãy xác nhận với đơn vị vận hành trước khi đi.</p><details><summary>Địa chỉ trong các bài công bố cũ của VinFast (2022–2023)</summary>${historicalLocations.map((x) => `<p><strong>${esc(x.title)}</strong> — ${esc(x.address)}. <a href="${esc(x.url)}" target="_blank" rel="noopener">Nguồn ${esc(x.date)}</a>. Chưa đủ tọa độ để đưa lên bản đồ.</p>`).join('')}</details></section>`;
+    )}</select></label><label>Phường/xã (theo nguồn, tham khảo)<select name="ward" disabled><option value="">Chưa có dữ liệu phường/xã</option></select></label><fieldset><legend>Loại địa điểm</legend>${categories.map((category, index) => `<label><input type="checkbox" name="category" value="${index}">${esc(category)}</label>`).join('')}</fieldset><div class="locator-actions"><button type="reset">Xóa bộ lọc</button><button type="button" data-near>Gần tôi</button></div></form><p data-count role="status"></p><p data-geo role="status"></p><div class="locator-results" aria-label="Kết quả địa điểm"></div></aside><div class="locator-map-panel"><button type="button" data-map-reset>Đặt lại bản đồ</button><p data-map-status role="status">Đang tải bản đồ…</p><div id="locator-map" aria-label="Bản đồ địa điểm"></div></div></section>
+  <section class="container locator-sources"><p>Dữ liệu ODbL © <a href="https://blokvolt.com/charging-stations/download/">BlokVolt</a>, cộng tác viên <a href="https://www.openstreetmap.org/copyright">OpenStreetMap — ODbL</a>. Tọa độ lấy từ đối tượng nguồn, chưa xác minh lối vào. Đường gần ghim và địa giới được đối chiếu ngoại tuyến từ <a href="https://download.geofabrik.de/asia/vietnam.html">OSM / Geofabrik (ODbL)</a>; chỉ dùng tham khảo, không phải địa chỉ hoặc lối vào được hãng xác nhận. Các địa chỉ từ hãng/đại lý có nguồn riêng, không có giấy phép dữ liệu mở. Hãy xác nhận với đơn vị vận hành trước khi đi.</p><details><summary>Địa chỉ trong các bài công bố cũ của VinFast (2022–2023)</summary>${historicalLocations.map((x) => `<p><strong>${esc(x.title)}</strong> — ${esc(x.address)}. <a href="${esc(x.url)}" target="_blank" rel="noopener">Nguồn ${esc(x.date)}</a>. Chưa đủ tọa độ để đưa lên bản đồ.</p>`).join('')}</details></section>`;
   const root = main.querySelector('.locator'),
     form = root.querySelector('form'),
     results = root.querySelector('.locator-results');
@@ -121,10 +158,7 @@ export async function mountLocator(main) {
     );
     filtered = locations.filter(
       (x) =>
-        (!query ||
-          normalize(x.name + ' ' + x.address + ' ' + x.province).includes(
-            query,
-          )) &&
+        (!query || normalize(searchText(x)).includes(query)) &&
         (!province || x.province === province) &&
         (!ward || x.ward === ward) &&
         (!types.length || types.includes(x.category)),
@@ -137,11 +171,12 @@ export async function mountLocator(main) {
       ? filtered
           .map(
             (x) =>
-              `<article data-id="${x.id}"><h2>${esc(x.name)}</h2><p class="locator-category">${esc(x.category)}</p><p>${esc(x.address)} · ${esc(x.province)}</p>${x.phone ? `<p>Điện thoại: ${esc(x.phone)}</p>` : ''}${x.openingHours ? `<p>Giờ theo nguồn: ${esc(x.openingHours)}</p>` : ''}${origin && hasCoordinates(x) ? `<p>Khoảng ${distance(origin, x).toFixed(1)} km đường chim bay</p>` : ''}<p class="locator-note">${esc(x.note)}</p><div class="locator-actions">${hasCoordinates(x) ? `<button type="button" data-focus="${x.id}">Xem trên bản đồ</button>` : '<span>Chưa có tọa độ xác minh</span>'}<a href="${directions(x)}" target="_blank" rel="noopener">Chỉ đường</a></div><a href="${x.source}" target="_blank" rel="noopener">${esc(x.sourceLabel)} · ${x.verifiedDate}</a></article>`,
+              `<article data-id="${x.id}"><h2>${esc(x.name)}</h2><p class="locator-category">${esc(x.category)}</p>${locationDetails(x)}${x.phone ? `<p>Điện thoại: ${esc(x.phone)}</p>` : ''}${x.openingHours ? `<p>Giờ theo nguồn: ${esc(x.openingHours)}</p>` : ''}${origin && hasCoordinates(x) ? `<p>Khoảng ${distance(origin, x).toFixed(1)} km đường chim bay</p>` : ''}<p class="locator-note">${esc(x.note)}</p><div class="locator-actions">${hasCoordinates(x) ? `<button type="button" data-focus="${x.id}">Xem trên bản đồ</button>` : '<span>Chưa có tọa độ xác minh</span>'}${directionLink(x)}</div><a href="${x.source}" target="_blank" rel="noopener">${esc(x.sourceLabel)} · ${x.verifiedDate}</a></article>`,
           )
           .join('')
       : '<p>Không tìm thấy địa điểm phù hợp. Hãy xóa hoặc đổi bộ lọc.</p>';
     if (!map) return;
+    map.closePopup();
     cluster.clearLayers();
     markers.clear();
     filtered.filter(hasCoordinates).forEach((item) => {
@@ -155,7 +190,7 @@ export async function mountLocator(main) {
         }),
       });
       marker.bindPopup(
-        `<strong>${esc(item.name)}</strong><p>${esc(item.address)}</p><a href="${directions(item)}" target="_blank" rel="noopener">Chỉ đường</a>`,
+        `<strong>${esc(item.name)}</strong>${locationDetails(item)}${directionLink(item)}`,
       );
       marker.on('click', () => {
         selected = item.id;
@@ -182,7 +217,7 @@ export async function mountLocator(main) {
         .map((x) => x.ward),
     );
     form.elements.ward.innerHTML =
-      `<option value="">${wards.length ? 'Tất cả phường/xã' : 'Chưa có dữ liệu đã xác minh'}</option>` +
+      `<option value="">${wards.length ? 'Tất cả phường/xã có dữ liệu' : 'Chưa có dữ liệu đã xác minh'}</option>` +
       wards.map((x) => `<option>${esc(x)}</option>`).join('');
     form.elements.ward.disabled = !wards.length;
     render();

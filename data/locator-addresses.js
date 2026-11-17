@@ -293,3 +293,75 @@ export const addressLocations = records.map(
     note: `Chưa có tọa độ xác minh; chỉ đường bằng địa chỉ.${sourceUpdated ? ` Nguồn: ${sourceUpdated}; cần xác nhận lại hoạt động và địa chỉ hiện hành.` : ' Địa chỉ theo trang liên hệ; vui lòng xác nhận trước khi đi.'}`,
   }),
 );
+
+// Bổ sung từ tài liệu công bố, chưa có tọa độ: không đặt ghim suy đoán.
+const caMauSource =
+  'https://vinfastauto.com/vn_vi/danh-sach-tram-sac-vinfast-ca-mau-moi-nhat';
+export const supplementalAddressLocations = [
+  [
+    'official-laichau',
+    'VinFast Lai Châu',
+    'Lai Châu',
+    'Đường 30/4, thành phố Lai Châu, tỉnh Lai Châu',
+    'Điểm dịch vụ / hỗ trợ kỹ thuật',
+    warranty,
+  ],
+  [
+    'official-camau-thuduy',
+    'Trạm sạc VinFast tại khu du lịch Thư Duy',
+    'Cà Mau',
+    '323 Lý Thường Kiệt, khóm 9, phường 6, Cà Mau',
+    'Trạm sạc — chưa rõ loại xe',
+    caMauSource,
+  ],
+  [
+    'official-camau-vincom',
+    'Trạm sạc VinFast tại Vincom Plaza Cà Mau',
+    'Cà Mau',
+    'Tầng hầm Vincom Plaza, số 02 Lê Duẩn, phường 1, Cà Mau',
+    'Trạm sạc — chưa rõ loại xe',
+    caMauSource,
+  ],
+  [
+    'official-camau-songphuoc',
+    'Trạm sạc VinFast tại xăng dầu Song Phước',
+    'Cà Mau',
+    '177A Lý Thường Kiệt, khóm 7, phường 6, Cà Mau',
+    'Trạm sạc — chưa rõ loại xe',
+    caMauSource,
+  ],
+  [
+    'official-camau-petrolimex52',
+    'Trạm sạc VinFast tại Petrolimex số 52',
+    'Cà Mau',
+    'Khóm 7, phường 7, Cà Mau',
+    'Trạm sạc — chưa rõ loại xe',
+    caMauSource,
+  ],
+  [
+    'official-camau-hoanghuy',
+    'Trạm sạc VinFast tại xăng dầu Petrolimex Hoàng Huy',
+    'Cà Mau',
+    'Khu vực 3, khóm 3, thị trấn Năm Căn, Cà Mau',
+    'Trạm sạc ô tô',
+    caMauSource,
+  ],
+].map(([id, name, province, address, category, source]) => ({
+  id,
+  name,
+  province,
+  address,
+  category,
+  source,
+  sourceLabel: 'VinFast',
+  sourceUpdated: 'Tài liệu địa chỉ trước sắp xếp 2025',
+  verifiedDate: '2026-11-17',
+  ward: null,
+  lat: null,
+  lng: null,
+  phone: null,
+  openingHours: null,
+  license: 'Factual reference; no open licence claimed',
+  verificationStatus: 'SOURCE_MATCHED_MISSING_COORDINATES',
+  note: 'Địa chỉ theo công bố lịch sử của hãng; chưa xác nhận hoạt động hoặc địa chỉ hành chính hiện tại. Chưa có tọa độ xác minh.',
+}));
