@@ -1,6 +1,7 @@
 // Dữ liệu dẫn xuất OpenStreetMap, ODbL 1.0; đối chiếu API công khai 16/11/2026.
 import { nationalLocations } from './locator-national.js';
 import { addressLocations } from './locator-addresses.js';
+import { coverageLocations, coverageUpdates } from './locator-coverage.js';
 import {
   locationQuality,
   additionalLocations,
@@ -65,7 +66,7 @@ export const originalLocatorLocations = [
   ).values(),
 ];
 // Bản gốc vẫn giữ nguyên; lớp đối chiếu có nguồn riêng và không di chuyển ghim.
-export const locatorLocations = [
+export const locatorReferenceLocations = [
   ...originalLocatorLocations,
   ...additionalLocations,
 ].map((item) => ({
@@ -75,3 +76,10 @@ export const locatorLocations = [
   originalProvince: item.province,
   ...locationQuality[item.id],
 }));
+export const locatorLocations = [
+  ...locatorReferenceLocations.map((item) => ({
+    ...item,
+    ...coverageUpdates[item.id],
+  })),
+  ...coverageLocations,
+];
