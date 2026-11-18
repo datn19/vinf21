@@ -3683,6 +3683,12 @@
         "amenity": "charging_station",
         "brand": "VinFast",
         "fee": "yes"
+      },
+      "followUp": {
+        "date": "2026-11-18",
+        "status": "MAPPED_AREA_REFERENCE",
+        "dataFile": "data/locator-mapped-coverage.js",
+        "note": "Đã bổ sung điểm đại diện bên trong khuôn viên; giữ lý do và tag gốc. Chưa xác minh lối vào/hoạt động."
       }
     },
     {
@@ -3694,6 +3700,12 @@
         "amenity": "charging_station",
         "brand": "VinFast",
         "operator": "VinFast"
+      },
+      "followUp": {
+        "date": "2026-11-18",
+        "status": "MAPPED_AREA_REFERENCE",
+        "dataFile": "data/locator-mapped-coverage.js",
+        "note": "Đã bổ sung điểm đại diện bên trong khuôn viên; giữ lý do và tag gốc. Chưa xác minh lối vào/hoạt động."
       }
     },
     {
@@ -3705,6 +3717,12 @@
         "amenity": "charging_station",
         "brand": "VinFast",
         "operator": "VinFast"
+      },
+      "followUp": {
+        "date": "2026-11-18",
+        "status": "MAPPED_AREA_REFERENCE",
+        "dataFile": "data/locator-mapped-coverage.js",
+        "note": "Đã bổ sung điểm đại diện bên trong khuôn viên; giữ lý do và tag gốc. Chưa xác minh lối vào/hoạt động."
       }
     },
     {
@@ -3717,6 +3735,12 @@
         "brand": "VinFast",
         "manufacturer": "VinFast",
         "operator": "VinFast"
+      },
+      "followUp": {
+        "date": "2026-11-18",
+        "status": "MAPPED_AREA_REFERENCE",
+        "dataFile": "data/locator-mapped-coverage.js",
+        "note": "Đã bổ sung điểm đại diện bên trong khuôn viên; giữ lý do và tag gốc. Chưa xác minh lối vào/hoạt động."
       }
     },
     {
@@ -3772,6 +3796,12 @@
         "brand": "Vinfast",
         "name": "Trạm sạc Vinfast Lộc Thắng",
         "name:en": "Vinfast Loc Thang Charging Station"
+      },
+      "followUp": {
+        "date": "2026-11-18",
+        "status": "MAPPED_AREA_REFERENCE",
+        "dataFile": "data/locator-mapped-coverage.js",
+        "note": "Đã bổ sung điểm đại diện bên trong khuôn viên; giữ lý do và tag gốc. Chưa xác minh lối vào/hoạt động."
       }
     },
     {
@@ -3795,6 +3825,12 @@
         "payment:app": "yes",
         "payment:cash": "yes",
         "surface": "dirt"
+      },
+      "followUp": {
+        "date": "2026-11-18",
+        "status": "MAPPED_AREA_REFERENCE",
+        "dataFile": "data/locator-mapped-coverage.js",
+        "note": "Đã bổ sung điểm đại diện bên trong khuôn viên; giữ lý do và tag gốc. Chưa xác minh lối vào/hoạt động."
       }
     },
     {
@@ -3815,6 +3851,12 @@
         "amenity": "charging_station",
         "brand": "Vinfast",
         "fee": "no"
+      },
+      "followUp": {
+        "date": "2026-11-18",
+        "status": "MAPPED_AREA_REFERENCE",
+        "dataFile": "data/locator-mapped-coverage.js",
+        "note": "Đã bổ sung điểm đại diện bên trong khuôn viên; giữ lý do và tag gốc. Chưa xác minh lối vào/hoạt động."
       }
     },
     {
@@ -3825,6 +3867,12 @@
         "amenity": "charging_station",
         "brand": "Vinfast",
         "name": "Trạm sạc Vinfast"
+      },
+      "followUp": {
+        "date": "2026-11-18",
+        "status": "MAPPED_AREA_REFERENCE",
+        "dataFile": "data/locator-mapped-coverage.js",
+        "note": "Đã bổ sung điểm đại diện bên trong khuôn viên; giữ lý do và tag gốc. Chưa xác minh lối vào/hoạt động."
       }
     },
     {
@@ -3855,6 +3903,12 @@
         "building": "yes",
         "name": "Vinfast",
         "shop": "car"
+      },
+      "followUp": {
+        "date": "2026-11-18",
+        "status": "MAPPED_AREA_REFERENCE",
+        "dataFile": "data/locator-mapped-coverage.js",
+        "note": "Đã bổ sung điểm đại diện bên trong khuôn viên; giữ lý do và tag gốc. Chưa xác minh lối vào/hoạt động."
       }
     },
     {
@@ -3899,6 +3953,12 @@
         "opening_hours": "24/7",
         "operator": "VinFast",
         "panoramax": "67008900-28f2-43d6-ab57-206dd421302c"
+      },
+      "followUp": {
+        "date": "2026-11-18",
+        "status": "MAPPED_AREA_REFERENCE",
+        "dataFile": "data/locator-mapped-coverage.js",
+        "note": "Đã bổ sung điểm đại diện bên trong khuôn viên; giữ lý do và tag gốc. Chưa xác minh lối vào/hoạt động."
       }
     },
     {
@@ -3967,6 +4027,12 @@
         "brand": "Vinfast",
         "name": "Trạm sạc ô tô Vinfast Ba Khe",
         "operator": "Vinfast"
+      },
+      "followUp": {
+        "date": "2026-11-18",
+        "status": "MAPPED_AREA_REFERENCE",
+        "dataFile": "data/locator-mapped-coverage.js",
+        "note": "Đã bổ sung điểm đại diện bên trong khuôn viên; giữ lý do và tag gốc. Chưa xác minh lối vào/hoạt động."
       }
     },
     {
@@ -3977,6 +4043,12 @@
         "brand": "VinFast",
         "building": "yes",
         "shop": "car"
+      },
+      "followUp": {
+        "date": "2026-11-18",
+        "status": "MAPPED_AREA_REFERENCE",
+        "dataFile": "data/locator-mapped-coverage.js",
+        "note": "Đã bổ sung điểm đại diện bên trong khuôn viên; giữ lý do và tag gốc. Chưa xác minh lối vào/hoạt động."
       }
     },
     {

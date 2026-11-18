@@ -4,15 +4,46 @@ const assert = require('node:assert/strict');
     locatorLocations: data,
     originalLocatorLocations: original,
     locatorReferenceLocations: baseline,
+    locatorCoverageBaseline: coverageBaseline,
   } = await import('../data/locator-locations.js');
   const { coverageSources, coverageLocations, coverageUpdates } =
     await import('../data/locator-coverage.js');
+  const { mappedCoverageLocations, openChargeMapLocations } =
+    await import('../data/locator-mapped-coverage.js');
   const { addressText, hasCoordinates, directions, searchText } =
     await import('../js/locator-quality.js');
   assert.equal(original.length, 291, 'Preserve all original records');
+  assert.equal(coverageBaseline.length, 583);
+  for (const previous of coverageBaseline) {
+    assert.deepEqual(
+      data.find((x) => x.id === previous.id),
+      previous,
+    );
+  }
+  for (const item of mappedCoverageLocations) {
+    assert.equal(item.coordinateStatus, 'AREA_REPRESENTATIVE');
+    assert.equal(item.license, 'ODbL-1.0');
+    assert.ok(item.coordinateEvidence.geometry.length >= 4);
+    assert.ok(
+      item.administrativeEvidence.some((x) => x.level === '4') ||
+        item.provinceParentSource,
+    );
+  }
+  for (const item of openChargeMapLocations) {
+    assert.equal(item.originalSourceRecord.DataProviderID, 1);
+    assert.equal(item.license, 'CC-BY-4.0');
+    assert.equal(item.lat, item.originalSourceRecord.AddressInfo.Latitude);
+    assert.equal(item.lng, item.originalSourceRecord.AddressInfo.Longitude);
+  }
   assert.equal(baseline.length, 495, 'Audit the actual 495-record baseline');
   assert.equal(new Set(coverageSources.map((x) => x.province)).size, 34);
-  assert.equal(data.length, baseline.length + coverageLocations.length);
+  assert.equal(
+    data.length,
+    baseline.length +
+      coverageLocations.length +
+      mappedCoverageLocations.length +
+      openChargeMapLocations.length,
+  );
   for (const previous of baseline) {
     const current = data.find((x) => x.id === previous.id);
     assert.ok(current, previous.id);

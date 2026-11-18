@@ -188,6 +188,34 @@ const assert = require('node:assert/strict');
           assert.ok(await p.locator('[data-id="' + sample.id + '"]').count());
         }
       }
+      await search.fill('Thạnh Lộc 19');
+      const areaCard = p.locator('[data-id="osm-way-1429694652"]');
+      assert.ok(
+        (await areaCard.textContent()).includes(
+          'Điểm đại diện khuôn viên (tham khảo)',
+        ),
+      );
+      await areaCard.locator('[data-focus]').click();
+      await p.waitForSelector('.leaflet-popup');
+      await p.waitForFunction(
+        () => document.querySelectorAll('.leaflet-popup-content').length === 1,
+      );
+      await p.locator('.leaflet-container').scrollIntoViewIfNeeded();
+      await p.waitForTimeout(500);
+      assert.ok(
+        (await p.locator('.leaflet-popup-content').textContent()).includes(
+          'Điểm đại diện khuôn viên (tham khảo)',
+        ),
+      );
+      await p.screenshot({
+        path: require('path').join(
+          require('os').tmpdir(),
+          'locator-area-' + width + '.png',
+        ),
+      });
+      if (width === 390) await p.locator('[data-view=list]').click();
+      await search.fill('phan van tri');
+      assert.ok(await p.locator('[data-id="ocm-267276"]').count());
       await search.fill('xanh mekong');
       assert.equal(await p.locator('.locator-results article').count(), 1);
       await p.locator('button[type=reset]').click();

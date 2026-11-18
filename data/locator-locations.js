@@ -3,6 +3,10 @@ import { nationalLocations } from './locator-national.js';
 import { addressLocations } from './locator-addresses.js';
 import { coverageLocations, coverageUpdates } from './locator-coverage.js';
 import {
+  mappedCoverageLocations,
+  openChargeMapLocations,
+} from './locator-mapped-coverage.js';
+import {
   locationQuality,
   additionalLocations,
 } from './locator-quality-data.js';
@@ -76,10 +80,15 @@ export const locatorReferenceLocations = [
   originalProvince: item.province,
   ...locationQuality[item.id],
 }));
-export const locatorLocations = [
+export const locatorCoverageBaseline = [
   ...locatorReferenceLocations.map((item) => ({
     ...item,
     ...coverageUpdates[item.id],
   })),
   ...coverageLocations,
+];
+export const locatorLocations = [
+  ...locatorCoverageBaseline,
+  ...mappedCoverageLocations,
+  ...openChargeMapLocations,
 ];

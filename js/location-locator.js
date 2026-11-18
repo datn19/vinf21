@@ -17,7 +17,10 @@ const normalize = (value) =>
 const unique = (values) => [...new Set(values.filter(Boolean))];
 function locationDetails(item) {
   const coordinates = hasCoordinates(item)
-    ? '<p class="locator-note">Tọa độ nguồn: ' +
+    ? '<p class="locator-note">' +
+      (item.coordinateStatus === 'AREA_REPRESENTATIVE'
+        ? 'Điểm đại diện khuôn viên (tham khảo): '
+        : 'Tọa độ nguồn: ') +
       item.lat.toFixed(6) +
       ', ' +
       item.lng.toFixed(6) +
@@ -98,7 +101,7 @@ export async function mountLocator(main) {
     .join(
       '',
     )}</select></label><label>Phường/xã (theo nguồn, tham khảo)<select name="ward" disabled><option value="">Chưa có dữ liệu phường/xã</option></select></label><fieldset><legend>Loại địa điểm</legend>${categories.map((category, index) => `<label><input type="checkbox" name="category" value="${index}">${esc(category)}</label>`).join('')}</fieldset><div class="locator-actions"><button type="reset">Xóa bộ lọc</button><button type="button" data-near>Gần tôi</button></div></form><p data-count role="status"></p><p data-geo role="status"></p><div class="locator-results" aria-label="Kết quả địa điểm"></div></aside><div class="locator-map-panel"><button type="button" data-map-reset>Đặt lại bản đồ</button><p data-map-status role="status">Đang tải bản đồ…</p><div id="locator-map" aria-label="Bản đồ địa điểm"></div></div></section>
-  <section class="container locator-sources"><p>Dữ liệu ODbL © <a href="https://blokvolt.com/charging-stations/download/">BlokVolt</a>, cộng tác viên <a href="https://www.openstreetmap.org/copyright">OpenStreetMap — ODbL</a>. Tọa độ lấy từ đối tượng nguồn, chưa xác minh lối vào. Đường gần ghim và địa giới được đối chiếu ngoại tuyến từ <a href="https://download.geofabrik.de/asia/vietnam.html">OSM / Geofabrik (ODbL)</a>; chỉ dùng tham khảo, không phải địa chỉ hoặc lối vào được hãng xác nhận. Các địa chỉ từ hãng/đại lý có nguồn riêng, không có giấy phép dữ liệu mở. Hãy xác nhận với đơn vị vận hành trước khi đi.</p><details><summary>Địa chỉ trong các bài công bố cũ của VinFast (2022–2023)</summary>${historicalLocations.map((x) => `<p><strong>${esc(x.title)}</strong> — ${esc(x.address)}. <a href="${esc(x.url)}" target="_blank" rel="noopener">Nguồn ${esc(x.date)}</a>. Chưa đủ tọa độ để đưa lên bản đồ.</p>`).join('')}</details></section>`;
+  <section class="container locator-sources"><p>Dữ liệu ODbL © <a href="https://blokvolt.com/charging-stations/download/">BlokVolt</a>, cộng tác viên <a href="https://www.openstreetmap.org/copyright">OpenStreetMap — ODbL</a>. Tọa độ lấy từ điểm nguồn hoặc điểm đại diện bên trong khuôn viên, chưa xác minh lối vào. Một địa điểm sử dụng dữ liệu © <a href="https://openchargemap.org/site/poi/details/267276">Open Charge Map</a> (<a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>), đối chiếu địa chỉ VinFast. Đường gần ghim và địa giới được đối chiếu ngoại tuyến từ <a href="https://download.geofabrik.de/asia/vietnam.html">OSM / Geofabrik (ODbL)</a>; chỉ dùng tham khảo, không phải địa chỉ hoặc lối vào được hãng xác nhận. Các địa chỉ từ hãng/đại lý có nguồn riêng, không có giấy phép dữ liệu mở. Hãy xác nhận với đơn vị vận hành trước khi đi.</p><details><summary>Địa chỉ trong các bài công bố cũ của VinFast (2022–2023)</summary>${historicalLocations.map((x) => `<p><strong>${esc(x.title)}</strong> — ${esc(x.address)}. <a href="${esc(x.url)}" target="_blank" rel="noopener">Nguồn ${esc(x.date)}</a>. Chưa đủ tọa độ để đưa lên bản đồ.</p>`).join('')}</details></section>`;
   const root = main.querySelector('.locator'),
     form = root.querySelector('form'),
     results = root.querySelector('.locator-results');

@@ -12,7 +12,7 @@ import osmium.geom
 import osmium.io
 import osmium.filter
 from shapely import wkb
-from shapely.geometry import Point, LineString, box
+from shapely.geometry import Point, LineString, Polygon, box
 from shapely.strtree import STRtree
 
 pbf, baseline_path, output_path = sys.argv[1:]
@@ -24,7 +24,7 @@ locations, roads, boundaries = [], [], []
 
 def relevant(tags):
     return bool(re.search(r"vin\s*fast|v[ -]?green", " ".join(
-        tags.get(k, "") for k in ("name", "brand", "operator")), re.I))
+        tags.get(k, "") for k in ("name", "name:vi", "name:en", "brand", "operator", "network")), re.I))
 
 
 class Extract(osmium.SimpleHandler):
@@ -58,8 +58,15 @@ class Extract(osmium.SimpleHandler):
             roads.append((line, {"id": obj.id, "name": tags["name"],
                                  "highway": tags["highway"]}))
         if candidate:
-            # Do not introduce a centroid as an exact entrance pin.
-            locations.append(dict(id=key, lat=None, lng=None, tags=tags,
+            # A point inside a mapped footprint is only a map anchor, never an entrance.
+            point = None
+            if coords[0] == coords[-1] and len(coords) >= 4:
+                polygon = Polygon(coords)
+                if polygon.is_valid and not polygon.is_empty:
+                    point = polygon.representative_point()
+            locations.append(dict(id=key, lat=point.y if point else None,
+                                  lng=point.x if point else None, tags=tags,
+                                  coordinateMethod="AREA_REPRESENTATIVE" if point else "MISSING",
                                   geometry=list(line.coords), sourceUpdated=str(obj.timestamp)))
 
     def area(self, obj):
@@ -82,7 +89,7 @@ handler = Extract()
 # Native filters skip millions of untagged geometry nodes before entering Python.
 processor = (osmium.FileProcessor(pbf).with_locations()
              .with_areas(osmium.filter.TagFilter(("boundary", "administrative")))
-             .with_filter(osmium.filter.KeyFilter("name", "brand", "operator", "boundary")))
+             .with_filter(osmium.filter.KeyFilter("name", "name:vi", "name:en", "brand", "operator", "network", "boundary")))
 for obj in processor:
     if obj.is_node():
         handler.node(obj)

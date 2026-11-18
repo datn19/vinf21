@@ -3,11 +3,10 @@ const fs = require('node:fs');
 const path = require('node:path');
 
 async function main() {
-  const { locatorLocations: after, locatorReferenceLocations: before } =
+  const { locatorLocations: after, locatorCoverageBaseline: before } =
     await import('../data/locator-locations.js');
   const { hasCoordinates } = await import('../js/locator-quality.js');
-  const { coverageSources, coverageReview, dealerSources, coverageUpdates } =
-    await import('../data/locator-coverage.js');
+
   const provinces = [...new Set(before.map((x) => x.province))].sort((a, b) =>
     a.localeCompare(b, 'vi'),
   );
@@ -88,7 +87,7 @@ async function main() {
     .map((p) => {
       const old = before.filter((x) => x.province === p),
         current = after.filter((x) => x.province === p);
-      return `| ${p} | ${old.length} | ${current.length} | ${count(current, hasCoordinates)} | ${count(current, officialAddress)} | PARTIAL |`;
+      return `| ${p} | ${old.length} | ${current.length} | ${count(old, hasCoordinates)} → ${count(current, hasCoordinates)} | ${count(current, officialAddress)} | PARTIAL |`;
     })
     .join('\n');
   const matrix = provinces
@@ -100,107 +99,88 @@ async function main() {
   const gaps = provinces.filter(
     (p) => !after.some((x) => x.province === p && hasCoordinates(x)),
   );
-  const ledger = provinces
-    .map((p) => {
-      const sources = coverageSources.filter((s) => s.province === p);
-      const other = dealerSources.filter((s) =>
-        s.entries.some((e) => e[4] === p),
-      );
-      const urls = [...new Set([...sources, ...other].map((s) => s.url))];
-      return `| ${p} | ${urls.map((url, i) => `[Nguồn ${i + 1}](${url})`).join(', ')} | ${count(added, (x) => x.province === p)} | ${
-        coverageReview
-          .filter((x) => x.province === p)
-          .map((x) => x.issue)
-          .join(' ') ||
-        'Đã đối chiếu mục có địa chỉ rõ; chưa có tọa độ công bố để đặt pin. Phần địa giới sáp nhập chưa được phủ hết.'
-      } |`;
-    })
-    .join('\n');
-  const report = `# Kiểm kê và mở rộng độ phủ locator — 18/11/2026
+  const report = `# Kiểm kê độ phủ locator — 18/11/2026
 
 ## Kết luận: PARTIAL
 
-Kiểm kê trực tiếp locatorReferenceLocations (${a.records} bản ghi mốc) và locatorLocations (${b.records} bản ghi đang dùng). Không dùng bảng 291 cũ làm mốc. Các số này là bản ghi địa điểm/dịch vụ có ID riêng; chưa chứng minh mọi bản ghi là một cơ sở vật lý độc lập. Showroom và khu sạc trong cùng trung tâm thương mại được giữ riêng khi nguồn phân biệt chức năng/tầng.
+Mốc thực tế: locatorCoverageBaseline gồm ${a.records} bản ghi; sau sửa ${b.records}. ID riêng không chứng minh các dịch vụ đồng địa chỉ là những cơ sở vật lý độc lập. Chưa xác nhận hoạt động hiện tại của bất kỳ cơ sở nào. Mức mở rộng này chưa đạt mục tiêu độ phủ toàn quốc đầy đủ hoặc cân bằng.
 
 ## Trước / sau
 
 | Chỉ tiêu | Trước | Sau |
 |---|---:|---:|
-| Bản ghi / ID không trùng | ${a.ids} | ${b.ids} |
-| Địa chỉ đường theo nguồn chính thức/đơn vị công bố | ${a.official} | ${b.official} |
-| Địa chỉ đường gần ghim, chỉ tham khảo | ${a.approximate} | ${b.approximate} |
-| Địa chỉ chưa xác minh đầy đủ (UNVERIFIED) | ${a.unverified} | ${b.unverified} |
-| Chỉ tọa độ, không địa chỉ đường đáng tin | ${a.coordinatesOnly} | ${b.coordinatesOnly} |
-| Thiếu thành phần road | ${a.noRoad} | ${b.noRoad} |
-| Có tọa độ nguồn hợp lệ | ${a.mapped} | ${b.mapped} |
+| ID riêng | ${a.ids} | ${b.ids} |
+| Có tọa độ hợp lệ để hiển thị | ${a.mapped} | ${b.mapped} |
 | Không tọa độ | ${a.records - a.mapped} | ${b.records - b.mapped} |
-| Tỉnh/thành có pin | 21 | ${provinces.length - gaps.length} |
+| Địa chỉ chính thức/đơn vị công bố, gồm nguồn lịch sử | ${a.official} | ${b.official} |
+| Đường gần ghim, chỉ tham khảo | ${a.approximate} | ${b.approximate} |
+| Địa chỉ chưa xác minh đầy đủ | ${a.unverified} | ${b.unverified} |
+| Chỉ tọa độ | ${a.coordinatesOnly} | ${b.coordinatesOnly} |
+| Thiếu thành phần đường | ${a.noRoad} | ${b.noRoad} |
+| Tỉnh/thành có ghim | 21 | ${34 - gaps.length} |
 | Xác nhận hoạt động hiện tại | 0 | 0 |
 
-Thêm **${added.length}** bản ghi, bổ sung bằng chứng cho **${Object.keys(coverageUpdates).length}** bản ghi hiện có. Xóa **0** bản ghi. Tất cả ${a.records} bản ghi mốc còn nguyên nguồn và tọa độ; cập nhật GO!/Big C Tân Hiệp dựa trên cùng cơ sở/số nhà/đường.
+Thêm ${added.length} bản ghi: 12 khuôn viên OSM, 1 điểm Open Charge Map. Tọa độ mới gồm **12 điểm đại diện tính bên trong polygon**, không phải tọa độ lối vào; **1 điểm nguồn OCM**. Giữ nguyên 583 bản ghi mốc và tọa độ cũ. Không xóa bản ghi nào vì chưa đủ bằng chứng trùng cơ sở. Không có điểm cũ nằm trong 12 polygon mới; các polygon được chọn không giao nhau.
 
-${b.official} địa chỉ có căn cứ công bố, gồm tài liệu lịch sử và trang đơn vị; không gọi đây là ${b.official} cơ sở được xác minh đầy đủ hiện tại. Có **1** bản ghi được ghép chéo địa chỉ hãng và node OSM; tọa độ vẫn là điểm OSM, chưa xác minh cửa vào. **${b.records - b.official}** bản ghi còn chưa có địa chỉ chính thức đầy đủ. Không có cơ sở nào được kiểm tra ngoài thực địa hoặc xác nhận đủ cả địa chỉ, lối vào và hoạt động hiện tại.
+Có ${b.records - b.official} bản ghi thiếu địa chỉ chính thức đầy đủ. Mọi bản ghi vẫn cần xác nhận hiện trạng; không gọi ${b.records} là số cơ sở đã xác minh toàn diện. Hai bản ghi có đối chiếu địa chỉ hãng và nguồn tọa độ cộng đồng (GO! Tân Hiệp, Vincom Phan Văn Trị).
 
-## Theo tỉnh/thành
+## Toàn bộ 34 tỉnh/thành
 
-| Tỉnh/thành | Trước | Sau | Có tọa độ | Địa chỉ công bố | Trạng thái |
+| Tỉnh/thành | Bản ghi trước | Bản ghi sau | Ghim trước → sau | Địa chỉ công bố | Trạng thái |
 |---|---:|---:|---:|---:|---|
 ${rows}
 
-Chưa có pin (${gaps.length}): ${gaps.join(', ')}. Các tỉnh có 1–3 địa điểm vẫn yếu; tỉnh có nhiều bản ghi cũng không bảo đảm phủ đủ. Mở rộng lần này cải thiện tìm kiếm địa chỉ, **không tăng độ phủ pin** vì chưa có tọa độ đủ bằng chứng. Không geocode từ tâm tỉnh hay tâm đường.
+Chưa có ghim (${gaps.length}): ${gaps.join(', ')}. Đã có ghim ở cả Bắc, Trung, Nam nhưng không đồng nghĩa phủ toàn quốc. Đồng Nai, Tây Ninh, An Giang, Đà Nẵng, Huế, Đắk Lắk chưa thêm được điểm có nguồn tái sử dụng phù hợp trong đợt này. Mọi vùng ít bản ghi vẫn là khoảng trống dữ liệu, không được suy ra là ít cơ sở thực tế.
 
 ## Loại địa điểm × tỉnh/thành
-
-Mỗi ô là trước → sau. Đây là loại theo bằng chứng nguồn, không phải số cơ sở đang mở.
 
 | Tỉnh/thành | ${categories.join(' | ')} |
 |---|${categories.map(() => '---:').join('|')}|
 ${matrix}
 
-## Vì sao lệch về Hà Nội/Bắc Ninh?
+## Bản ghi mới và nguồn
 
-1. Script prepare-locator-geodata.py đọc PBF Geofabrik toàn Việt Nam, không giới hạn hộp tọa độ Hà Nội hoặc giới hạn số bản ghi. Trích xuất cục bộ ngày 16/11/2026 có 692 đối tượng: 644 node và 48 way. Trong 644 node ứng viên, polygon OSM gán 510 Hà Nội, 63 Bắc Ninh, 8 Hồ Chí Minh, 6 Đà Nẵng, 1 Đồng Nai, 1 Cần Thơ. Sự lệch đã có trong nguồn ứng viên; không thể suy ra phân bố thực của VinFast.
-2. Điều kiện tên/brand/operator chỉ nhận VinFast/V-GREEN, nên bỏ sót đối tượng thiếu thương hiệu, tag khác hoặc cơ sở chưa được cộng đồng lập bản đồ. Lần trước chỉ nhận node đủ loại, bỏ polygon thiếu điểm đại diện được xác minh, 6 xưởng motorcycle_repair và 149 vending_machine cần kiểm tra có phải đổi pin. Đây là thiếu sót theo biểu diễn/tag, không phải bằng chứng rằng miền Nam ít trạm.
-3. Các nguồn địa chỉ trước chỉ bổ sung rải rác, chưa đối chiếu cùng bộ danh sách tỉnh. Lần này đi qua liên kết chính thức cho cả 34 tên tỉnh/thành và thêm nguồn đơn vị ở vùng ưu tiên. Những danh sách dùng địa giới 2022 không bao phủ hết phần tỉnh sáp nhập; không tuyên bố nghiên cứu hết từng xã hoặc từng cơ sở.
-4. Lớp geoBoundaries năm 2008 từng phân loại sai tỉnh; lần trước đã sửa 14 tỉnh và giải quyết 1 điểm chưa rõ bằng polygon OSM mới. Kiểm tra hiện tại: ${mismatches.length} bản ghi mâu thuẫn với ADM4 đang lưu; 3 điểm Khánh Hòa dùng quan hệ phường/xã và nghị quyết, không có ADM4. Đây không phải xác minh độc lập độ chính xác toàn bộ ranh giới.
-5. Không có ID lặp hay tọa độ ngoài giới hạn (${invalid.length} lỗi tọa độ). Phát hiện ${duplicates.length} cặp trùng hoàn toàn khóa tên/địa chỉ/tọa độ; ${near.length} cặp ghim cách nhau dưới 30 m cần xem xét. Không xóa các điểm chỉ vì gần nhau hoặc cùng tên chung.
+| ID | Tỉnh/thành | Loại | Nguồn |
+|---|---|---|---|
+${added.map((x) => '| ' + x.id + ' | ' + x.province + ' | ' + x.category + ' | [Nguồn](' + x.source + ') — ' + x.license + ' |').join('\n')}
 
-Hà Nội + Bắc Ninh: 403/${a.records} (${((403 / a.records) * 100).toFixed(1)}%) → 403/${b.records} (${((403 / b.records) * 100).toFixed(1)}%). Tỷ lệ giảm nhờ nguồn địa chỉ vùng khác, không phải vì đã cân bằng được mạng lưới pin.
+Giữ tag nguồn, geometry, timestamp và bằng chứng phân loại trong data/locator-mapped-coverage.js. Không suy ra xe hỗ trợ từ tên bãi đỗ hoặc công suất. Phường Tây Nha Trang được nối với Khánh Hòa qua Nghị quyết 1667 (provinceParentSource); 11 khuôn viên khác có polygon ADM4. Điểm Thạnh Xuân có tag phường cũ khác địa giới hiện tại, giữ cảnh báo historicalWard.
 
-## Trùng, gần nhau và nguồn đáng nghi
+## Vì sao lệch về miền Bắc?
 
-${near.map((x) => `- ${x.a} / ${x.b}: khoảng ${x.metres} m; ${x.sameCategory ? 'cùng loại' : 'khác loại'}, giữ để rà soát.`).join('\n')}
+- Trích xuất Geofabrik toàn Việt Nam ngày 2026-11-16T21:22:36Z, không hộp giới hạn Hà Nội/Bắc Ninh hoặc cap bản ghi. SHA256 PBF: A3EA775DF348D94103FDD939BFACB88569B4FB05F08CD08112BCC1F756056A50.
+- 692 ứng viên cũ gồm 644 node và 48 way. Trong node ứng viên đã có 510 Hà Nội, 63 Bắc Ninh, 8 HCM, 6 Đà Nẵng, 1 Đồng Nai, 1 Cần Thơ. Độ lệch có trong dữ liệu cộng đồng, không phải thống kê mạng lưới thực tế.
+- Bộ lọc cũ thiếu name:vi/name:en/network và bỏ cách biểu diễn polygon. Bộ lọc mở rộng có 696 ứng viên; 4 mới là nhà nghỉ công nhân, không phải điểm phục vụ khách, nên không nhập. Khắc phục polygon giúp đưa thêm các khu vực sạc miền Nam lên bản đồ.
+- 149 vending_machine và 6 motorcycle_repair đã nằm trong hàng chờ cũ; chưa nhập hàng loạt các tủ/điểm miền Bắc để tăng số lượng. Cần xác minh từng loại và cơ sở trước khi nhận. Không coi hàng chờ là cơ sở đã xác minh.
+- Các lỗi địa giới 2008 từng được sửa ở đợt trước. Audit hiện tại: ${mismatches.length} mâu thuẫn với ADM4 đang lưu; ${invalid.length} tọa độ ngoài điều kiện; ${duplicates.length} khóa tên/địa chỉ/tọa độ trùng hoàn toàn. Đây không thay thế kiểm tra thực địa.
+- Hà Nội+Bắc Ninh vẫn 403 bản ghi, 401 ghim: 401/464 → 401/${b.mapped}. Không xóa điểm hợp lệ chỉ để giảm tỷ lệ.
 
-- Vincom Sơn La: showroom tầng 1 và trạm sạc hầm B1 là hai dịch vụ cùng cơ sở; không coi hai dòng là hai tòa nhà. Vincom Vĩnh Long: điểm hỗ trợ và khu sạc có cùng địa chỉ, cần đơn vị xác nhận quan hệ cơ sở.
-- CT04 km77 có hai chiều cao tốc khác nhau; không gộp chỉ vì chuỗi địa chỉ giống nhau.
-- Không nhập lặp các dòng Vincom Hùng Vương Cần Thơ, Vincom Sơn La và Vincom Lê Văn Việt chỉ vì xuất hiện nhiều lần trong bài. Đây là ngăn trùng lúc nhập, không phải xóa bản ghi khỏi dataset cũ.
-- Các trạm OSM tên chung chưa có đối chiếu chính thức vẫn chưa xác minh danh tính độc lập. Số ID riêng không bảo đảm số cơ sở vật lý riêng.
+## Nghi trùng / cần rà soát
 
-## Nhật ký đối chiếu 34 tỉnh/thành
+${near.map((x) => '- ' + x.a + ' / ' + x.b + ': ' + x.metres + ' m; ' + (x.sameCategory ? 'cùng loại' : 'khác loại') + '.').join('\n')}
 
-Nguồn hãng được đọc 17/11/2026; nguồn Huy Tiến Dũng được đọc 18/11/2026. Giữ ngày nguồn nếu có, để null nếu không xác định; không dùng ngày truy cập làm ngày khai trương. Nội dung các bài trạm sạc phần lớn là lịch sử 2022–2024.
+${near.length} cặp dưới 30 m chỉ là ứng viên rà soát, không phải ${near.length} bản ghi chắc chắn trùng. 32 cặp cũ khác loại, 1 cặp cùng loại Hoàng Long/Minh Giang Liên Bão cần đối chiếu danh tính. Không phát hiện cơ sở nào đủ bằng chứng để xóa.
 
-| Tỉnh/thành | Nguồn | Thêm | Kết quả / giới hạn |
-|---|---|---:|---|
-${ledger}
+12 bản ghi trong data/locator-quality-review.json đã có followUp=MAPPED_AREA_REFERENCE; giữ nguyên lý do loại ban đầu để theo dõi lịch sử. Không cộng bản ghi đã giải quyết vào số ứng viên chưa xử lý.
 
-## Giấy phép và giới hạn
+Không nhập ứng viên:
+- OSM way 715839927: tên Vinfast nhưng operator Chevrolet; có thể trùng địa chỉ An Thái chưa tọa độ, chưa đủ bằng chứng.
+- OSM way 940004477: brand Vìnast/operator Vinsgroup và tên garage nhưng shop=car; cần xác minh danh tính/loại.
+- OSM way 1501789348: gần way 1222753571 trong cùng khu, cần kiểm tra có phải phân mảnh cùng cơ sở.
+- OCM 208969/208970: OpenCharger/không chứng minh VinFast; OCM 274579: tên đường chung; 461659: tên chung/thông số đáng nghi; 461673: địa chỉ và tỉnh mâu thuẫn. Không nhập 5 ứng viên này. Không cộng với hàng chờ cũ để đưa ra số cơ sở độc lập.
 
-- Giữ attribution ODbL của OpenStreetMap/BlokVolt/Geofabrik cho toàn bộ dữ liệu dẫn xuất cũ; xem LOCATOR_SOURCES.md. Không lấy số lượng hoặc tọa độ từ trang tổng hợp không rõ giấy phép để cân bằng dữ liệu.
-- Chỉ trích dữ kiện địa điểm riêng lẻ từ nguồn hãng/đơn vị, không sao chép văn bản mô tả hay nhận định rằng danh mục thương mại có giấy phép mở. Không có bản xuất mạng lưới chính thức được phép tái phân phối hàng loạt.
-- HTTP trực tiếp trang hãng trả 403 nên đã dừng cách truy cập đó. Đối chiếu bằng các trang công khai được công cụ tìm kiếm cung cấp; không dùng API riêng hay vượt kiểm soát truy cập. Tìm V-GREEN tại các vùng ưu tiên chưa cung cấp nguồn tọa độ có thể nhập hợp lệ.
-- Không gọi reverse-geocoding hàng loạt, không dùng API trả phí, không tạo ghim giả. Tất cả điểm mới không tọa độ vẫn có thể tìm kiếm và chỉ đường bằng địa chỉ nguồn; phường hiện hành để trống nếu chưa đối chiếu.
+## Giấy phép / giới hạn nguồn
+
+- [OSM / Geofabrik](https://download.geofabrik.de/asia/vietnam.html): [ODbL 1.0](https://www.openstreetmap.org/copyright). Xử lý PBF ngoại tuyến; không lặp truy vấn Overpass, không reverse-geocode hàng loạt trên Nominatim.
+- [Open Charge Map export](https://github.com/openchargemap/ocm-export/tree/master/data/VN): xem 6 bản ghi Việt Nam, chỉ nhận ID267276 DataProviderID=1. Dữ liệu người đóng góp OCM theo [CC BY 4.0](https://community.openchargemap.org/t/announcing-our-new-simpler-data-license-for-ocm-data-cc-by-4-0-international/565). Giữ bản gốc và attribution; nguồn kiểm tra cuối 2023 không chứng minh vận hành 2026.
+- [VinFast: Vincom Phan Văn Trị](https://vinfastauto.com/vn_vi/danh-sach-tram-sac-xe-dien-vinfast-o-tp-hcm-va-nhung-dieu-can-biet-phan-1): đối chiếu riêng địa chỉ/loại xe trong công bố lịch sử, không coi là giấy phép sao chép danh mục hàng loạt.
+- [V-GREEN điều khoản](https://vgreen.net/vi/cong-bo-thong-tin-va-dieu-khoan-dich-vu): chưa tìm được bản xuất toàn quốc có quyền tái phân phối. Không gọi API riêng.
+- [HuggingFace Wanderer210w](https://huggingface.co/datasets/Wanderer210w/vgreen-charging-siting-data): license unknown; [phoenixvn/OpenData-Vietnam](https://github.com/phoenixvn/OpenData-Vietnam): chưa thấy giấy phép tái phân phối. Không nhập hai bộ này.
+- Không dùng Google Places/Maps làm nguồn dataset, không kích hoạt API trả phí. Google Maps chỉ dùng liên kết chỉ đường sẵn có.
 
 ## Kiểm thử
 
-Kết quả chạy ngày 18/11/2026 trên bản 583 bản ghi:
-
-- node tests/locator-quality.cjs: PASS; kiểm tra bảo toàn toàn bộ 495 bản ghi mốc, nguồn và tọa độ, 34 tỉnh, ID, nhãn địa chỉ, bằng chứng loại xe và directions của mọi bản ghi mới.
-- node tests/location-locator.cjs: PASS Chromium 1440/768/390 px, bộ lọc tất cả tỉnh/loại, tìm kiếm, marker/popup, directions, geolocation và không tràn ngang.
-- Phiên Chromium riêng: tìm không dấu “778 nguyen van qua” trả đúng bản ghi mới, 0 pin, liên kết Google Maps nhận địa chỉ công bố. Đã xem ảnh chụp desktop/mobile; không lỗi JS của trang. Tile được chặn có chủ đích để kiểm tra fallback, không tuyên bố kiểm tra tải tile mạng thật trong đợt này.
-- Không sửa CSS, bố cục, Leaflet, clustering hoặc các điều khiển bản đồ. Không kiểm tra thực địa hay trạng thái hoạt động từng cơ sở.
-
-Báo cáo số liệu tái tạo bằng node scripts/audit-locator-coverage.cjs. Kết quả kiểm thử trên là lần chạy bàn giao, không phải chứng nhận tự động cho dữ liệu được sửa về sau.
+Số liệu tái tạo: node scripts/audit-locator-coverage.cjs. Kiểm thử dữ liệu: node tests/locator-quality.cjs. Kiểm thử trình duyệt: node tests/location-locator.cjs. Kết quả bàn giao 18/11/2026: PASS cả hai bộ test. Chromium thực tế chạy 1440/768/390 px, lọc từng tỉnh (gồm HCM, Hà Nội, Đà Nẵng, Đồng Nai, Cần Thơ), từng loại, tìm tên/đường/phường, popup, chỉ đường và định vị gần tôi; không lỗi JS của trang hoặc tràn ngang. Kiểm tra riêng nhãn điểm khuôn viên và tìm không dấu Phan Văn Trị. Đã xem ảnh desktop/mobile. Tile OSM được chặn có chủ đích để test fallback; chưa xác minh tải tile mạng thật. Kiểm tra hình học ngoại tuyến: 12 điểm nằm trong polygon hợp lệ, không giao polygon khác và không chứa ghim cũ. Không kiểm tra thực địa.
 `;
   fs.writeFileSync(
     path.join(__dirname, '..', 'LOCATOR_COVERAGE_AUDIT.md'),
