@@ -1,10 +1,37 @@
 const assert = require('node:assert/strict');
 (async () => {
-  const { locatorLocations: data, originalLocatorLocations: original } =
-    await import('../data/locator-locations.js');
+  const {
+    locatorLocations: data,
+    originalLocatorLocations: original,
+    locatorReferenceLocations: baseline,
+  } = await import('../data/locator-locations.js');
+  const { coverageSources, coverageLocations, coverageUpdates } =
+    await import('../data/locator-coverage.js');
   const { addressText, hasCoordinates, directions, searchText } =
     await import('../js/locator-quality.js');
   assert.equal(original.length, 291, 'Preserve all original records');
+  assert.equal(baseline.length, 495, 'Audit the actual 495-record baseline');
+  assert.equal(new Set(coverageSources.map((x) => x.province)).size, 34);
+  assert.equal(data.length, baseline.length + coverageLocations.length);
+  for (const previous of baseline) {
+    const current = data.find((x) => x.id === previous.id);
+    assert.ok(current, previous.id);
+    assert.equal(current.lat, previous.lat);
+    assert.equal(current.lng, previous.lng);
+    assert.equal(current.source, previous.source);
+    if (!coverageUpdates[previous.id]) assert.deepEqual(current, previous);
+  }
+  for (const item of coverageLocations) {
+    assert.equal(item.lat, null, 'No invented pins for address-only records');
+    assert.equal(item.lng, null);
+    assert.ok(
+      item.addressComponents.road && item.categoryEvidence.basis.length,
+    );
+    assert.equal(
+      new URL(directions(item)).searchParams.get('destination'),
+      item.verifiedAddress,
+    );
+  }
   assert.equal(
     new Set(data.map((x) => x.id)).size,
     data.length,

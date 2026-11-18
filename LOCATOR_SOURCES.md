@@ -1,5 +1,7 @@
 # Chất lượng dữ liệu locator — 17/11/2026
 
+> Đây là báo cáo của đợt 291 → 495 bản ghi. Kết quả hiện tại và đối chiếu đầy đủ 495 → 583 bản ghi nằm trong [LOCATOR_COVERAGE_AUDIT.md](LOCATOR_COVERAGE_AUDIT.md). Phần nguồn/giấy phép bên dưới vẫn áp dụng cho dữ liệu gốc.
+
 ## Kết luận: PARTIAL
 
 Đã rà soát toàn bộ 291 bản ghi gốc, giữ nguyên nguồn và tọa độ; thêm 198 node OSM phù hợp và 6 địa chỉ công bố. 495 bản ghi không đồng nghĩa 495 cơ sở đã được hãng xác nhận hoặc đang hoạt động. Không đủ bằng chứng để tuyên bố phủ toàn quốc.
