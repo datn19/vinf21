@@ -33,6 +33,7 @@ import {
 } from './components.js';
 import { products, money } from '../data/products.js';
 import { card, renderCatalog } from './catalog.js';
+import { renderDataStatus } from './data-status.js';
 import { renderProduct } from './product.js';
 import { renderTestDrive } from './forms.js';
 import { renderCompare } from './compare.js';
@@ -278,6 +279,7 @@ const renderers = {
   reference: () => renderReference(main),
   home: () => renderHome(main),
   catalog: () => renderCatalog(main),
+  'data-status': () => renderDataStatus(main),
   product: () => renderProduct(main),
   warranty,
   battery,

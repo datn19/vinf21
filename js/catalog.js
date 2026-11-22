@@ -20,6 +20,9 @@ export function card(p) {
 
 export function renderCatalog(main) {
   const params = new URLSearchParams(location.search);
+  const seatOptions = [
+    ...new Set(products.map((p) => p.seats).filter(Boolean)),
+  ].sort((a, b) => a - b);
   main.innerHTML = /* HTML */ `<section class="container">
     <p class="eyebrow">Khám phá sản phẩm</p>
     <h1>Các dòng xe VinFast</h1>
@@ -27,6 +30,9 @@ export function renderCatalog(main) {
       Bộ lọc và tìm kiếm là chức năng bổ sung cho đồ án. Danh mục hiện có
       ${products.length} mẫu trong dự án, gồm cả hồ sơ xe xăng lịch sử. Giá
       snapshot không phải báo giá hiện tại.
+      <a class="text-link" href="${pageURL('data-status')}"
+        >Xem trạng thái dữ liệu thông số</a
+      >.
     </p>
     <form class="filters" role="search">
       <label
@@ -49,6 +55,34 @@ export function renderCatalog(main) {
           <option value="">Tất cả</option>
           ${[...new Set(products.map((p) => p.segment))].map((s) => /* HTML */ `<option>${s}</option>`).join('')}
         </select></label
+      ><label
+        >Số chỗ<select id="seats">
+          <option value="">Tất cả</option>
+          ${seatOptions.map((n) => /* HTML */ `<option value="${n}">${n} chỗ</option>`).join('')}
+        </select></label
+      ><label
+        >Giá từ (triệu đồng)<input
+          id="price-min"
+          type="number"
+          min="0"
+          step="1"
+          inputmode="numeric"
+          placeholder="Ví dụ: 20" /></label
+      ><label
+        >Giá đến (triệu đồng)<input
+          id="price-max"
+          type="number"
+          min="0"
+          step="1"
+          inputmode="numeric"
+          placeholder="Ví dụ: 800" /></label
+      ><label
+        >Sắp xếp<select id="sort">
+          <option value="">Mặc định</option>
+          <option value="price-asc">Giá thấp đến cao</option>
+          <option value="price-desc">Giá cao đến thấp</option>
+          <option value="name">Tên A–Z</option>
+        </select></label
       ><button type="reset" class="secondary">Xóa bộ lọc</button>
     </form>
     <p id="result-count" role="status"></p>
@@ -57,12 +91,34 @@ export function renderCatalog(main) {
   const form = main.querySelector('form'),
     search = main.querySelector('#search'),
     group = main.querySelector('#group'),
-    segment = main.querySelector('#segment');
+    segment = main.querySelector('#segment'),
+    seats = main.querySelector('#seats'),
+    priceMin = main.querySelector('#price-min'),
+    priceMax = main.querySelector('#price-max'),
+    sort = main.querySelector('#sort');
   group.value = params.get('group') || '';
   segment.value = params.get('segment') || '';
+  seats.value = params.get('seats') || '';
+  priceMin.value = params.get('pmin') || '';
+  priceMax.value = params.get('pmax') || '';
+  sort.value = params.get('sort') || '';
   search.value = params.get('q') || '';
+  // Ô giá nhập theo triệu đồng; để trống nghĩa là không giới hạn.
+  const toVND = (input) =>
+    input.value.trim() === '' ? null : Number(input.value) * 1e6;
+  const hasPrice = (p) => Number.isFinite(p.price);
+  const sorters = {
+    'price-asc': (a, b) => a.price - b.price,
+    'price-desc': (a, b) => b.price - a.price,
+    name: (a, b) => a.name.localeCompare(b.name, 'vi'),
+  };
   function filter() {
-    const result = products.filter(
+    const min = toVND(priceMin),
+      max = toVND(priceMax),
+      priceActive = min !== null || max !== null,
+      seatsActive = seats.value !== '',
+      invalidRange = min !== null && max !== null && min > max;
+    const base = products.filter(
       (p) =>
         (!group.value || p.group === group.value) &&
         (!segment.value || p.segment === segment.value) &&
@@ -70,14 +126,45 @@ export function renderCatalog(main) {
           .replace(/\s/g, '')
           .includes(normalize(search.value).replace(/\s/g, '')),
     );
+    const result = invalidRange
+      ? []
+      : base.filter(
+          (p) =>
+            (!priceActive ||
+              (hasPrice(p) &&
+                (min === null || p.price >= min) &&
+                (max === null || p.price <= max))) &&
+            (!seatsActive || String(p.seats) === seats.value),
+        );
+    // Mẫu chưa có giá luôn xếp cuối khi sắp xếp theo giá.
+    if (sorters[sort.value])
+      result.sort((a, b) =>
+        sort.value === 'name'
+          ? sorters.name(a, b)
+          : hasPrice(b) - hasPrice(a) ||
+            (hasPrice(a) ? sorters[sort.value](a, b) : 0),
+      );
+    const notes = [];
+    if (invalidRange) notes.push('Giá tối thiểu đang lớn hơn giá tối đa.');
+    const noPrice =
+      priceActive && !invalidRange
+        ? base.filter((p) => !hasPrice(p)).length
+        : 0;
+    const noSeats = seatsActive ? base.filter((p) => !p.seats).length : 0;
+    if (noPrice) notes.push(`Chưa tính ${noPrice} mẫu chưa có giá snapshot.`);
+    if (noSeats) notes.push(`Chưa tính ${noSeats} mẫu chưa có dữ liệu số chỗ.`);
     main.querySelector('#result-count').textContent =
-      `${result.length} mẫu xe phù hợp`;
+      `${result.length} mẫu xe phù hợp. ${notes.join(' ')}`.trim();
     main.querySelector('#results').innerHTML = result.length
       ? result.map(card).join('')
       : '<p>Không tìm thấy mẫu xe. Hãy thử tên khác hoặc xóa bộ lọc.</p>';
     const query = new URLSearchParams();
     if (group.value) query.set('group', group.value);
     if (segment.value) query.set('segment', segment.value);
+    if (seats.value) query.set('seats', seats.value);
+    if (priceMin.value.trim()) query.set('pmin', priceMin.value.trim());
+    if (priceMax.value.trim()) query.set('pmax', priceMax.value.trim());
+    if (sort.value) query.set('sort', sort.value);
     if (search.value.trim()) query.set('q', search.value.trim());
     history.replaceState(
       null,

@@ -4,6 +4,7 @@ import { extendedProducts } from './extended-products.js';
 import { newCars } from './new-cars.js';
 import { specificationBaseline } from './vehicle-spec-baseline.js';
 import { vehicleFeatureResearch } from './vehicle-feature-research.js';
+import { specAdditions } from './spec-additions.js';
 
 // Nguồn cũ giữ ngày khảo sát cũ; chỉ đánh dấu đối chiếu mới cho dữ liệu đã đọc lại.
 export const vehicleSpecifications = vehicleViewers.map((viewer) => {
@@ -1027,6 +1028,17 @@ get('ec-van').conflicts.push(
 get('ec-van').missing.push(
   'Trang bị theo bản cơ bản, nâng cao và nâng cao có cửa trượt chưa đối chiếu đầy đủ',
 );
+// Thông số bổ sung có nguồn hãng (data/spec-additions.js), áp dụng trước khi tính trạng thái.
+for (const { id, rows, source, date } of specAdditions) {
+  const model = get(id);
+  if (!model) throw new Error(`spec-additions: không có xe "${id}"`);
+  model.groups.push({
+    title: 'Thông tin bổ sung đã đối chiếu',
+    source,
+    rows,
+  });
+  if (!model.sourceDate || date > model.sourceDate) model.sourceDate = date;
+}
 // Dữ liệu giữ nguyên chưa đồng nghĩa hồ sơ kỹ thuật toàn diện đã hoàn tất.
 for (const model of vehicleSpecifications) {
   const fields = getSpecificationFields(model);

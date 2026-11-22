@@ -1,5 +1,6 @@
 import { newCars } from './new-cars.js';
 import { extendedProducts } from './extended-products.js';
+import { carGroups, scooterGroups } from './home-products.js';
 
 // Chỉ dữ liệu tĩnh; không gọi API VinFast. Các số liệu là snapshot khảo sát.
 export const products = [
@@ -57,7 +58,7 @@ export const products = [
     group: 'personal',
     segment: 'A-SUV',
     seats: 5,
-    range: '326,4 km (NEDC)',
+    range: '326 km (NEDC)',
     price: 496000000,
     image: 'vf5.webp',
   },
@@ -212,6 +213,42 @@ for (const model of extendedProducts) {
     source: model.source,
   });
 }
+
+// Điền chỗ trống bằng snapshot trang chủ (data/home-products.js), không ghi đè giá trị đã có.
+// Cùng một xe có thể nằm ở nhiều file với mức đầy đủ khác nhau; gộp ở đây để catalog,
+// bộ lọc và trang so sánh dùng chung một nguồn.
+// Quãng đường xe máy điện 2 pin nằm ở nhãn ("... (2 pin)"), nên giữ lại phần chú thích đó.
+const homeItems = new Map(
+  [...carGroups, ...scooterGroups]
+    .flatMap((g) => g.items)
+    .map((i) => [i.id, i]),
+);
+const homeStat = (id, label) =>
+  homeItems.get(id)?.stats.find(([l]) => label.test(l))?.[1];
+const homeRange = (id) => {
+  const row = homeItems
+    .get(id)
+    ?.stats.find(([l]) => /^quãng đường|^di chuyển/i.test(l));
+  if (!row) return undefined;
+  const note = row[0].match(/\((\d+ pin)\)/i)?.[1];
+  return note && !row[1].includes(note) ? `${row[1]} (${note})` : row[1];
+};
+// Xe không có trên trang chủ (EBus) lấy quãng đường từ dữ liệu mở rộng.
+const extendedStat = (id, label) =>
+  extendedProducts
+    .find((m) => m.productId === id)
+    ?.battery?.find(([l]) => label.test(l))?.[1];
+for (const p of products) {
+  if (p.seats == null) {
+    const seats = parseInt(homeStat(p.id, /^số chỗ/i), 10);
+    if (Number.isFinite(seats)) p.seats = seats;
+  }
+  if (p.range == null) {
+    const range = homeRange(p.id) ?? extendedStat(p.id, /^quãng đường/i);
+    if (range) p.range = range;
+  }
+}
+
 export const money = (value) =>
   new Intl.NumberFormat('vi-VN', { style: 'currency', currency: 'VND' }).format(
     value,

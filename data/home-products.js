@@ -63,7 +63,7 @@ export const carGroups = [
           [
             ['Dòng xe', 'MiniCar'],
             ['Số chỗ ngồi', '4 chỗ'],
-            ['Quãng đường lên tới', '210 km (NEDC)'],
+            ['Quãng đường lên tới', '215 km (NEDC)'],
           ],
           285,
         ),
@@ -77,7 +77,7 @@ export const carGroups = [
           [
             ['Dòng xe', 'A-SUV'],
             ['Số chỗ ngồi', '5 chỗ'],
-            ['Quãng đường lên tới', '326,4 km (NEDC)'],
+            ['Quãng đường lên tới', '326 km (NEDC)'],
           ],
           496,
         ),
@@ -105,7 +105,7 @@ export const carGroups = [
           [
             ['Dòng xe', 'C-SUV'],
             ['Số chỗ ngồi', '5 chỗ'],
-            ['Quãng đường lên tới', '500,5 km (NEDC)'],
+            ['Quãng đường lên tới', '440 km (NEDC)'],
           ],
           740,
         ),
@@ -132,10 +132,10 @@ export const carGroups = [
           '',
           [
             ['Dòng xe', 'E-SUV'],
-            ['Số chỗ ngồi', '6–7 chỗ'],
+            ['Số chỗ ngồi', '7 chỗ'],
             ['Quãng đường lên tới', '626 km (WLTP)'],
           ],
-          1300,
+          1348,
         ),
         image: 'assets/vf9.webp',
       },
